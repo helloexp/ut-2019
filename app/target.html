@@ -1,0 +1,657 @@
+<style>
+/* inject:theCss:css */
+.modalCarousel {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modalCarousel .slick-slide {
+  margin: 10px 0;
+}
+
+.modalCarousel .slick-list {
+  margin: -10px 0;
+}
+
+.modalCarousel .slick-current {
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+.modalCarousel .slick-next {
+  left: 50%;
+  bottom: -15% !important;
+  top: initial !important;
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.modalCarousel .slick-prev {
+  left: 50% !important;
+  top: -15% !important;
+  transform: translateX(-50%) rotate(90deg);
+}
+
+#navCarousel {
+  -ms-flex: 20%;
+      flex: 20%;
+  margin: auto 15px auto 0;
+}
+
+#slideCont {
+  -ms-flex: 80%;
+      flex: 80%;
+}
+
+.teaserHero {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.teaserHero img {
+  width: 100%;
+  min-width: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+div#categoryspecific {
+  display: none !important;
+}
+
+.search-promo {
+  display: none !important;
+}
+
+#utCat {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#utCat .teaserContent {
+  overflow: hidden;
+  max-width: 980px;
+  margin: 40px 60px 60px;
+  background-color: white;
+}
+
+#utCat .teaserContent .flexContainer {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  padding: 40px;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+#utCat .teaserContent .flexContainer img {
+  width: 200px;
+  height: 100%;
+}
+
+#utCat .teaserContent .bioCopy .title {
+  font-size: 24px;
+}
+
+#utCat .teaserContent .bioCopy .sub {
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial;
+}
+
+#utCat .teaserContent .bioCopy small {
+  display: block;
+  font-size: 11px;
+  margin-top: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial;
+}
+
+#utCat .teaserContent .copy h1 {
+  font-size: 34px;
+  margin-bottom: .45em;
+  color: black;
+  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#utCat .teaserContent .copy p {
+  font-size: 18px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#utCat .teaserContent .available .disclaimer {
+  font-size: 14px;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+#utCat .teaserContent .available .disclaimerCopy {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+#utCat .teaserContent .available .date {
+  color: red;
+  font-size: 24px;
+  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 30px;
+}
+
+#utCat .teaserContent .available .price {
+  font-size: 21px;
+  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: .75em 0;
+}
+
+#utCat .teaserContent .eventInfo .eventDetails {
+  margin: 14px 0;
+}
+
+#utCat .teaserContent .eventInfo .cta {
+  margin: 14px auto;
+  border: 2px solid black;
+  text-align: center;
+  width: 150px;
+}
+
+#utCat .teaserContent .eventInfo .cta a {
+  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  padding: 8px 0;
+  display: block;
+}
+
+#utCat .teaserContent .eventInfo .cta:hover {
+  background-color: black;
+  transition: all .075s linear;
+}
+
+#utCat .teaserContent .eventInfo .cta:hover a {
+  color: white;
+  transition: all .075s linear;
+}
+
+#utCat .teaserContent .eventInfo .eventTitle {
+  font-size: 24px;
+  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 30px;
+}
+
+#utCat .teaserContent .eventInfo .eventTiming {
+  color: red;
+  font-size: 21px;
+  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 14px;
+}
+
+#utCat .teaserContent .divider {
+  width: 50%;
+  background-color: #dadada;
+  height: 1px;
+  margin: 30px auto;
+}
+
+#utCat .teaserContent h3.toggleSee {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  padding: 10px 20px;
+  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  background: white;
+  border: 3px solid black;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#utCat .teaserContent h3.toggleSee:hover {
+  color: white;
+  background: black;
+  transition: all 0.2s;
+}
+
+#utCat .teaserContent .seeMe {
+  display: none;
+}
+
+#utCat .teaserContent .teaserMovie {
+  margin: 30px auto;
+  display: block;
+  width: 85%;
+  height: 440px;
+}
+
+#utCat .teaserContent .products h4 {
+  text-align: center;
+  margin: 1em 0;
+  font-size: 32px;
+  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#utCat .teaserContent .products .productList {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 7.5%;
+  margin: -1% 0 0 -1%;
+}
+
+#utCat .teaserContent .productList .column {
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  width: calc(100% * (1/4) - 1%);
+  margin: 1% 0 0 1%;
+  padding: 1%;
+  box-sizing: border-box;
+  background-color: #f2f3f5;
+}
+
+#utCat .teaserContent .productDetail {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+#utCat .teaserContent .productName {
+  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+#utCat .teaserContent .productPrice {
+  font-size: 20px;
+  text-align: right;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.bio {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 85%;
+  margin: 0 auto;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  margin: 60px auto;
+}
+
+.gwp {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 85%;
+  margin: 0 auto;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  margin: 60px auto;
+}
+
+.bioCopy {
+  margin: auto 0 auto 4%;
+}
+
+.gwpCopy {
+  margin: auto 0 auto 4%;
+}
+
+.gwpCopy .title {
+  font-size: 24px;
+}
+
+.gwpCopy .sub {
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial;
+}
+
+.gwpCopy small {
+  display: block;
+  font-size: 11px;
+  margin-top: 10px;
+  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.flag {
+  background-color: #378694;
+  color: white;
+  display: inline-block;
+  padding: 1px 5px !important;
+  margin-bottom: 4px !important;
+  font-size: 14px;
+}
+
+.copy {
+  -ms-flex: 1;
+      flex: 1;
+  margin: auto 0 auto 25px;
+}
+
+.eventInfo {
+  text-align: center;
+  padding: 2em 0;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.eventInfo .eventDetails {
+  font-size: 18px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.eventInfo small {
+  font-size: 12px;
+}
+
+.available {
+  text-align: center;
+  padding: 2em 0;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.available small {
+  font-size: 12px;
+}
+
+.column img {
+  transition: opacity .25s linear;
+  -webkit-backface-visibility: hidden;
+  display: block;
+  padding: 4%;
+  background-color: #f2f3f5;
+  box-sizing: border-box;
+}
+
+.column img:hover {
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  opacity: .6;
+  transition: opacity .25s linear;
+}
+
+.productName {
+  -ms-flex: 50%;
+      flex: 50%;
+}
+
+.productPrice {
+  -ms-flex: 50%;
+      flex: 50%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.modal-bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(235, 235, 235, 0.8);
+}
+
+.modal-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  margin-left: -350px;
+  padding: 30px;
+  font-size: 0;
+  transform: translateY(-50%);
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  padding: 14px;
+  cursor: pointer;
+}
+
+.modal-close:before {
+  position: absolute;
+  top: 26px;
+  right: 12px;
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background-color: #000;
+  transform-origin: center center;
+  transform: rotate(45deg);
+}
+
+.modal-close:after {
+  position: absolute;
+  top: 26px;
+  right: 12px;
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background-color: #000;
+  transform-origin: center center;
+  transform: rotate(-45deg);
+}
+
+.productLogo {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+}
+
+.fa-chevron-left {
+  font-size: 30px;
+}
+
+.fa-chevron-right {
+  font-size: 30px;
+}
+
+#heroCaro {
+  max-width: 85%;
+  margin: 30px auto 0;
+  position: relative;
+}
+
+#heroCaro .owl-nav {
+  position: absolute;
+  width: 100%;
+  top: 41%;
+  transform: translateY(-50%);
+}
+
+#heroCaro .owl-nav button:first-child {
+  position: absolute;
+  left: -4.2%;
+}
+
+#heroCaro .owl-nav button:last-child {
+  position: absolute;
+  right: -4.2%;
+}
+
+#heroCaro .owl-theme .owl-nav .disabled {
+  background-color: inherit !important;
+  opacity: .35;
+}
+
+.owl-theme .owl-nav .disabled:hover {
+  color: inherit !important;
+}
+
+.owl-dots {
+  margin-top: 15px;
+}
+
+#primary .categorybreadcrumb {
+  margin: 10px auto 14px 19px;
+}
+
+#utCat {
+  background-image: url("https://uniqlo.scene7.com/is/image/UNIQLO/18FW_UT_KawsxSesameStreet_backgroundpattern");
+  background-size: 0.5 auto;
+  background-repeat: repeat;
+}
+
+.breadcrumb h1 {
+  background: #ffffff87;
+  padding: 5px;
+}
+
+.categorybreadcrumb h1 {
+  background: #ffffff87;
+  padding: 5px;
+}
+
+
+
+/* endCSSinject */
+</style>
+
+
+<!-- inject:theHTML:html -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<div id="utCat">
+    <div class='teaserContent'>
+        <div class='flexContainer'>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_DISCOVERYCHANNEL_00' alt='Discovery Channel' />
+            <div class='copy'>
+                <h1 style='text-transform:uppercase'>Discovery Channel</h1>
+                <p>The new KAWS x Sesame Street collaboration designed exclusively for UT. Limited-edition tees, hoodies and plush collectibles featuring the artist’s iconic take on your favorite childhood friends.</p>
+                <p style='color:#ababab; font-size:14px; margin-top:8px;'>© 2019& ™ Discovery Communications, LLC. All rights reserved.</p>
+            </div>
+        </div>
+        <div class='available'>
+            <p class='date'>Available Online + In Select Stores 1/28</p>
+            <p class='price'>Adults $14.90 | Kids $9.90 | Toddler $9.90</p>
+            <p class='disclaimer'>Product Availability</p>
+            <p class='disclaimerCopy'>
+                &middot; Collection unavailable at UNIQLO Disney Springs.
+                <br />&middot; Kids t-shirts only available at stores that feature kids collection.
+                <br />&middot; Plush Toy Complete Box is only available online + NY 5th Ave, Soho, 34th Street, IL Michigan Ave, CA Union Square, Beverly Center stores, and HI Ala Moana (Ewa Wing) stores.
+            </p>
+            <p class='disclaimer'>Online Purchase Limit Notice</p>
+            <p class='disclaimerCopy'>
+                &middot; Collection unavailable at UNIQLO Disney Springs.
+                <br />&middot; Kids t-shirts only available at stores that feature kids collection.
+                <br />&middot; Plush Toy Complete Box is only available online + NY 5th Ave, Soho, 34th Street, IL Michigan Ave, CA Union Square, Beverly Center stores, and HI Ala Moana (Ewa Wing) stores.
+            </p>
+            <p class='disclaimer'>Disclaimer 3</p>
+            <p class='disclaimerCopy'>
+                &middot; Collection unavailable at UNIQLO Disney Springs.
+                <br />&middot; Kids t-shirts only available at stores that feature kids collection.
+                <br />&middot; Plush Toy Complete Box is only available online + NY 5th Ave, Soho, 34th Street, IL Michigan Ave, CA Union Square, Beverly Center stores, and HI Ala Moana (Ewa Wing) stores.
+            </p>
+        </div>
+        <div class='gwp' style='max-width:65%'>
+            <img alt='test' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_66_413977?$prod$?$jpgMQ$&wid=145'>
+            <div class='gwpCopy'>
+                <p class='flag'>test</p>
+                <p class='title'>test</p>
+                <p class='sub'>test</p>
+                <small>test</small>
+            </div>
+        </div>
+        <h3 class="toggleSee">EXPLORE THE COLLECTION</h3>
+        <div class="seeMe">
+            <iframe class='teaserMovie' src='https://www.youtube.com/embed/3WQHDUYk310?rel=0&amp;controls=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen=''></iframe>
+            <iframe class='teaserMovie' src='https://www.youtube.com/embed/3WQHDUYk310?rel=0&amp;controls=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen=''></iframe>
+        </div>
+        <div id='heroCaro' class='owl-carousel owl-theme'>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 1'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <div class='divider'></div>
+            <div class='eventInfo'>
+                <p class='eventTitle'>fdas</p>
+                <p class='eventDetails'>fdas</p>
+                <p class='eventTiming'>fdas</p>
+                <small>fdas</small>
+                <div class='cta'>
+                    <a href='fdas' target='_blank'>fdas</a>
+                </div>
+            </div>
+            <div class='divider'></div>
+            <div class='eventInfo'>
+                <p class='eventTitle'>fdas</p>
+                <p class='eventDetails'>fdas</p>
+                <p class='eventTiming'>fdas</p>
+                <small>fdas</small>
+                <div class='cta'>
+                    <a href='fdas' target='_blank'>fdas</a>
+                </div>
+            </div>
+            <div class='divider'></div>
+        </div>
+    </div>
+</div>
+<div class='bio'>
+    <img alt='fdsa' src='#'>
+    <div class='bioCopy'>
+        <p class='title'>fdsa</p>
+        <p class='sub'>fda</p>
+        <small>Visit <a style='color:red' href='fdsa' target='_blank'>here</a> to learn more.</small>
+    </div>
+</div>
+<div class='bio'>
+    <img alt='fdsa' src='#'>
+    <div class='bioCopy'>
+        <p class='title'>fdsa</p>
+        <p class='sub'>fdas</p>
+        <small>Visit <a style='color:red' href='dfas' target='_blank'>here</a> to learn more.</small>
+    </div>
+</div>
+<div class='products'>
+    <h4 style='text-transform:uppercase'>Adults</h4>
+    <div class='productList'>
+    </div>
+    <div class='modal'>
+        <div class='modal-inner'>
+            <span class='modal-close js-modalClose'></span>
+            <div class='modalCarousel'>
+                <div id='navCarousel'></div>
+                <div id='slideCont'><img class='featuredSlide' /></div>
+            </div>
+            <div class='modal-bg js-modalClose'></div>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+    // $('#heroCaro').owlCarousel({
+    //     items: 2,
+    //     margin: 10,
+    //     nav: true,
+    //     navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
+    // });
+    $(".toggleSee").unbind('click').click(function() {
+        $(".seeMe").slideToggle();
+    });
+})
+</script>
+<!-- endHTMLinject -->
