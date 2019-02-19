@@ -127,7 +127,7 @@ gulp.task('injectCSS', function() {
 gulp.task('injectHTML', function() {
     return gulp.src('./app/target.html')
         // .pipe(inject(gulp.src(['./app/zero20180430_jeans.html']), {
-        .pipe(inject(gulp.src(['./app/catPage.html']), {
+        .pipe(inject(gulp.src(['./app/shopable.html']), {
             starttag: '<!-- inject:theHTML:html -->',
             endtag: '<!-- endHTMLinject -->',
             transform: function(filePath, file) {

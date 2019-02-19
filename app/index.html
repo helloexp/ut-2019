@@ -41,6 +41,13 @@
     
   </head>
   <body>
+
+
+    <div class="switcher">
+        <h3 class="landing">landing</h3>
+        <h3 class="shopable">shopable</h3>
+        <h3 class="carousels">carousels</h3>
+    </div>
     
   <div id="main">
       <div id="primary" class="primary-content">
@@ -48,6 +55,7 @@
       </div>
   </div>
     
+  <!-- <div id="holder"></div> -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
@@ -63,28 +71,25 @@
 
 
         $(function() {
-            $("#holder").load("catPage.html");
+            $("#holder").load("shopable.html");
+            // $("#holder").load("carousels.html");
+
+            $('.switcher .landing').click(function() {
+                $("#holder").load("landing.html");
+            })
+
+            $('.switcher .shopable').click(function() {
+                $("#holder").load("shopable.html");
+            })
+
+            $('.switcher .carousels').click(function() {
+                $("#holder").load("carousels.html");
+            })
 
         });
 
     </script>
 
-
-
-
-
-
-
-
-
-    <script>
-
-    $(function() {
-      
-
-    })
-
-    </script>
 
 
 
