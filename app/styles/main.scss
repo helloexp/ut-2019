@@ -26,20 +26,6 @@ $bgCol_9: inherit;
     margin: auto 15px auto 0;
 }
 
-#slideCont {
-    flex: 80%;
-}
-
-// .teaserHero {
-//     display: flex;
-//     margin-bottom: 30px;
-//     img {
-//         width: 100%;
-//         min-width: 0;
-//         align-self: center;
-//     }
-// }
-
 div#categoryspecific {
     display: none !important;
 }
@@ -48,21 +34,24 @@ div#categoryspecific {
     display: none !important;
 }
 
-.bottom_banner {
-    // display: none !important;
-}
+// .bottom_banner {
+//     display: none !important;
+// }
 
-#secondary {
-    // display: none !important;
-}
+// #secondary {
+//     display: none !important;
+// }
 
-#primary {
-    // width: 100% !important;
-}
+// #primary {
+//     width: 100% !important;
+// }
 
 #utCat {
     padding-top: 10px;
     padding-bottom: 10px;
+    background-image: url("https://uniqlo.scene7.com/is/image/UNIQLO/18FW_UT_KawsxSesameStreet_backgroundpattern");
+    background-size: 0.5 auto;
+    background-repeat: repeat;
     .teaserContent {
       overflow: hidden;
         max-width: 980px;
@@ -168,10 +157,15 @@ div#categoryspecific {
         }
         .bio {
             display: flex;
+            align-items: center;
             max-width: 85%;
             margin: 0 auto;
             flex-direction: row;
             margin: 45px auto;
+            img {
+                width: 145px;
+                height: auto;
+            }
         }
         .bioCopy {
             margin: auto 0 auto 25px;
@@ -286,19 +280,19 @@ div#categoryspecific {
             margin: 50px auto;
             background-color: $bgCol_4;
         }
+        .flag {
+            background-color: $bgCol_flag;
+            color: $color_1;
+            display: inline-block;
+            padding: 1px 5px !important;
+            margin-bottom: 4px !important;
+            font-size: 14px;
+        }
     }
 }
 
 
 
-.flag {
-    background-color: $bgCol_flag;
-    color: $color_1;
-    display: inline-block;
-    padding: 1px 5px !important;
-    margin-bottom: 4px !important;
-    font-size: 14px;
-}
 
 .copy {
     flex: 1;
@@ -344,23 +338,17 @@ div#categoryspecific {
     font-size: 30px;
 }
 
-#heroCaro {
-    max-width: 85%;
-    margin: 30px auto 0;
-    position: relative;
-}
-
 #primary {
     .categorybreadcrumb {
         margin: 10px auto 14px 19px;
     }
 }
 
-#utCat {
-    background-image: url("https://uniqlo.scene7.com/is/image/UNIQLO/18FW_UT_KawsxSesameStreet_backgroundpattern");
-    background-size: 0.5 auto;
-    background-repeat: repeat;
-}
+// #utCat {
+//     background-image: url("https://uniqlo.scene7.com/is/image/UNIQLO/18FW_UT_KawsxSesameStreet_backgroundpattern");
+//     background-size: 0.5 auto;
+//     background-repeat: repeat;
+// }
 
 .breadcrumb {
     h1 {

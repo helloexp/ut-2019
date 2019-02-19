@@ -45,8 +45,8 @@
 
     <div class="switcher">
         <h3 class="landing">landing</h3>
-        <h3 class="shopable">shopable</h3>
-        <h3 class="carousels">carousels</h3>
+        <h3 class="dskShopable">shopable</h3>
+        <h3 class="dskTeaser">dskTeaser</h3>
     </div>
     
   <div id="main">
@@ -71,15 +71,19 @@
 
 
         $(function() {
-            $("#holder").load("shopable.html");
+            $("#holder").load("dskTeaser.html");
             // $("#holder").load("carousels.html");
 
             $('.switcher .landing').click(function() {
                 $("#holder").load("landing.html");
             })
 
-            $('.switcher .shopable').click(function() {
-                $("#holder").load("shopable.html");
+            $('.switcher .dskShopable').click(function() {
+                $("#holder").load("dskShopable.html");
+            })
+
+            $('.switcher .dskTeaser').click(function() {
+                $("#holder").load("dskTeaser.html");
             })
 
             $('.switcher .carousels').click(function() {
