@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <div id='utLanding'>
     <section id='utHero'>
         <div id='utCaroMain' class='utCarousel'>
@@ -71,7 +72,11 @@
     <section id='utCollection'>
         <h2>Shop By Collection</h2>
         <article>
-            <img class='utColHdr' src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_category_buttons_MagicForAll' alt='UT Collection Disney' />
+            <!-- <img class='utColHdr' src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_category_buttons_MagicForAll' alt='UT Collection Disney' /> -->
+            <div class="utColHdr">
+                <h3 class="utHdrTitle">Art</h3>
+                <div class="utHdrHandle"><i class="fas fa-angle-down"></i></div>
+            </div>
             <div class='utColHidn'>
                 <h3 class='utColTitle'>SPRZ NY</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id leo et ante tincidunt cursus.</p>
@@ -160,6 +165,12 @@ $(function() {
 
     $('.utColHdr').click(function() {
         $('.utColHidn').slideToggle('slow')
+    })
+
+
+    $('.utColHdr').click(function() {
+        console.log('fired');
+        $('.utColHdr .fa-angle-down').toggleClass('rotated');
     })
 
 
