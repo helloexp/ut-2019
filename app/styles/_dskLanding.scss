@@ -7,6 +7,7 @@ $fontFam_hel: "Helvetica Neue",
 Helvetica,
 Arial,
 sans-serif;
+$colComing: #378694;
 $colWomen: red;
 $colMen: #020d80;
 $colKids: #4fb3ef;
@@ -27,7 +28,7 @@ $colBaby: #98c800;
         // margin-top: 100px;
         position: relative;
         padding: 25px 20px;
-        background: rgba(0,0,0,0.7);
+        background: rgba(0, 0, 0, 0.7);
         overflow: hidden;
         &::after {
             content: '';
@@ -38,7 +39,7 @@ $colBaby: #98c800;
             bottom: 0;
             right: 0;
             position: absolute;
-            z-index: -1;  
+            z-index: -1;
         }
     }
     #utCaroMain {
@@ -96,7 +97,7 @@ $colBaby: #98c800;
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(255,255,255,0.7);
+                background: rgba(255, 255, 255, 0.7);
                 transition: all 0.5s;
             }
         }
@@ -114,7 +115,7 @@ $colBaby: #98c800;
             background: white;
             transition: all 0.7s;
             .utTileOver {
-                background: rgba(255,255,255,0);
+                background: rgba(255, 255, 255, 0);
                 transition: all 0.3s;
             }
         }
@@ -174,10 +175,10 @@ $colBaby: #98c800;
     }
     #utCollection {
         h2 {
-            padding: 50px 0 40px;
-            // font-size: 43px;
+            padding: 50px 0 40px; // font-size: 43px;
             font-weight: 700;
             text-align: center;
+            overflow: hidden;
         }
         article {
             .utColHdr {
@@ -185,7 +186,10 @@ $colBaby: #98c800;
                 border: 1px solid lightgray;
             }
             .utColHidn {
-                padding: 40px 20px;
+                position: relative;
+                margin: 40px 20px;
+                overflow: hidden;
+                display: none;
                 hr {
                     height: 2px;
                     border: 0;
@@ -198,7 +202,6 @@ $colBaby: #98c800;
                     font-size: 46px;
                 }
             }
-
             p {
                 font-family: $fontFam_hel;
                 font-size: 21px;
@@ -210,9 +213,11 @@ $colBaby: #98c800;
                 margin: 0 -10px;
                 .utOneTile {
                     flex-basis: 25%;
+                    margin-bottom: 60px;
                     padding: 10px;
-                &.3col{
-                    flex-basis: 33.33333%;
+                    // white-space: pre-line;
+                    &.3col {
+                        flex-basis: 33.33333%;
                     }
                 }
                 h3 {
@@ -223,18 +228,29 @@ $colBaby: #98c800;
                 }
                 h4 {
                     display: inline-block;
-                    margin: 10px 0 5px;
+                    margin: 10px 1px 5px;
                     padding: 3px 10px;
                     font-family: $fontFam_uqReg;
                     font-size: 15px;
                     color: white;
                     text-transform: uppercase;
                     background: black;
+                    &.utFlagCom {
+                        display: table;
+                        margin-bottom: -5px;
+                        background: $colComing;
+                    }
                     &.utFlagM {
                         background: $colMen;
                     }
                     &.utFlagW {
                         background: $colWomen;
+                    }
+                    &.utFlagK {
+                        background: $colKids;
+                    }
+                    &.utFlagB {
+                        background: $colBaby;
                     }
                 }
             }
