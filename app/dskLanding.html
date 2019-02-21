@@ -74,7 +74,10 @@
         <article>
             <!-- <img class='utColHdr' src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_category_buttons_MagicForAll' alt='UT Collection Disney' /> -->
             <div class="utColHdr">
-                <h3 class="utHdrTitle">Art</h3>
+                <div class="utColMain">
+                    <img class="utHdrIcon" src="http://uniqlo.scene7.com/is/image/UNIQLO/art_culture_2019?$png$" alt="art and cultrue icon"  />
+                    <h3 class="utHdrTitle">Art</h3>
+                </div>
                 <div class="utHdrHandle"><i class="fas fa-angle-down"></i></div>
             </div>
             <div class='utColHidn'>
@@ -125,6 +128,24 @@
                 </div>
             </div>
         </article>
+        <article>
+            <div class="utColHdr">
+                <div class="utColMain">
+                    <img class="utHdrIcon" src="http://uniqlo.scene7.com/is/image/UNIQLO/art_culture_2019?$png$" alt="art and cultrue icon"  />
+                    <h3 class="utHdrTitle">Characters</h3>
+                </div>
+                <div class="utHdrHandle"><i class="fas fa-angle-down"></i></div>
+            </div>
+        </article>
+        <article>
+            <div class="utColHdr">
+                <div class="utColMain">
+                    <img class="utHdrIcon" src="http://uniqlo.scene7.com/is/image/UNIQLO/art_culture_2019?$png$" alt="art and cultrue icon"  />
+                    <h3 class="utHdrTitle">Manga/Anime/Games</h3>
+                </div>
+                <div class="utHdrHandle"><i class="fas fa-angle-down" style="color: white;"></i></div>
+            </div>
+        </article>
     </section>
 </div>
 <script>
@@ -164,13 +185,8 @@ $(function() {
 
 
     $('.utColHdr').click(function() {
-        $('.utColHidn').slideToggle('slow')
-    })
-
-
-    $('.utColHdr').click(function() {
-        console.log('fired');
-        $('.utColHdr .fa-angle-down').toggleClass('rotated');
+        $(this).next('.utColHidn').slideToggle('slow')
+        $('.fa-angle-down', this).toggleClass('rotated')
     })
 
 

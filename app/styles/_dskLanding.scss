@@ -16,6 +16,9 @@ $colBaby: #98c800;
     * {
         box-sizing: border-box;
     }
+    img {
+        display: block;
+    }
     h2 {
         font-family: $fontFam_uqReg;
         font-size: 50px;
@@ -70,7 +73,7 @@ $colBaby: #98c800;
             transform: scale(0.75);
             transition: all 0.5s;
         }
-        .slick-slide.slick-current {
+        .slick-slide.slick-center {
             transform: scale(2.25);
             transition: all 0.5s;
             .utReleaseMsg {
@@ -124,9 +127,16 @@ $colBaby: #98c800;
         display: flex;
         justify-content: space-between;
         width: 100%;
+        margin: 10px 0px 0 0;
+        a {
+            flex-grow: 1;
+            flex-basis: 25%;
+            // width: 25%;
+            padding: 10px;
+        }
         h3 {
-            min-width: 295px;
-            margin-top: 17px;
+            width: 100%;
+            // margin: 17px 17px 0;
             padding: 14px 40px 15px;
             font-family: $fontFam_hel;
             font-size: 18px;
@@ -181,20 +191,42 @@ $colBaby: #98c800;
             overflow: hidden;
         }
         article {
+            margin-bottom: 30px;
             .utColHdr {
                 position: relative;
                 width: 100%;
                 height: 16vw;
+                color: white;
                 cursor: pointer;
                 border: 1px solid lightgray;
                 border: 3px solid black;
-                .utHdrTitle {
+                background: black;
+                transition: all 0.4s;
+                &:hover {
+                    background: #4b4b4b;
+                    transition: all 0.4s;
+                    .utHdrTitle {
+                        color: white;
+                        transition: all 0.4s;
+                    }
+                }
+                .utColMain {
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    font-size: 70px;
+                }
+                .utHdrIcon {
+                    width: 83px;
+                    margin: 0 auto;
+                }
+                .utHdrTitle {
+                    margin-top: 10px;
+                    font-size: 36px;
+                    letter-spacing: 3px;
+                    text-align: center;
                     text-transform: uppercase;
+                    transition: all 0.4s;
                 }
                 .fa-angle-down {
                     position: absolute;
@@ -203,16 +235,16 @@ $colBaby: #98c800;
                     transform: translateY(-50%) rotate(0deg);
                     font-size: 65px;
                     line-height: 0;
-                    transition: all 0.3s;
-                }
-                .fa-angle-down.rotated {
-                    transform: rotate(180deg);
-                    transition: all 0.3s;
+                    transition: all 0.5s;
+                    &.rotated {
+                        transform: rotate(180deg);
+                        transition: all 0.5s;
+                    }
                 }
             }
             .utColHidn {
                 position: relative;
-                margin: 40px 20px;
+                margin: 40px 20px !important;
                 overflow: hidden;
                 display: none;
                 hr {
@@ -279,12 +311,17 @@ $colBaby: #98c800;
                     }
                 }
             }
+            // Temp Styling
+            // 
+            img {
+                // width: 100%;
+            }
         }
     }
 }
 
 button.slick-arrow {
-    top: 63%;
+    top: 65%;
     z-index: 1;
 }
 
