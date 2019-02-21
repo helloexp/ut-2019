@@ -1,0 +1,439 @@
+#utCat.utTease {
+    .teaserContent {
+        margin: 40px auto;
+    }
+}
+
+
+
+.modalCarousel {
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#navCarousel {
+    flex: 20%;
+    margin: auto 15px auto 0;
+}
+
+#slideCont {
+    flex: 80%;
+}
+
+.modalCarousel .slick-slide {
+    margin: 10px 0;
+}
+
+.modalCarousel .slick-list {
+    margin: -10px 0;
+}
+
+.modalCarousel .slick-current {
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.modalCarousel .slick-next {
+    left: 50%;
+    bottom: -15% !important;
+    top: initial !important;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.modalCarousel .slick-prev {
+    left: 50% !important;
+    top: -15% !important;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.teaserHero {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.teaserHero img {
+    width: 100%;
+    min-width: 0;
+    align-self: center;
+}
+
+div#categoryspecific,
+.search-promo,
+.bottom_banner,
+#secondary {
+    display: none !important;
+}
+
+#primary {
+    // width: 100% !important;
+}
+
+.teaserContent {
+    margin: 40px auto;
+    max-width: 980px;
+    background-color: white;
+    padding: 24px;
+}
+
+.flexContainer,
+.bio,
+.gwp {
+    display: flex;
+    max-width: 85%;
+    margin: 0 auto;
+    flex-direction: row;
+}
+
+.bio,
+.gwp {
+    margin: 60px auto;
+}
+
+.bioCopy,
+.gwpCopy {
+    margin: auto 0 auto 4%;
+}
+
+.teaserContent .bioCopy .title,
+.gwpCopy .title {
+    font-size: 24px;
+}
+
+.teaserContent .bioCopy .sub,
+.gwpCopy .sub {
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Helvetica, Arial;
+}
+
+// .teaserContent .bioCopy small,
+// .gwpCopy small {
+//     display: block;
+//     font-size: 11px;
+//     margin-top: 10px;
+//     font-family: 'Helvetica Neue', Helvetica, Arial;
+// }
+
+.flag {
+    background-color: #378694;
+    color: white;
+    display: inline-block;
+    padding: 1px 5px !important;
+    margin-bottom: 4px !important;
+    font-size: 14px;
+}
+
+.flexContainer img {
+    width: 330px;
+    height: 100%;
+}
+
+.copy {
+    flex: 1;
+    margin: auto 0 auto 25px;
+}
+
+.teaserContent .copy h1 {
+    font-size: 34px;
+    margin-bottom: .45em;
+    color: black;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.teaserContent .available .disclaimer {
+    font-size: 14px;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+.teaserContent .available .disclaimerCopy {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.teaserContent .copy p,
+.eventInfo .eventDetails {
+    font-size: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.teaserContent .eventInfo .eventDetails {
+    margin: 14px 0;
+}
+
+.teaserContent .eventInfo .cta {
+    margin: 14px auto;
+    border: 2px solid black;
+    text-align: center;
+    width: 150px;
+}
+
+.teaserContent .eventInfo .cta a {
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    padding: 8px 0;
+    display: block;
+}
+
+.teaserContent .eventInfo .cta:hover {
+    background-color: black;
+    transition: all .075s linear;
+}
+
+.teaserContent .eventInfo .cta:hover a {
+    color: white;
+    transition: all .075s linear;
+}
+
+// .available,
+// .eventInfo {
+//     text-align: center;
+//     padding: 2em 0;
+//     max-width: 85%;
+//     margin: 0 auto;
+// }
+
+.teaserContent .available .date {
+    color: red;
+    font-size: 24px;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 30px;
+}
+
+.teaserContent .eventInfo .eventTitle {
+    font-size: 24px;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 30px;
+}
+
+.teaserContent .eventInfo .eventTiming {
+    color: red;
+    font-size: 21px;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 14px;
+}
+
+.teaserContent .available .price {
+    font-size: 21px;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: .75em 0;
+}
+
+// .available small,
+// .eventInfo small {
+//     font-size: 12px;
+// }
+
+.teaserContent .divider {
+    width: 50%;
+    background-color: #dadada;
+    height: 1px;
+    margin: 30px auto;
+}
+
+.teaserContent .teaserMovie {
+    margin: 30px auto;
+    display: block;
+    width: 85%;
+    height: 440px;
+}
+
+.teaserContent .products h4 {
+    text-align: center;
+    margin: 1em 0;
+    font-size: 32px;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.teaserContent .products .productList {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 7.5%;
+    margin: -1% 0 0 -1%;
+}
+
+.teaserContent .productList .column {
+    flex-grow: 0;
+    width: calc(100% * (1/4) - 1%);
+    margin: 1% 0 0 1%;
+    padding: 1%;
+    box-sizing: border-box;
+    background-color: #f2f3f5;
+}
+
+.column img {
+    transition: opacity .25s linear;
+    backface-visibility: hidden;
+    display: block;
+    padding: 4%;
+    background-color: #f2f3f5;
+    box-sizing: border-box;
+}
+
+.teaserContent .productDetail {
+    display: flex;
+    margin: 10px 0;
+}
+
+.productName,
+.productPrice {
+    flex: 50%;
+}
+
+.teaserContent .productName {
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+.teaserContent .productPrice {
+    font-size: 20px;
+    text-align: right;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.column img:hover {
+    cursor: pointer;
+    backface-visibility: hidden;
+    opacity: .6;
+    transition: opacity .25s linear;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.modal-bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(235, 235, 235, 0.8);
+}
+
+.modal-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 700px;
+    margin-left: -350px;
+    padding: 30px;
+    font-size: 0;
+    transform: translateY(-50%);
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.modal-close:before,
+.modal-close:after {
+    position: absolute;
+    top: 26px;
+    right: 12px;
+    content: '';
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: #000;
+    transform-origin: center center;
+}
+
+.modal-close:before {
+    transform: rotate(45deg);
+}
+
+.modal-close:after {
+    transform: rotate(-45deg);
+}
+
+.productLogo {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    font-size: 30px;
+}
+
+#heroCaro {
+    max-width: 85%;
+    margin: 30px auto 0;
+    position: relative;
+}
+
+#heroCaro .owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 41%;
+    transform: translateY(-50%);
+}
+
+#heroCaro .owl-nav button:first-child {
+    position: absolute;
+    left: -4.2%;
+}
+
+#heroCaro .owl-nav button:last-child {
+    position: absolute;
+    right: -4.2%;
+}
+
+#heroCaro .owl-theme .owl-nav .disabled {
+    background-color: inherit !important;
+    opacity: .35;
+}
+
+.owl-theme .owl-nav .disabled:hover {
+    color: inherit !important;
+}
+
+.owl-dots {
+    margin-top: 15px;
+}
+#main {
+    background-image: url('//uniqlo.scene7.com/is/image/UNIQLO/18FW_UT_KawsxSesameStreet_backgroundpattern');
+    background-size: 50% auto;
+    background-repeat: repeat;
+}
+#main .categorybreadcrumb {
+    margin: 10px auto 14px 19px;
+}
+.breadcrumb h1, .categorybreadcrumb h1 {
+    background: #ffffff87;
+    padding: 5px;
+}
+button.slick-arrow {
+    top: 50%;
+    &.slick-prev {
+        &:hover,
+        &:focus {
+            opacity: 0.5;
+            background: url(https://www.uniqlo.com/na-static/on/demandware.static/Sites-UniqloUS-Site/-/default/v1504016526668/images/sprite-uniqlo.png) -96px -733px no-repeat;
+        }
+    }
+    &.slick-next {
+        &:hover,
+        &:focus {
+            opacity: 0.5;
+            background: url(https://www.uniqlo.com/na-static/on/demandware.static/Sites-UniqloUS-Site/-/default/v1504016526668/images/sprite-uniqlo.png) -102px -819px no-repeat;
+        }
+    }
+}

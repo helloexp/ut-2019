@@ -48,12 +48,12 @@
         <h3 class="dskShopable">shopable</h3>
         <h3 class="dskTeaser">dskTeaser</h3>
     </div>
-    
-  <div id="main">
-      <div id="primary" class="primary-content">
-          <div id="holder"></div>
-      </div>
-  </div>
+
+    <div class="pt_storefront content-homepage">
+        <div id="main">
+                <div id="holder"></div>
+        </div>
+    </div>
     
   <!-- <div id="holder"></div> -->
 
@@ -73,13 +73,13 @@
         $(function() {
             
             // 
-            $("#holder").load("dskShopYabe.html");
+            $("#holder").load("dskLanding.html");
             // 
 
 
 
             $('.switcher .landing').click(function() {
-                $("#holder").load("landing.html");
+                $("#holder").load("dskLanding.html");
             })
 
             $('.switcher .dskShopable').click(function() {

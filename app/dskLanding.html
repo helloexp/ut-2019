@@ -1,0 +1,106 @@
+<div id="utLanding">
+    <section id="utHero">
+        <div id="utCaroMain" class="utCarousel">
+            <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_022119_01?$jpgMQ$" alt="ZZZ" />
+            <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_022119_01?$jpgMQ$" alt="ZZZ" />
+            <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_022119_01?$jpgMQ$" alt="ZZZ" />
+            <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_022119_01?$jpgMQ$" alt="ZZZ" />
+            <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_022119_01?$jpgMQ$" alt="ZZZ" />
+        </div>
+        <div class="utBelowCaro">
+            <div class="utReleaseMsg">
+                <h3><span>Coming Soon!</span> Peanuts</h3>
+                <h4>Available on 3/18 Online and in Stores | Adults + Kids</h4>
+            </div>
+        </div>
+        <div id="utCaroSmall" class="utCarouselNav">
+            <div class="utTileWrapper">
+                <div class="utTileOver"></div>
+                <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_01" alt="ZZZ" />
+            </div>
+            <div class="utTileWrapper">
+                <div class="utTileOver"></div>
+                <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_01" alt="ZZZ" />
+            </div>
+            <div class="utTileWrapper">
+                <div class="utTileOver"></div>
+                <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_01" alt="ZZZ" />
+            </div>
+            <div class="utTileWrapper">
+                <div class="utTileOver"></div>
+                <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_01" alt="ZZZ" />
+            </div>
+            <div class="utTileWrapper">
+                <div class="utTileOver"></div>
+                <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_01" alt="ZZZ" />
+            </div>
+        </div>
+    </section>
+    <section id="utGenNav">
+        <a href="zzz"><h3 class="utNavA">SHOP ADULT</h3></a>
+        <a href="zzz"><h3 class="utNavW">SHOP WOMEN</h3></a>
+        <a href="zzz"><h3 class="utNavK">SHOP KIDS</h3></a>
+        <a href="zzz"><h3 class="utNavB">SHOP BABY</h3></a>
+    </section>
+    <section id="utCollection">
+        <h2>Shop By Collection</h2>
+        <article>
+            <img class="utColHdr" src="https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_category_buttons_MagicForAll" alt="UT Collection Disney" />
+            <div class="utColHidn">
+                <h3>SPRZ NY</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id leo et ante tincidunt cursus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id leo et ante tincidunt cursus. Aliquam sit amet urna vestibulum, eleifend velit eu, placerat erat.</p>
+                <hr />
+                <div class="utProdTiles">
+                    <div class="utOneTile">
+                        <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_01" alt="ZZZ" />
+                        
+                    </div>
+                    <div class="utOneTile">
+                        <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_01" alt="ZZZ" />
+                    </div>
+                    <div class="utOneTile">
+                        <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_01" alt="ZZZ" />
+                    </div>
+                    <div class="utOneTile">
+                        <img src="https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_01" alt="ZZZ" />
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+</div>
+<script>
+$(function() {
+    $('#utCaroMain').slick({
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        // autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: true,
+        dots: false,
+        asNavFor: '#utCaroSmall'
+    });
+
+
+    var smallSlideWidth = $('#utCaroSmall .slide').outerWidth()
+    $('#utCaroSmall').slick({
+        slidesToShow: 5,
+        slidesToScroll: 0,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        asNavFor: '#utCaroMain'
+    });
+
+
+    // Positioning hero to account for the scaling of the main slide
+    // 
+    var caroSlideHt = $('#utLanding #utCaroMain .slick-slide').height() / 2
+    $('#utLanding #utCaroMain').css('padding-top', caroSlideHt);
+    $('.utBelowCaro').css('padding-top', caroSlideHt)
+
+
+})
+</script>
