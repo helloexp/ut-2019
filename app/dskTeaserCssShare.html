@@ -1,0 +1,411 @@
+<style>
+#utLanding {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#utLanding * {
+    box-sizing: border-box;
+}
+
+#utLanding img {
+    display: block;
+}
+
+#utLanding h2 {
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+}
+
+#utLanding h3 {
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#utLanding #utHero {
+    position: relative;
+    padding: 25px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+#utLanding #utHero::after {
+    content: '';
+    background: url("https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_UT_pattern?$png$");
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#utLanding #utCaroMain {
+    margin: 0 -70px;
+}
+
+#utLanding #utCaroMain .utReleaseMsg {
+    margin-top: 7px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#utLanding #utCaroMain .utReleaseMsg h3 {
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+#utLanding #utCaroMain .utReleaseMsg h3 span {
+    font-weight: 500;
+}
+
+#utLanding #utCaroMain .utReleaseMsg h4 {
+    font-size: 9px;
+}
+
+#utLanding #utCaroMain .slick-list {
+    overflow: visible;
+    padding: 0 !important;
+}
+
+#utLanding #utCaroMain .slick-slide {
+    margin: 0 80px;
+    transform: scale(0.75);
+    transition: all 0.5s;
+}
+
+#utLanding #utCaroMain .slick-slide.slick-center {
+    transform: scale(2.25);
+    transition: all 0.5s;
+}
+
+#utLanding #utCaroMain .slick-slide.slick-center .utReleaseMsg {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+#utLanding #utCaroMain button.slick-prev {
+    left: 60px;
+}
+
+#utLanding #utCaroMain button.slick-next {
+    right: 60px;
+}
+
+#utLanding #utCaroSmall {
+    width: calc(55% + 5px);
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+#utLanding #utCaroSmall .utTileWrapper {
+    position: relative;
+}
+
+#utLanding #utCaroSmall .utTileWrapper .utTileOver {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 0.5s;
+}
+
+#utLanding #utCaroSmall .slick-slide {
+    margin: 0 10px;
+    transition: all 0.7s;
+}
+
+#utLanding #utCaroSmall .slick-slide.slick-current {
+    background: white;
+    transition: all 0.7s;
+}
+
+#utLanding #utCaroSmall .slick-slide.slick-current .utTileOver {
+    background: rgba(255, 255, 255, 0);
+    transition: all 0.3s;
+}
+
+#utLanding #utGenNav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0px 0 0;
+}
+
+#utLanding #utGenNav a {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+#utLanding #utGenNav h3 {
+    width: 100%;
+    padding: 14px 40px 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    border: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+#utLanding #utGenNav h3.utNavM {
+    background: #020d80;
+}
+
+#utLanding #utGenNav h3.utNavM:hover {
+    color: #020d80;
+    border: 3px solid #020d80;
+    background: white;
+    transition: all 0.3s;
+}
+
+#utLanding #utGenNav h3.utNavW {
+    background: red;
+}
+
+#utLanding #utGenNav h3.utNavW:hover {
+    color: red;
+    border: 3px solid red;
+    background: white;
+    transition: all 0.3s;
+}
+
+#utLanding #utGenNav h3.utNavK {
+    background: #4fb3ef;
+}
+
+#utLanding #utGenNav h3.utNavK:hover {
+    color: #4fb3ef;
+    border: 3px solid #4fb3ef;
+    background: white;
+    transition: all 0.3s;
+}
+
+#utLanding #utGenNav h3.utNavB {
+    background: #98c800;
+}
+
+#utLanding #utGenNav h3.utNavB:hover {
+    color: #98c800;
+    border: 3px solid #98c800;
+    background: white;
+    transition: all 0.3s;
+}
+
+#utLanding #utCollection h2 {
+    padding: 50px 0 40px;
+    font-weight: 700;
+    text-align: center;
+    overflow: hidden;
+}
+
+#utLanding #utCollection article {
+    margin-bottom: 30px;
+}
+
+#utLanding #utCollection article .utColHdr {
+    position: relative;
+    width: 100%;
+    height: 16vw;
+    color: white;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border: 3px solid black;
+    background: black;
+    transition: all 0.4s;
+}
+
+#utLanding #utCollection article .utColHdr:hover {
+    background: #4b4b4b;
+    transition: all 0.4s;
+}
+
+#utLanding #utCollection article .utColHdr:hover .utHdrTitle {
+    color: white;
+    transition: all 0.4s;
+}
+
+#utLanding #utCollection article .utColHdr .utColMain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#utLanding #utCollection article .utColHdr .utHdrIcon {
+    width: 83px;
+    margin: 0 auto;
+}
+
+#utLanding #utCollection article .utColHdr .utHdrTitle {
+    margin-top: 10px;
+    font-size: 36px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.4s;
+}
+
+#utLanding #utCollection article .utColHdr .utHdrHandle {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 40px;
+}
+
+#utLanding #utCollection article .utColHdr .utHdrHandle img {
+    transform: rotate(0deg);
+    transform-origin: 20px 20px;
+    transition: all 0.6s;
+}
+
+#utLanding #utCollection article .utColHdr .utHdrHandle img.rotated {
+    transform: rotate(180deg);
+    transform-origin: 20px 20px;
+    transition: all 0.6s;
+}
+
+#utLanding #utCollection article .utColHdr .utHdrHandle img {
+    width: 100%;
+}
+
+#utLanding #utCollection article .utColHdr .fa-angle-down {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%) rotate(0deg);
+    font-size: 65px;
+    line-height: 0;
+    transition: all 0.5s;
+}
+
+#utLanding #utCollection article .utColHdr .fa-angle-down.rotated {
+    transform: rotate(180deg);
+    transition: all 0.5s;
+}
+
+#utLanding #utCollection article .utColHidn {
+    position: relative;
+    margin: 40px 20px !important;
+    overflow: hidden;
+    display: none;
+}
+
+#utLanding #utCollection article .utColHidn hr {
+    height: 2px;
+    border: 0;
+    background: black;
+    margin: 40px 0 60px;
+}
+
+#utLanding #utCollection article h3.utColTitle {
+    font-size: 46px;
+}
+
+#utLanding #utCollection article p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 21px;
+}
+
+#utLanding #utCollection article .utProdTiles {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+#utLanding #utCollection article .utProdTiles .utOneTile {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    margin-bottom: 60px;
+    padding: 10px;
+}
+
+#utLanding #utCollection article .utProdTiles .utOneTile.3col {
+    -ms-flex-preferred-size: 33.33333%;
+    flex-basis: 33.33333%;
+}
+
+#utLanding #utCollection article .utProdTiles h3 {
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+#utLanding #utCollection article .utProdTiles h4 {
+    display: inline-block;
+    margin: 10px 1px 5px;
+    padding: 3px 10px;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    background: black;
+}
+
+#utLanding #utCollection article .utProdTiles h4.utFlagCom {
+    display: table;
+    margin-bottom: -5px;
+    background: #378694;
+}
+
+#utLanding #utCollection article .utProdTiles h4.utFlagM {
+    background: #020d80;
+}
+
+#utLanding #utCollection article .utProdTiles h4.utFlagW {
+    background: red;
+}
+
+#utLanding #utCollection article .utProdTiles h4.utFlagK {
+    background: #4fb3ef;
+}
+
+#utLanding #utCollection article .utProdTiles h4.utFlagB {
+    background: #98c800;
+}
+
+#utLanding #utCollection .copyright {
+    float: left;
+    width: 66%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #4b4b4b;
+    text-align: left;
+    background: none;
+}
+
+button.slick-arrow {
+    top: 65%;
+    z-index: 1;
+}
+
+button.slick-prev,
+button.slick-arrow.slick-prev:hover,
+button.slick-arrow.slick-prev:focus {
+    width: 15px;
+    height: 69px;
+    background: url(https://www.uniqlo.com/na-static/on/demandware.static/Sites-UniqloUS-Site/-/default/v1504016526668/images/sprite-uniqlo.png) -97px -727px no-repeat;
+}
+
+button.slick-next,
+button.slick-arrow.slick-next:hover,
+button.slick-arrow.slick-next:focus {
+    width: 15px;
+    height: 69px;
+    background: url(https://www.uniqlo.com/na-static/on/demandware.static/Sites-UniqloUS-Site/-/default/v1504016526668/images/sprite-uniqlo.png) -108px -819px no-repeat;
+}
+</style>
