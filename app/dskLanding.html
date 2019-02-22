@@ -210,12 +210,15 @@ $(function() {
     // 
     $('#utCaroMain').slick({
         centerMode: true,
+        centerPadding: '60px',
         slidesToShow: 3,
         slidesToScroll: 1,
         // autoplay: true,
         autoplaySpeed: 5000,
         arrows: true,
         dots: false,
+        useTransform: true,
+        cssEase: 'ease',
         asNavFor: '#utCaroSmall'
     });
 
@@ -224,14 +227,10 @@ $(function() {
     // Small, supporting carousel which highlights 
     // current slide shown in the carousel above
     // 
-    var smallSlideWidth = $('#utCaroSmall .slide').outerWidth()
     $('#utCaroSmall').slick({
         slidesToShow: 5,
-        slidesToScroll: 0,
         arrows: false,
-        dots: false,
-        infinite: true,
-        asNavFor: '#utCaroMain'
+        dots: false
     });
 
 
