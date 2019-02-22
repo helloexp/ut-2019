@@ -26,6 +26,10 @@ img {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 #utLanding.mobLanding {
     * {
         box-sizing: border-box;
@@ -36,7 +40,7 @@ img {
     }
     h2 {
         font-family: $fontFam_uqReg;
-        font-size: 30px;
+        font-size: 25px;
     }
     h3 {
         font-family: $fontFam_uqReg;
@@ -57,6 +61,7 @@ img {
     .utReleaseMsg {
         width: 100%;
         margin-top: 7px;
+        // margin-bottom: 10px;
         color: black;
         text-align: center;
         h3 {
@@ -67,6 +72,7 @@ img {
             }
         }
         h4 {
+            margin-bottom: 20px;
             font-size: 13px;
         }
     }
@@ -116,6 +122,9 @@ img {
     .utMainImgWrp {
         position: relative;
 
+    }
+    .slick-dots {
+        bottom: -5px;
     }
     .utMainCta {
         visibility: hidden;
@@ -171,13 +180,13 @@ img {
         }
     }
     .utReleaseMsg {
-        transform: translateX(-13%);
-        width: 135%;
+        // transform: translateX(-13%);
+        // width: 135%;
         margin-top: 7px;
         color: white;
         text-align: center;
-        opacity: 0;
-        transition: opacity 0.5s;
+        // opacity: 0;
+        // transition: opacity 0.5s;
         h3 {
             font-size: 10px;
             text-transform: uppercase;
@@ -191,7 +200,7 @@ img {
     }
     .slick-list {
         overflow: visible;
-        padding: 0 !important;
+        padding: 0 0 10px !important;
     }
     .slick-slide {
         margin: 0 80px;
@@ -216,7 +225,7 @@ img {
 #utGenNav {
     display: block;
     width: 100%;
-    margin: 10px 0px 0 0;
+    margin: 30px 0px 0 0;
     * {
         box-sizing: border-box;
     }
@@ -278,6 +287,7 @@ img {
     }
 }
 #utCollection {
+    margin-top: 25px;
     * {
         box-sizing: border-box;
     }
@@ -359,11 +369,11 @@ img {
         }
         h3 {
             &.utColTitle {
-                font-size: 32px;
+                font-size: 20px;
             }
         }
         p {
-            font-size: 18px;
+            font-size: 15px;
         }
         .utProdTiles {
             display: flex;
@@ -431,9 +441,10 @@ img {
                 }
             }
             h3 {
+                margin: 5px 0;
                 // padding-bottom: 10px;
                 // font-family: $fontFam_uqReg;
-                font-size: 20px;
+                font-size: 15px;
                 text-transform: uppercase;
             }
             h4 {
@@ -442,13 +453,13 @@ img {
                 margin: 0 1px 5px 0;
                 padding: 3px 10px;
                 // font-family: $fontFam_uqReg;
-                font-size: 15px;
+                font-size: 13px;
                 color: white;
                 text-transform: uppercase;
                 background: black;
                 &.utFlagCom {
                     display: table;
-                    margin-bottom: -5px;
+                    // margin-bottom: -5px;
                     background: $colComing;
                 }
                 &.utFlagM {
@@ -465,19 +476,16 @@ img {
                 }
             }
         }
-        // Temp Styling
-        // 
-        img {
-            // width: 100%;
-        }
     }
 }
 .copyright {
     float: left;
     width: 100%;
+    padding: 10px;
     // font-family: $fontFam_hel;
     font-size: 10px;
     color: darkgray;
+    line-height: 1em;
     text-align: left;
     background: none;
 }

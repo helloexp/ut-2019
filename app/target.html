@@ -12,6 +12,10 @@ img {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 #utLanding.mobLanding * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -23,7 +27,7 @@ img {
 
 #utLanding.mobLanding h2 {
   font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 #utLanding.mobLanding h3 {
@@ -62,6 +66,7 @@ img {
 }
 
 #utLanding.mobLanding .utReleaseMsg h4 {
+  margin-bottom: 20px;
   font-size: 13px;
 }
 
@@ -115,6 +120,10 @@ img {
 
 #utCaroMain .utMainImgWrp {
   position: relative;
+}
+
+#utCaroMain .slick-dots {
+  bottom: -5px;
 }
 
 #utCaroMain .utMainCta {
@@ -177,13 +186,9 @@ img {
 }
 
 #utCaroMain .utReleaseMsg {
-  transform: translateX(-13%);
-  width: 135%;
   margin-top: 7px;
   color: white;
   text-align: center;
-  opacity: 0;
-  transition: opacity 0.5s;
 }
 
 #utCaroMain .utReleaseMsg h3 {
@@ -201,7 +206,7 @@ img {
 
 #utCaroMain .slick-list {
   overflow: visible;
-  padding: 0 !important;
+  padding: 0 0 10px !important;
 }
 
 #utCaroMain .slick-slide {
@@ -231,7 +236,7 @@ img {
 #utGenNav {
   display: block;
   width: 100%;
-  margin: 10px 0px 0 0;
+  margin: 30px 0px 0 0;
 }
 
 #utGenNav * {
@@ -297,6 +302,10 @@ img {
   border: 3px solid #98c800;
   background: white;
   transition: all 0.3s;
+}
+
+#utCollection {
+  margin-top: 25px;
 }
 
 #utCollection * {
@@ -387,11 +396,11 @@ img {
 }
 
 #utCollection article h3.utColTitle {
-  font-size: 32px;
+  font-size: 20px;
 }
 
 #utCollection article p {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 #utCollection article .utProdTiles {
@@ -472,7 +481,8 @@ img {
 }
 
 #utCollection article .utProdTiles h3 {
-  font-size: 20px;
+  margin: 5px 0;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -480,7 +490,7 @@ img {
   display: inline-block;
   margin: 0 1px 5px 0;
   padding: 3px 10px;
-  font-size: 15px;
+  font-size: 13px;
   color: white;
   text-transform: uppercase;
   background: black;
@@ -488,7 +498,6 @@ img {
 
 #utCollection article .utProdTiles h4.utFlagCom {
   display: table;
-  margin-bottom: -5px;
   background: #378694;
 }
 
@@ -511,8 +520,10 @@ img {
 .copyright {
   float: left;
   width: 100%;
+  padding: 10px;
   font-size: 10px;
   color: darkgray;
+  line-height: 1em;
   text-align: left;
   background: none;
 }
@@ -545,7 +556,13 @@ button.slick-arrow.slick-next:focus {
 
 
 <!-- inject:theHTML:html -->
-<div id='utLanding' class="mobLanding">
+<link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css' />
+<link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css' />
+
+
+
+
+<div id='utLanding' class='mobLanding'>
 
 
 
@@ -566,7 +583,7 @@ button.slick-arrow.slick-next:focus {
         <div id='utCaroMain' class='utCarousel'>
             <div class='utMainTile'>
                 <a href='/us/en/ut-graphic-tees/shop-all-men'>
-                    <div class="utMainImgWrp">
+                    <div class='utMainImgWrp'>
                         <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_ut_020619_keithharing' alt='SPRZ NY Keith Haring Main Image' />
                     </div>
                 </a>
@@ -576,7 +593,7 @@ button.slick-arrow.slick-next:focus {
                 </div>
             </div>
             <div class='utMainTile'>
-                <div class="utMainImgWrp">
+                <div class='utMainImgWrp'>
                 <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_022119_01' alt='LINE FRIENDS Main Image' />
             </div>
                 <div class='utReleaseMsg'>
@@ -585,7 +602,7 @@ button.slick-arrow.slick-next:focus {
                 </div>
             </div>
             <div class='utMainTile'>
-                <div class="utMainImgWrp">
+                <div class='utMainImgWrp'>
                 <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_010419_01' alt='Hokusai Blue Main Image' />
             </div>
                 <div class='utReleaseMsg'>
@@ -594,7 +611,7 @@ button.slick-arrow.slick-next:focus {
                 </div>
             </div>
             <div class='utMainTile'>
-                <div class="utMainImgWrp">
+                <div class='utMainImgWrp'>
                 <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_030119_05' alt='Minions Every Days A Weekend Collection Main Image' />
             </div>
                 <div class='utReleaseMsg'>
@@ -603,7 +620,7 @@ button.slick-arrow.slick-next:focus {
                 </div>
             </div>
             <div class='utMainTile'>
-                <div class="utMainImgWrp">
+                <div class='utMainImgWrp'>
                 <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_030119_16' alt='Sanrio Characters Main Image' />
             </div>
                 <div class='utReleaseMsg'>
@@ -681,8 +698,8 @@ button.slick-arrow.slick-next:focus {
                 <div class='utProdTiles'>
                     <div class='utOneTile'>
                         <a href='/us/en/ut-graphic-tees/shop-all-men'>
-                            <div class="utTileOverlay">
-                                <div class="utTileCta"><h3>shop now</h3></div>
+                            <div class='utTileOverlay'>
+                                <div class='utTileCta'><h3>shop now</h3></div>
                                 <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_PRINCESSWAY_00' alt='ZZZ' />
                             </div>
                             <h4 class='utTileFlag utFlagA'>adults</h4>
@@ -1104,9 +1121,9 @@ button.slick-arrow.slick-next:focus {
 
 
 
-<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 
 <script>
+    
 $(function() {
 
 
@@ -1120,112 +1137,15 @@ $(function() {
         dataType: 'script',
         success: function() {
             console.log('called back');
-            // $('#utCaroMain').not('.slick-initialized').slick({
-            //     slidesToShow: 1,
-            //     slidesToScroll: 1,
-            //     arrows: false,
-            //     dots: false,
-            //     // asNavFor: '#utCaroSmall'
-            // });
-            // $('#utCaroSmall').slick({
-            //     slidesToShow: 5,
-            //     arrows: false,
-            //     dots: false,
-            //     asNavFor: '#utCaroMain'
-            // });
-            // setTimeout(function() {
-            //     loadSlick()
-            // }, 2000)
+            $('#utCaroMain').not('.slick-initialized').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true
+            });
         },
         async: true
     });
-
-
-
-
-    setTimeout(function() {
-        // loadSlick()
-        $('#utCaroMain').not('.slick-initialized').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: false,
-            // asNavFor: '#utCaroSmall'
-        });
-    }, 2000)
-
-
-    // function loadSlick() {
-    //     // Main carousel in hero
-    //     // 
-    //     $('#utCaroMain').slick({
-    //         slidesToShow: 1,
-    //         slidesToScroll: 1,
-    //         arrows: false,
-    //         dots: false,
-    //         useTransform: false,
-    //         cssEase: 'ease',
-    //         asNavFor: '#utCaroSmall'
-    //     });
-    //     // Small, supporting carousel which highlights 
-    //     // current slide shown in the carousel above
-    //     // 
-    //     $('#utCaroSmall').slick({
-    //         slidesToShow: 5,
-    //         arrows: false,
-    //         dots: false,
-    //         asNavFor: '#utCaroMain'
-    //     });
-    // }
-
-
-
-
-    // // Main carousel in hero
-    // // 
-    // $('#utCaroMain').slick({
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     arrows: false,
-    //     dots: false,
-    //     useTransform: false,
-    //     cssEase: 'ease',
-    //     asNavFor: '#utCaroSmall'
-    // });
-    // // Small, supporting carousel which highlights 
-    // // current slide shown in the carousel above
-    // // 
-    // $('#utCaroSmall').slick({
-    //     slidesToShow: 5,
-    //     arrows: false,
-    //     dots: false,
-    //     asNavFor: '#utCaroMain'
-    // });
-
-
-
-
-
-    // // Clicking on the small carousel slides brings associated
-    // // large carousel slide into focus
-    // // 
-    // $('.slick-slider').on('click', '.slick-slide', function (e) {
-    //     e.stopPropagation();
-    //     var index = $(this).data("slick-index");
-    //     if ($('.slick-slider').slick('slickCurrentSlide') !== index) {
-    //         $('.slick-slider').slick('slickGoTo', index);
-    //     }
-    // });
-
-
-
-    // // Small carousel slides were not working on demandware.
-    // // This bit of JS changes current slide of Small Carousel after
-    // // large carousel has advanced. Didn't work to do this "beforeChage"
-    // // 
-    // $('#utCaroMain').on('afterChange', function(event, slick, direction){
-    //     $('#utCaroSmall .slick-active:eq('+slick.currentSlide+')').addClass('slick-current').siblings().removeClass('slick-current');
-    // });
 
 
 
