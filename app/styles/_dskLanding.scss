@@ -61,7 +61,66 @@ $colBaby: #98c800;
     #utCaroMain {
         margin: 0 -70px;
         z-index: 2;
+        .utMainImgWrp {
+            position: relative;
+
+        }
+        .utMainCta {
+            visibility: hidden;
+            // display: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            opacity: 0;
+            transition: opacity 0.3s;
+            h3 {
+                visibility: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 37%;
+                padding: 4px 5px;
+                font-family: $fontFam_hel;
+                font-size: 8px;
+                font-weight: 500;
+                color: white;
+                text-transform: uppercase;
+                text-align: center;
+                border: 2px solid white;
+                transition: all 0.2s;
+                &:hover {
+                    visibility: visible;
+                    border: 2px solid black;
+                    background: black;
+                    transition: visibility 0.3s;
+                }
+            }
+        }
+        .slick-current:hover {
+            .utMainImgWrp {
+                .utMainCta {
+                    visibility: visible;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    opacity: 1;
+                    transition: opacity 0.3s;
+                    h3 {
+                        visibility: visible;
+                        padding: 4px 5px;
+                        border: 2px solid white;
+                        transition: border 0.3s;
+                    }
+                }
+            }
+        }
         .utReleaseMsg {
+            transform: translateX(-13%);
+            width: 135%;
             margin-top: 7px;
             color: white;
             text-align: center;
@@ -307,6 +366,49 @@ $colBaby: #98c800;
                     &.3col {
                         flex-basis: 33.33333%;
                     }
+                    .utTileOverlay {
+                        position: relative;
+                    }
+                    .utTileCta {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0);
+                        transition: background-color 0.3s;
+                        h3 {
+                            // visibility: hidden;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 37%;
+                            padding: 4px 5px;
+                            font-family: $fontFam_hel;
+                            font-size: 8px;
+                            font-weight: 500;
+                            color: white;
+                            text-transform: uppercase;
+                            text-align: center;
+                            border: 2px solid white;
+                            transition: all 0.2s;
+                            &:hover {
+                                visibility: visible;
+                                border: 2px solid black;
+                                background: black;
+                                transition: visibility 0.3s;
+                            }
+                        }
+                    }
+                    &:hover {
+                        .utTileOverlay {
+                            position: relative;
+                        }
+                        .utTileCta {
+                            background-color: rgba(0, 0, 0, 0.7);
+                            transition: background-color 0.3s;
+                        }
+                    }
                 }
                 h3 {
                     // padding-bottom: 10px;
@@ -348,15 +450,15 @@ $colBaby: #98c800;
                 // width: 100%;
             }
         }
-        .copyright {
-            float: left;
-            width: 66%;
-            // font-family: $fontFam_hel;
-            font-size: 13px;
-            color: #4b4b4b;
-            text-align: left;
-            background: none;
-        }
+    }
+    .copyright {
+        float: left;
+        width: 100%;
+        // font-family: $fontFam_hel;
+        font-size: 10px;
+        color: darkgray;
+        text-align: left;
+        background: none;
     }
 }
 
