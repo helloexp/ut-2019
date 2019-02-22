@@ -1,0 +1,904 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<style>
+.noscroll {
+  overflow-y:hidden!important;
+}
+.seeMe {
+    display: none;
+}
+.teaserHero {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.teaserHero img {
+    width: 100%;
+    min-width: 0;
+    align-self: center;
+}
+
+#primary {
+    width: 100% !important;
+}
+
+.teaserContent {
+    margin: 4%;
+}
+
+.flexContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4%;
+    padding-bottom: 10px;
+}
+
+.flag {
+  background-color: #378694;
+  color:white;
+  display:inline-block;
+      padding: 1px 5px!important;
+    margin-bottom: 4px!important;
+  font-size:14px;
+    font-family: 'uniqlo pro regular';
+}
+
+.gwp {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2%;
+}
+
+.bio {
+    margin: 0 auto;
+    padding:30px 0;
+    clear:both;
+}
+.bio img {
+  float:left;
+  margin-right:10px;
+}
+.bioCopy {
+  margin:auto;
+}
+.gwp img {
+  margin: auto 0;
+  width:100%;
+}
+.gwpCopy {
+    margin: auto 0 auto 4%;
+}
+
+.gwpCopy .title, .bioCopy .title {
+    font-size: 18px;
+    margin-bottom:0;
+    font-family: 'uniqlo pro regular';
+}
+
+.gwpCopy .sub, .bioCopy .sub {
+    font-size: 14px;
+    margin-bottom:0;
+    font-family: 'Helvetica Neue';
+}
+
+.gwpCopy small, .bioCopy small {
+    display: block;
+    font-size: 11px;
+    margin-top: 6px;
+    font-family: 'Helvetica Neue';
+}
+
+.flexContainer img {
+    width: 100%;
+}
+
+.copy {
+    text-align: left;
+    margin: auto;
+}
+
+.copy h1 {
+    font-size: 26px;
+    margin: 0;
+    color: black;
+    font-family: 'Uniqlo Pro Regular';
+}
+
+.copy p,
+.eventInfo .eventDetails {
+    font-size: 15px;
+    font-family: 'Helvetica Neue';
+}
+
+.available,
+.eventInfo {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.eventInfo .eventDetails {
+    margin: 14px 0;
+}
+
+.eventInfo .cta {
+    margin: 14px auto;
+    border: 2px solid black;
+    text-align: center;
+    width: 150px;
+}
+
+.eventInfo .cta a {
+    font-family: 'Uniqlo Pro Regular';
+    font-size: 18px;
+    padding: 8px 0;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.teaserContent .available .date {
+    color: red;
+    font-size: 20px;
+    font-family: "Uniqlo Pro Regular";
+    line-height: 1.25em;
+}
+.teaserContent .available .disclaimer {
+    font-size: 14px;
+    text-decoration: underline;
+    margin: 2em 0 0;
+}
+
+.teaserContent .available .disclaimerCopy {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.teaserContent .divider {
+    border: 1px solid lightgray;
+    width: 100px;
+    margin: 15px auto;
+}
+.eventInfo .eventTitle {
+    font-size: 20px;
+    font-family: "Uniqlo Pro Regular";
+    line-height: 1.25em;
+}
+
+.eventInfo .eventTiming {
+    color: red;
+    font-size: 18px;
+    font-family: 'Uniqlo Pro Regular';
+    margin-bottom: 14px;
+}
+
+.available .price {
+    font-size: 15px;
+    font-family: "Uniqlo Pro Regular";
+    margin: .75em 0;
+}
+
+.available small,
+.eventInfo small {
+    font-size: 12px;
+}
+
+.products h4 {
+    text-align: center;
+    margin: 1.5em auto 0.5em;
+    font-size: 20px;
+    font-family: 'Uniqlo Pro Regular';
+}
+
+.products .productList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -2% -7% 0 -10;
+}
+
+.productList .column {
+    flex-grow: 0;
+    width: calc(100% * (1/2) - 2%);
+    margin: 2% 0 0 2%;
+    box-sizing: border-box;
+}
+
+.column img {
+    transition: opacity .25s linear;
+    -webkit-backface-visibility: hidden;
+    display: block;
+    padding: 4%;
+    width: 100%;
+    background-color: #f2f3f5;
+    box-sizing: border-box;
+}
+
+.productDetail {
+    display: block;
+    margin: 10px 0;
+}
+
+.productName,
+.productPrice {
+    flex: 50%;
+}
+
+.productName {
+    font-family: 'Uniqlo Pro Regular';
+    font-size: 16px;
+    margin: 0 0 5px;
+}
+
+.productPrice {
+    font-family: 'Uniqlo Pro Regular';
+    font-size: 16px;
+}
+
+.column img:hover {
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+    opacity: .6;
+    transition: opacity .25s linear;
+}
+
+.modalTemplate {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 3000;
+    display: none;
+}
+.modal-bg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+}
+
+.modal-inner {
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    background-color: white;
+    padding: 13% 0% 4%;
+    margin: 0 4%;
+    z-index: 3000;
+}
+
+.modal-close {
+    position: fixed;
+    top: 13px;
+    right: 13px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    transform: translate3d(0, 0, 0);
+}
+
+.modal-close:before,
+.modal-close:after {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 23.5px;
+    ;
+    height: 2px;
+    background-color: #000;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.modal-close:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.modal-close:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.productLogo {
+    width: 100%;
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width:350px) {
+    .teaserContent {
+        max-width: 290px !important
+    }
+}
+.vid-outer {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 0;
+    margin-bottom: 20px;
+    padding-top: 56.25%;
+}
+
+.vid-inner {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.teaserContent h3.toggleSee {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    background: black;
+    border: 2px solid black;
+    font-family: Uniqlo Pro Regular;
+}
+</style>
+<style>
+.teaserBackground {
+    background-image: url('//uniqlo.scene7.com/is/image/UNIQLO/18FW_UT_KawsxSesameStreet_backgroundpattern');
+    background-size: 50% auto;
+    background-repeat: repeat;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.teaserContent {
+    background-color:white;
+    padding:4%;
+}
+</style><div class='teaserBackground'>
+    <div class='teaserContent'>
+    <div class='flexContainer'>
+        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_DISCOVERYCHANNEL_00' alt='So? Have Fun! Erin Domingo's Ice Cream Party' />
+        <div class='copy'>
+            <h1>So? Have Fun! Erin Domingo's Ice Cream Party</h1>
+        </div>
+    </div>
+    <div class='copy'>
+         <p style='text-align:center'>Explore your world with Discovery.</p>
+         <p style='color:#ababab;font-size:10px; margin-top:5px;text-align:center'>© 2019& ™ Discovery Communications, LLC. All rights reserved.</p>
+   </div>
+    <div class='available'>
+          <p class='date'>Available Online + In Select Stores 1/28</p>
+          <p class='price'>Adults $14.90 | Kids $9.90 | Toddler $9.90</p>
+          <p class='disclaimer'>Product Availability</p>
+          <p class='disclaimerCopy'>Available online + all stores. Disney store will not carry this collection</p>
+          <p class='disclaimer'>Online Purchase Limit</p>
+          <p class='disclaimerCopy'>1 product per person. first come first serve</p>
+          <p class='disclaimer'>In-Store Purchase Limit</p>
+          <p class='disclaimerCopy'>1 product per person. first come first serve</p>
+    </div>
+
+    <div class='gwp'>
+        <img alt='Erin Domingo's Ice Cream Scooper' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_66_413977?$prod$?$usmob$&wid=145'>
+        <div class='gwpCopy'>
+            <p class='flag'>Get A Free Gift Now!</p>
+            <p class='title'>Erin Domingo's Ice Cream Scooper</p>
+            <p class='sub'>You try this fucking awesome scooper and you'll love how easy it is to make perfectly shaped ice cream on your cups or cones.</p>
+        </div>
+    </div>
+    <small>*The awesomeness may vary depending on the user.</small>
+    <div class='divider'></div>
+    <div class='eventInfo'>
+        <p class='eventTitle'>ERIN DOMINGO'S ICE CREAM PARTY @ UNIQLO 5TH AVE</p>
+        <p class='eventDetails'>My name is Erin Domingo and I love eating ice cream. Ice cream is my favorite food, and I would love to eat more. Give your ice cream to me right now or I'm going to kill you. Just kidding, bestie~~~</p>
+        <p class='eventTiming'>Time & Place: sometime, somewhere, idk</p>
+        <small>My name is Erin Domingo and I love eating ice cream. Ice cream is my favorite food, and I would love to eat more. Give your ice cream to me right now or I'm going to kill you. Just kidding, bestie~~~</small>
+        <div class='cta'>
+            <a href='/us/en/men' target='_blank'>LEARN MORE</a>
+        </div>
+    </div>
+    <div class='divider'></div>
+
+    <div class='eventInfo'>
+        <p class='eventTitle'>ERIN DOMINGO'S ICE CREAM PARTY @ UNIQLO 5TH AVE</p>
+        <p class='eventDetails'>My name is Erin Domingo and I love eating ice cream. Ice cream is my favorite food, and I would love to eat more. Give your ice cream to me right now or I'm going to kill you. Just kidding, bestie~~~</p>
+        <p class='eventTiming'>Time & Place: sometime, somewhere, idk</p>
+        <small>My name is Erin Domingo and I love eating ice cream. Ice cream is my favorite food, and I would love to eat more. Give your ice cream to me right now or I'm going to kill you. Just kidding, bestie~~~</small>
+        <div class='cta'>
+            <a href='/us/en/men' target='_blank'>LEARN MORE</a>
+        </div>
+    </div>
+    <div class='divider'></div>
+        <h3 class='toggleSee'>EXPLORE THE COLLECTION</h3>
+        <div class='seeMe'>
+
+    <div class='vid-outer'>
+        <iframe class='vid-inner' src='https://www.youtube.com/embed/3WQHDUYk310?rel=0&amp;controls=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen=''></iframe>
+    </div>
+
+    <div class='vid-outer'>
+        <iframe class='vid-inner' src='https://www.youtube.com/embed/3WQHDUYk310?rel=0&amp;controls=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen=''></iframe>
+    </div>
+    <div id='theCarousel'>
+        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 1'/>
+                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 3'/>
+                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 4'/>
+                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 5'/>
+                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 6'/>
+                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 7'/>
+                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 8'/>
+                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 9'/>
+                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 10'/>
+        </div>
+        <div class='bio'>
+        <img alt='Artist Name Goes Here 1' src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$?$jpgMQ$&wid=145'>
+        <div class='bioCopy'>            <p class='title'>Artist Name Goes Here 1</p>
+            <p class='sub'>My name is Erin Domingo and I love eating ice cream. Ice cream is my favorite food, and I would love to eat more. Give your ice cream to me right now or I'm going to kill you. Just kidding, bestie~~~</p>
+            <small>Visit <a style='color:red' href='/us/en/men' target='_blank'>here</a> to learn more.</small>
+
+        </div>
+    </div>
+
+        <div class='bio'>
+        <img alt='Artist Name Goes Here 2' src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$?$jpgMQ$&wid=145'>
+        <div class='bioCopy'>            <p class='title'>Artist Name Goes Here 2</p>
+            <p class='sub'>My name is Erin Domingo and I love eating ice cream. Ice cream is my favorite food, and I would love to eat more. Give your ice cream to me right now or I'm going to kill you. Just kidding, bestie~~~</p>
+            <small>Visit <a style='color:red' href='/us/en/women' target='_blank'>here</a> to learn more.</small>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<div class='modalTemplate'>
+   <div class='modal-inner'>
+      <span class='modal-close js-modalClose'></span>
+        <div id='carousel' class='owl-carousel owl-theme'></div>
+        <img class='productLogo' src='' />
+   </div>
+   <!-- // end modal inner -->
+   <div class='modal-bg js-modalClose'></div>
+</div>
+<script>
+   let images = [
+    {
+      id: '41433109',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_414331?$usmob$&wid=600',]
+    },
+    {
+      id: '41811209',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418112?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418112_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811357',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_57_418113?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418113_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418113_sub12?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41813703',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_03_418137?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418137_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811707',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_07_418117?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418117_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811800',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418118?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418118_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811900',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418119?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418119_sub8?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418119_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812009',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418120?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418120_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811400',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418114?$usmob$&wid=600',]
+    },
+    {
+      id: '41811412',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_12_418114?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418114_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811500',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418115?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418115_sub8?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418115_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811666',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_66_418116?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418116_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812109',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418121?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418121_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812200',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418122?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418122_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418122_sub12?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41813809',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418138?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418138_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812309',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418123?$usmob$&wid=600',]
+    },
+    {
+      id: '41812400',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418124?$usmob$&wid=600',]
+    },
+    {
+      id: '41813900',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418139?$usmob$&wid=600',]
+    },
+    {
+      id: '41433109',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_414331?$usmob$&wid=600',]
+    },
+    {
+      id: '41811209',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418112?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418112_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811357',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_57_418113?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418113_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418113_sub12?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41813703',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_03_418137?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418137_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811707',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_07_418117?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418117_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811800',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418118?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418118_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811900',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418119?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418119_sub8?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418119_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812009',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418120?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418120_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811400',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418114?$usmob$&wid=600',]
+    },
+    {
+      id: '41811412',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_12_418114?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418114_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811500',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418115?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418115_sub8?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418115_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811666',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_66_418116?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418116_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812109',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418121?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418121_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812200',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418122?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418122_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418122_sub12?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41813809',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418138?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418138_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812309',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418123?$usmob$&wid=600',]
+    },
+    {
+      id: '41812400',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418124?$usmob$&wid=600',]
+    },
+    {
+      id: '41813900',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418139?$usmob$&wid=600',]
+    },
+    {
+      id: '41433109',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_414331?$usmob$&wid=600',]
+    },
+    {
+      id: '41811209',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418112?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418112_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811357',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_57_418113?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418113_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418113_sub12?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41813703',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_03_418137?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418137_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811707',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_07_418117?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418117_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811800',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418118?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418118_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811900',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418119?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418119_sub8?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418119_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812009',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418120?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418120_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811400',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418114?$usmob$&wid=600',]
+    },
+    {
+      id: '41811412',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_12_418114?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418114_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811500',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418115?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418115_sub8?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418115_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811666',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_66_418116?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418116_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812109',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418121?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418121_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812200',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418122?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418122_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418122_sub12?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41813809',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418138?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418138_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812309',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418123?$usmob$&wid=600',]
+    },
+    {
+      id: '41812400',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418124?$usmob$&wid=600',]
+    },
+    {
+      id: '41813900',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418139?$usmob$&wid=600',]
+    },
+    {
+      id: '41433109',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_414331?$usmob$&wid=600',]
+    },
+    {
+      id: '41811209',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418112?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418112_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811357',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_57_418113?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418113_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418113_sub12?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41813703',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_03_418137?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418137_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811707',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_07_418117?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418117_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811800',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418118?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418118_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811900',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418119?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418119_sub8?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418119_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812009',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418120?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418120_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811400',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418114?$usmob$&wid=600',]
+    },
+    {
+      id: '41811412',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_12_418114?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418114_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811500',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418115?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418115_sub8?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418115_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811666',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_66_418116?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418116_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812109',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418121?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418121_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812200',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418122?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418122_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418122_sub12?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41813809',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418138?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418138_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812309',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418123?$usmob$&wid=600',]
+    },
+    {
+      id: '41812400',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418124?$usmob$&wid=600',]
+    },
+    {
+      id: '41813900',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418139?$usmob$&wid=600',]
+    },
+    {
+      id: '41433109',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_414331?$usmob$&wid=600',]
+    },
+    {
+      id: '41811209',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418112?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418112_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811357',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_57_418113?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418113_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418113_sub12?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41813703',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_03_418137?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418137_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811707',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_07_418117?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418117_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811800',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418118?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418118_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811900',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418119?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418119_sub8?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418119_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812009',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418120?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418120_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811400',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418114?$usmob$&wid=600',]
+    },
+    {
+      id: '41811412',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_12_418114?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418114_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811500',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418115?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418115_sub8?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418115_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41811666',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_66_418116?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418116_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812109',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418121?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418121_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812200',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418122?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418122_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418122_sub12?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41813809',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418138?$usmob$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418138_sub11?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41812309',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418123?$usmob$&wid=600',]
+    },
+    {
+      id: '41812400',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418124?$usmob$&wid=600',]
+    },
+    {
+      id: '41813900',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418139?$usmob$&wid=600',]
+    },
+  ]
+  findProduct = (id) => {
+    return images.find(e => e.id == id) || null
+  }
+  let carousel = ``
+   $('.column img').on('click', function(){
+       let id = $(this).data('id')
+       let src = this.src
+       let owl = $('#carousel')
+       let product = findProduct(id)
+       if(product) {
+          product.images.forEach(image => owl.append(`<img data-src=${image} class='lazyload' style='width:100%'/>`))
+      }
+      else {
+        owl.append(`<img data-src=${src} class='lazyload' style='width:100%'/>`)
+      }
+       dataLayer.push({
+            'event': 'eventTracking',
+            'eventCategory': 'Category Page',
+            'eventAction': 'Clicked category: /ut-graphic-tees/kaws-x-sesame-street/',
+            'eventLabel': src.slice(-18, -9),
+            'eventCallback': function() {
+                 owl.owlCarousel({
+                   items:1,
+                   dots: true,
+                   onInitialized: function() {$('.modalTemplate').fadeIn(200)}
+                 })
+                 document.documentElement.classList.add('noscroll');
+                 $('.js-modalClose').click(function(){
+                  $('.modalTemplate').fadeOut(200);
+                 document.documentElement.classList.remove('noscroll');
+                  owl.owlCarousel('destroy')
+                  $('#carousel').html('')
+                 });
+            }
+       })
+   })
+</script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(function() {
+        jQuery.ajax({
+            url: '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js',
+            dataType: 'script',
+            success: function() {
+                $('#theCarousel').slick({
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    dots: true
+                });
+            },
+            async: true
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.toggleSee').unbind('click').click(function() {
+            $('.seeMe').slideToggle();
+        })
+    })
+</script>

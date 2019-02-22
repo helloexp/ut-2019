@@ -8,116 +8,56 @@
   width: 100% !important;
 }
 
-img {
-  width: 100%;
-}
-
-#utLanding.mobLanding * {
+#utLanding * {
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
 }
 
-#utLanding.mobLanding img {
+#utLanding img {
   display: block;
 }
 
-#utLanding.mobLanding h2 {
+#utLanding h2 {
   font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 50px;
 }
 
-#utLanding.mobLanding h3 {
+#utLanding h3 {
   font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-#utLanding.mobLanding p {
+#utLanding p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-#utLanding.mobLanding #utHero {
-  padding: 0;
+#utLanding #utHero {
   position: relative;
+  padding: 25px 20px;
+  background: rgba(0, 0, 0, 0.7);
   overflow: hidden;
-  background: none;
 }
 
-#utLanding.mobLanding #utHero::after {
-  background: none;
-}
-
-#utLanding.mobLanding .utReleaseMsg {
-  width: 100%;
-  margin-top: 7px;
-  color: black;
-  text-align: center;
-}
-
-#utLanding.mobLanding .utReleaseMsg h3 {
-  font-size: 17px;
-  text-transform: uppercase;
-}
-
-#utLanding.mobLanding .utReleaseMsg h3 span {
-  font-weight: 500;
-}
-
-#utLanding.mobLanding .utReleaseMsg h4 {
-  font-size: 13px;
-}
-
-#utLanding.mobLanding #utCaroSmall {
-  width: calc(55% + 5px);
-  width: 100%;
-  margin: 0 auto;
-  padding: 15px 0 20px;
-  z-index: 2;
-}
-
-#utLanding.mobLanding #utCaroSmall .utTileWrapper {
-  position: relative;
-}
-
-#utLanding.mobLanding #utCaroSmall .utTileWrapper .utTileOver {
-  display: none;
-  position: absolute;
+#utLanding #utHero::after {
+  content: '';
+  background: url("https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_UT_pattern?$png$");
+  opacity: 0.1;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.7);
-  transition: all 0.5s;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
 }
 
-#utLanding.mobLanding #utCaroSmall .slick-slide {
-  margin: 0 10px;
-  margin: 0;
-  transition: all 0.7s;
-}
-
-#utLanding.mobLanding #utCaroSmall .slick-slide.slick-current {
-  background: white;
-  transition: all 0.7s;
-}
-
-#utLanding.mobLanding #utCaroSmall .slick-slide.slick-current .utTileOver {
-  background: rgba(255, 255, 255, 0);
-  transition: all 0.3s;
-}
-
-#utCaroMain {
-  margin: 0;
+#utLanding #utCaroMain {
+  margin: 0 -70px;
   z-index: 2;
 }
 
-#utCaroMain img {
-  width: 100%;
-}
-
-#utCaroMain .utMainImgWrp {
+#utLanding #utCaroMain .utMainImgWrp {
   position: relative;
 }
 
-#utCaroMain .utMainCta {
+#utLanding #utCaroMain .utMainCta {
   visibility: hidden;
   display: -ms-flexbox;
   display: flex;
@@ -135,7 +75,7 @@ img {
   transition: opacity 0.3s;
 }
 
-#utCaroMain .utMainCta h3 {
+#utLanding #utCaroMain .utMainCta h3 {
   visibility: hidden;
   display: -ms-flexbox;
   display: flex;
@@ -155,28 +95,28 @@ img {
   transition: all 0.2s;
 }
 
-#utCaroMain .utMainCta h3:hover {
+#utLanding #utCaroMain .utMainCta h3:hover {
   visibility: visible;
   border: 2px solid black;
   background: black;
   transition: visibility 0.3s;
 }
 
-#utCaroMain .slick-current:hover .utMainImgWrp .utMainCta {
+#utLanding #utCaroMain .slick-current:hover .utMainImgWrp .utMainCta {
   visibility: visible;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 1;
   transition: opacity 0.3s;
 }
 
-#utCaroMain .slick-current:hover .utMainImgWrp .utMainCta h3 {
+#utLanding #utCaroMain .slick-current:hover .utMainImgWrp .utMainCta h3 {
   visibility: visible;
   padding: 4px 5px;
   border: 2px solid white;
   transition: border 0.3s;
 }
 
-#utCaroMain .utReleaseMsg {
+#utLanding #utCaroMain .utReleaseMsg {
   transform: translateX(-13%);
   width: 135%;
   margin-top: 7px;
@@ -186,65 +126,101 @@ img {
   transition: opacity 0.5s;
 }
 
-#utCaroMain .utReleaseMsg h3 {
+#utLanding #utCaroMain .utReleaseMsg h3 {
   font-size: 10px;
   text-transform: uppercase;
 }
 
-#utCaroMain .utReleaseMsg h3 span {
+#utLanding #utCaroMain .utReleaseMsg h3 span {
   font-weight: 500;
 }
 
-#utCaroMain .utReleaseMsg h4 {
+#utLanding #utCaroMain .utReleaseMsg h4 {
   font-size: 9px;
 }
 
-#utCaroMain .slick-list {
+#utLanding #utCaroMain .slick-list {
   overflow: visible;
   padding: 0 !important;
 }
 
-#utCaroMain .slick-slide {
+#utLanding #utCaroMain .slick-slide {
   margin: 0 80px;
-  margin: 0;
-  float: left;
+  transform: scale(0.75);
+  transition: all 0.5s;
 }
 
-#utCaroMain .slick-slide.slick-center {
+#utLanding #utCaroMain .slick-slide.slick-center {
   transform: scale(2.25);
   transition: all 0.5s;
 }
 
-#utCaroMain .slick-slide.slick-center .utReleaseMsg {
+#utLanding #utCaroMain .slick-slide.slick-center .utReleaseMsg {
   opacity: 1;
   transition: opacity 0.5s;
 }
 
-#utCaroMain button.slick-prev {
+#utLanding #utCaroMain button.slick-prev {
   left: 60px;
 }
 
-#utCaroMain button.slick-next {
+#utLanding #utCaroMain button.slick-next {
   right: 60px;
 }
 
-#utGenNav {
-  display: block;
+#utLanding #utCaroSmall {
+  width: calc(55% + 5px);
+  margin: 0 auto;
+  padding-top: 30px;
+  z-index: 2;
+}
+
+#utLanding #utCaroSmall .utTileWrapper {
+  position: relative;
+}
+
+#utLanding #utCaroSmall .utTileWrapper .utTileOver {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  transition: all 0.5s;
+}
+
+#utLanding #utCaroSmall .slick-slide {
+  margin: 0 10px;
+  transition: all 0.7s;
+}
+
+#utLanding #utCaroSmall .slick-slide.slick-current {
+  background: white;
+  transition: all 0.7s;
+}
+
+#utLanding #utCaroSmall .slick-slide.slick-current .utTileOver {
+  background: rgba(255, 255, 255, 0);
+  transition: all 0.3s;
+}
+
+#utLanding #utGenNav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   width: 100%;
   margin: 10px 0px 0 0;
 }
 
-#utGenNav * {
-  box-sizing: border-box;
-}
-
-#utGenNav a {
+#utLanding #utGenNav a {
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
   margin-top: 5px;
 }
 
-#utGenNav h3 {
+#utLanding #utGenNav h3 {
   width: 100%;
-  margin-bottom: 5px;
   padding: 14px 40px 15px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -255,146 +231,166 @@ img {
   transition: all 0.3s;
 }
 
-#utGenNav h3.utNavM {
+#utLanding #utGenNav h3.utNavM {
   background: #020d80;
 }
 
-#utGenNav h3.utNavM:hover {
+#utLanding #utGenNav h3.utNavM:hover {
   color: #020d80;
   border: 3px solid #020d80;
   background: white;
   transition: all 0.3s;
 }
 
-#utGenNav h3.utNavW {
+#utLanding #utGenNav h3.utNavW {
   background: red;
 }
 
-#utGenNav h3.utNavW:hover {
+#utLanding #utGenNav h3.utNavW:hover {
   color: red;
   border: 3px solid red;
   background: white;
   transition: all 0.3s;
 }
 
-#utGenNav h3.utNavK {
+#utLanding #utGenNav h3.utNavK {
   background: #4fb3ef;
 }
 
-#utGenNav h3.utNavK:hover {
+#utLanding #utGenNav h3.utNavK:hover {
   color: #4fb3ef;
   border: 3px solid #4fb3ef;
   background: white;
   transition: all 0.3s;
 }
 
-#utGenNav h3.utNavB {
+#utLanding #utGenNav h3.utNavB {
   background: #98c800;
 }
 
-#utGenNav h3.utNavB:hover {
+#utLanding #utGenNav h3.utNavB:hover {
   color: #98c800;
   border: 3px solid #98c800;
   background: white;
   transition: all 0.3s;
 }
 
-#utCollection * {
-  box-sizing: border-box;
-}
-
-#utCollection h2 {
-  padding: 30px 0 10px;
+#utLanding #utCollection h2 {
+  padding: 50px 0 40px;
   font-weight: 700;
   text-align: center;
   overflow: hidden;
 }
 
-#utCollection article {
-  margin-bottom: 10px;
+#utLanding #utCollection article {
+  margin-bottom: 30px;
 }
 
-#utCollection article .utColHdr {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center;
+#utLanding #utCollection article .utColHdr {
   position: relative;
   width: 100%;
-  height: 70px;
-  padding: 0 15px;
+  height: 16vw;
   color: white;
   cursor: pointer;
+  border: 1px solid lightgray;
+  border: 3px solid black;
   background: black;
   transition: all 0.4s;
 }
 
-#utCollection article .utColHdr:hover {
+#utLanding #utCollection article .utColHdr:hover {
+  background: #4b4b4b;
   transition: all 0.4s;
 }
 
-#utCollection article .utColHdr:hover .utHdrTitle {
+#utLanding #utCollection article .utColHdr:hover .utHdrTitle {
   color: white;
   transition: all 0.4s;
 }
 
-#utCollection article .utColHdr .utHdrIcon {
-  width: 40px;
+#utLanding #utCollection article .utColHdr .utColMain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#utCollection article .utColHdr .utHdrTitle {
-  margin: 0;
-  font-size: 20px;
-  color: white;
+#utLanding #utCollection article .utColHdr .utHdrIcon {
+  width: 83px;
+  margin: 0 auto;
+}
+
+#utLanding #utCollection article .utColHdr .utHdrTitle {
+  margin-top: 10px;
+  font-size: 36px;
   letter-spacing: 3px;
   text-align: center;
   text-transform: uppercase;
+  transition: all 0.4s;
 }
 
-#utCollection article .utColHdr .utHdrHandle {
-  position: relative;
-  width: 20px;
+#utLanding #utCollection article .utColHdr .utHdrHandle {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 40px;
 }
 
-#utCollection article .utColHdr .utHdrHandle img {
-  width: 20px;
-  height: 20px;
+#utLanding #utCollection article .utColHdr .utHdrHandle img {
   transform: rotate(0deg);
-  transform-origin: 10px 10px;
+  transform-origin: 20px 20px;
   transition: all 0.6s;
 }
 
-#utCollection article .utColHdr .utHdrHandle img.rotated {
+#utLanding #utCollection article .utColHdr .utHdrHandle img.rotated {
   transform: rotate(180deg);
-  transform-origin: 10px 10px;
+  transform-origin: 20px 20px;
   transition: all 0.6s;
 }
 
-#utCollection article .utColHidn {
+#utLanding #utCollection article .utColHdr .utHdrHandle img {
+  width: 100%;
+}
+
+#utLanding #utCollection article .utColHdr .fa-angle-down {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%) rotate(0deg);
+  font-size: 65px;
+  line-height: 0;
+  transition: all 0.5s;
+}
+
+#utLanding #utCollection article .utColHdr .fa-angle-down.rotated {
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+
+#utLanding #utCollection article .utColHidn {
   position: relative;
-  margin: 30px 20px !important;
+  margin: 40px 20px !important;
   overflow: hidden;
   display: none;
 }
 
-#utCollection article .utColHidn hr {
+#utLanding #utCollection article .utColHidn hr {
   height: 2px;
   border: 0;
   background: black;
-  margin: 20px 0 15px;
+  margin: 40px 0 60px;
 }
 
-#utCollection article h3.utColTitle {
-  font-size: 32px;
+#utLanding #utCollection article h3.utColTitle {
+  font-size: 46px;
 }
 
-#utCollection article p {
-  font-size: 18px;
+#utLanding #utCollection article p {
+  font-size: 21px;
 }
 
-#utCollection article .utProdTiles {
+#utLanding #utCollection article .utProdTiles {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -404,24 +400,23 @@ img {
   margin: 0 -10px;
 }
 
-#utCollection article .utProdTiles .utOneTile {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  margin-bottom: 10px;
+#utLanding #utCollection article .utProdTiles .utOneTile {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  margin-bottom: 60px;
   padding: 10px;
 }
 
-#utCollection article .utProdTiles .utOneTile img {
-  width: 100%;
-  margin-bottom: 10px;
+#utLanding #utCollection article .utProdTiles .utOneTile.3col {
+  -ms-flex-preferred-size: 33.33333%;
+      flex-basis: 33.33333%;
 }
 
-#utCollection article .utProdTiles .utOneTile .utTileOverlay {
+#utLanding #utCollection article .utProdTiles .utOneTile .utTileOverlay {
   position: relative;
-  margin-bottom: 10px;
 }
 
-#utCollection article .utProdTiles .utOneTile .utTileCta {
+#utLanding #utCollection article .utProdTiles .utOneTile .utTileCta {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -437,7 +432,7 @@ img {
   transition: background-color 0.3s;
 }
 
-#utCollection article .utProdTiles .utOneTile .utTileCta h3 {
+#utLanding #utCollection article .utProdTiles .utOneTile .utTileCta h3 {
   visibility: hidden;
   display: -ms-flexbox;
   display: flex;
@@ -457,28 +452,28 @@ img {
   transition: all 0.1s;
 }
 
-#utCollection article .utProdTiles .utOneTile:hover .utTileOverlay {
+#utLanding #utCollection article .utProdTiles .utOneTile:hover .utTileOverlay {
   position: relative;
 }
 
-#utCollection article .utProdTiles .utOneTile:hover .utTileCta {
+#utLanding #utCollection article .utProdTiles .utOneTile:hover .utTileCta {
   background-color: rgba(0, 0, 0, 0.7);
   transition: background-color 0.3s;
 }
 
-#utCollection article .utProdTiles .utOneTile:hover .utTileCta h3 {
+#utLanding #utCollection article .utProdTiles .utOneTile:hover .utTileCta h3 {
   visibility: visible;
   transition: all 0.3s;
 }
 
-#utCollection article .utProdTiles h3 {
-  font-size: 20px;
+#utLanding #utCollection article .utProdTiles h3 {
+  font-size: 25px;
   text-transform: uppercase;
 }
 
-#utCollection article .utProdTiles h4 {
+#utLanding #utCollection article .utProdTiles h4 {
   display: inline-block;
-  margin: 0 1px 5px 0;
+  margin: 10px 1px 5px;
   padding: 3px 10px;
   font-size: 15px;
   color: white;
@@ -486,29 +481,29 @@ img {
   background: black;
 }
 
-#utCollection article .utProdTiles h4.utFlagCom {
+#utLanding #utCollection article .utProdTiles h4.utFlagCom {
   display: table;
   margin-bottom: -5px;
   background: #378694;
 }
 
-#utCollection article .utProdTiles h4.utFlagM {
+#utLanding #utCollection article .utProdTiles h4.utFlagM {
   background: #020d80;
 }
 
-#utCollection article .utProdTiles h4.utFlagW {
+#utLanding #utCollection article .utProdTiles h4.utFlagW {
   background: red;
 }
 
-#utCollection article .utProdTiles h4.utFlagK {
+#utLanding #utCollection article .utProdTiles h4.utFlagK {
   background: #4fb3ef;
 }
 
-#utCollection article .utProdTiles h4.utFlagB {
+#utLanding #utCollection article .utProdTiles h4.utFlagB {
   background: #98c800;
 }
 
-.copyright {
+#utLanding .copyright {
   float: left;
   width: 100%;
   font-size: 10px;
@@ -540,12 +535,21 @@ button.slick-arrow.slick-next:focus {
 
 
 
+
+
+
+
+
+#utCaroSmall
+
+
+
 /* endCSSinject */
 </style>
 
 
 <!-- inject:theHTML:html -->
-<div id='utLanding' class="mobLanding">
+<div id='utLanding'>
 
 
 
@@ -559,75 +563,20 @@ button.slick-arrow.slick-next:focus {
     <!-- ————————————————————————————————————o————————————————————————————————————o BIKINIS -->
     <section id='utHero'>
 
-
-
-        <!-- ————————————————————————————————————o MAIN CAROUSEL -->
-        <!-- MAIN CAROUSEL -->
-        <div id='utCaroMain' class='utCarousel'>
-            <div class='utMainTile'>
-                <a href='/us/en/ut-graphic-tees/shop-all-men'>
-                    <div class="utMainImgWrp">
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_ut_020619_keithharing' alt='SPRZ NY Keith Haring Main Image' />
-                    </div>
-                </a>
-                <div class='utReleaseMsg'>
-                    <h3>SPRZ NY Keith Haring</h3>
-                    <h4>Available Online + In Select Stores | $14.90</h4>
-                </div>
-            </div>
-            <div class='utMainTile'>
-                <div class="utMainImgWrp">
-                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_022119_01' alt='LINE FRIENDS Main Image' />
-            </div>
-                <div class='utReleaseMsg'>
-                    <h3>LINE FRIENDS</h3>
-                    <h4>Available Online + In Select Stores | $14.90</h4>
-                </div>
-            </div>
-            <div class='utMainTile'>
-                <div class="utMainImgWrp">
-                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_010419_01' alt='Hokusai Blue Main Image' />
-            </div>
-                <div class='utReleaseMsg'>
-                    <h3>Hokusai Blue</h3>
-                    <h4>Available Online + In Select Stores | T-Shirts $14.90 | Sweatshirts $29.90</h4>
-                </div>
-            </div>
-            <div class='utMainTile'>
-                <div class="utMainImgWrp">
-                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_030119_05' alt='Minions Every Days A Weekend Collection Main Image' />
-            </div>
-                <div class='utReleaseMsg'>
-                    <h3><span>Coming Soon!</span> Minions Every Day's A Weekend Collection</h3>
-                    <h4>Available Online + In Select Stores 3/4 | Adults $14.90 | Kids $9.90</h4>
-                </div>
-            </div>
-            <div class='utMainTile'>
-                <div class="utMainImgWrp">
-                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_030119_16' alt='Sanrio Characters Main Image' />
-            </div>
-                <div class='utReleaseMsg'>
-                    <h3><span>Coming Soon!</span> Sanrio Characters</h3>
-                    <h4>Available Online + In Select Stores 3/4 | Women $14.90 | Kids $9.90</h4>
-                </div>
-            </div>
-        </div>
-
-
-
         <!-- ————————————————————————————————————o SECONDARY CAROUSEL -->
         <!-- SECONDARY CAROUSEL -->
-        <!-- <div id='utCaroSmall' class='utCarouselNav'>
-            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-190204-utgraphictees-keith-haring-without-copyright' alt='SPRZ NY Keith Haring tile' />
+        <div id='utCaroSmall' class='utCarouselNav'>
+                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-190204-utgraphictees-keith-haring-without-copyright' alt='SPRZ NY Keith Haring tile' />
 
-            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_00' alt='LINE FRIENDS tile' />
+                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_00' alt='LINE FRIENDS tile' />
 
-            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_hero_Hokusai' alt='Hokusai Blue tile' />
+                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_hero_Hokusai' alt='Hokusai Blue tile' />
 
-            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-minions' alt='Minions Every Day's A Weekend Collection tile' />
+                <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-minions' alt='Minions Every Day's A Weekend Collection tile' />
 
-            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-sanriocharacters45thririka' alt='Sanrio Characters tile' />
-        </div> -->
+                <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-sanriocharacters45thririka' alt='Sanrio Characters tile' />
+            </div>
+        </div>
     </section>
 
 
@@ -661,15 +610,7 @@ button.slick-arrow.slick-next:focus {
             <!-- <img class='utColHdr' src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_category_buttons_MagicForAll' alt='UT Collection MAGIC FOR ALL' /> -->
             <div class='utColHdr'>
                 <div class='utColMain'>
-                    <img style='
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 80px;
-                        height: 80px;
-                        object-fit: cover;
-                        ' class='utHdrIcon' src='//uniqlo.scene7.com/is/image/UNIQLO/TEST_MAGIC?$png$' alt='MAGIC FOR ALL icon'  />
+                    <img class='utHdrIcon' src='//uniqlo.scene7.com/is/image/UNIQLO/TEST_MAGIC?$png$' alt='MAGIC FOR ALL icon'  />
                     <!---<h3 class='utHdrTitle'>MAGIC FOR ALL</h3>--->
                 </div>
                 <div class='utHdrHandle'><img src='https://uniqlo.scene7.com/is/image/UNIQLO/UT_Carrot?$gif$' /></div>
@@ -757,8 +698,10 @@ button.slick-arrow.slick-next:focus {
         <article>
             <!-- <img class='utColHdr' src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_category_buttons_Art' alt='UT Collection ART' /> -->
             <div class='utColHdr'>
-                <img class='utHdrIcon' src='https://uniqlo.scene7.com/is/image/UNIQLO/art_culture_2019?$png$' alt='ART icon'  />
-                <h3 class='utHdrTitle'>ART</h3>
+                <div class='utColMain'>
+                    <img class='utHdrIcon' src='https://uniqlo.scene7.com/is/image/UNIQLO/art_culture_2019?$png$' alt='ART icon'  />
+                    <h3 class='utHdrTitle'>ART</h3>
+                </div>
                 <div class='utHdrHandle'><img src='https://uniqlo.scene7.com/is/image/UNIQLO/UT_Carrot?$gif$' /></div>
             </div>
             <div class='utColHidn'>
@@ -844,8 +787,10 @@ button.slick-arrow.slick-next:focus {
         <article>
             <!-- <img class='utColHdr' src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_category_buttons_Characters' alt='UT Collection CHARACTERS' /> -->
             <div class='utColHdr'>
-                <img class='utHdrIcon' src='https://uniqlo.scene7.com/is/image/UNIQLO/pop_icons_2019?$png$' alt='CHARACTERS icon'  />
-                <h3 class='utHdrTitle'>CHARACTERS</h3>
+                <div class='utColMain'>
+                    <img class='utHdrIcon' src='https://uniqlo.scene7.com/is/image/UNIQLO/pop_icons_2019?$png$' alt='CHARACTERS icon'  />
+                    <h3 class='utHdrTitle'>CHARACTERS</h3>
+                </div>
                 <div class='utHdrHandle'><img src='https://uniqlo.scene7.com/is/image/UNIQLO/UT_Carrot?$gif$' /></div>
             </div>
             <div class='utColHidn'>
@@ -889,8 +834,10 @@ button.slick-arrow.slick-next:focus {
         <article>
             <!-- <img class='utColHdr' src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_category_buttons_Manga' alt='UT Collection GAME/MANGA/ANIME' /> -->
             <div class='utColHdr'>
-                <img class='utHdrIcon' src='https://uniqlo.scene7.com/is/image/UNIQLO/manga_2019?$png$' alt='GAME/MANGA/ANIME icon'  />
-                <h3 class='utHdrTitle'>GAME/MANGA/ANIME</h3>
+                <div class='utColMain'>
+                    <img class='utHdrIcon' src='https://uniqlo.scene7.com/is/image/UNIQLO/manga_2019?$png$' alt='GAME/MANGA/ANIME icon'  />
+                    <h3 class='utHdrTitle'>GAME/MANGA/ANIME</h3>
+                </div>
                 <div class='utHdrHandle'><img src='https://uniqlo.scene7.com/is/image/UNIQLO/UT_Carrot?$gif$' /></div>
             </div>
             <div class='utColHidn'>
@@ -1104,7 +1051,7 @@ button.slick-arrow.slick-next:focus {
 
 
 
-<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
 
 <script>
 $(function() {
@@ -1116,116 +1063,36 @@ $(function() {
 
 
     jQuery.ajax({
-        url: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js',
+        url: '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js',
         dataType: 'script',
         success: function() {
-            console.log('called back');
-            // $('#utCaroMain').not('.slick-initialized').slick({
-            //     slidesToShow: 1,
-            //     slidesToScroll: 1,
-            //     arrows: false,
-            //     dots: false,
-            //     // asNavFor: '#utCaroSmall'
-            // });
-            // $('#utCaroSmall').slick({
-            //     slidesToShow: 5,
-            //     arrows: false,
-            //     dots: false,
-            //     asNavFor: '#utCaroMain'
-            // });
-            // setTimeout(function() {
-            //     loadSlick()
-            // }, 2000)
+            // Main carousel in hero
+            // 
+            $('#utCaroMain').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                // autoplay: true,
+                autoplaySpeed: 5000,
+                arrows: true,
+                dots: false,
+                useTransform: true,
+                cssEase: 'ease',
+                asNavFor: '#utCaroSmall'
+            });
+            // Small, supporting carousel which highlights 
+            // current slide shown in the carousel above
+            // 
+            $('#utCaroSmall').slick({
+                slidesToShow: 5,
+                arrows: false,
+                dots: false,
+                asNavFor: '#utCaroMain'
+            });
         },
         async: true
     });
-
-
-
-
-    setTimeout(function() {
-        // loadSlick()
-        $('#utCaroMain').not('.slick-initialized').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: false,
-            // asNavFor: '#utCaroSmall'
-        });
-    }, 2000)
-
-
-    // function loadSlick() {
-    //     // Main carousel in hero
-    //     // 
-    //     $('#utCaroMain').slick({
-    //         slidesToShow: 1,
-    //         slidesToScroll: 1,
-    //         arrows: false,
-    //         dots: false,
-    //         useTransform: false,
-    //         cssEase: 'ease',
-    //         asNavFor: '#utCaroSmall'
-    //     });
-    //     // Small, supporting carousel which highlights 
-    //     // current slide shown in the carousel above
-    //     // 
-    //     $('#utCaroSmall').slick({
-    //         slidesToShow: 5,
-    //         arrows: false,
-    //         dots: false,
-    //         asNavFor: '#utCaroMain'
-    //     });
-    // }
-
-
-
-
-    // // Main carousel in hero
-    // // 
-    // $('#utCaroMain').slick({
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     arrows: false,
-    //     dots: false,
-    //     useTransform: false,
-    //     cssEase: 'ease',
-    //     asNavFor: '#utCaroSmall'
-    // });
-    // // Small, supporting carousel which highlights 
-    // // current slide shown in the carousel above
-    // // 
-    // $('#utCaroSmall').slick({
-    //     slidesToShow: 5,
-    //     arrows: false,
-    //     dots: false,
-    //     asNavFor: '#utCaroMain'
-    // });
-
-
-
-
-
-    // // Clicking on the small carousel slides brings associated
-    // // large carousel slide into focus
-    // // 
-    // $('.slick-slider').on('click', '.slick-slide', function (e) {
-    //     e.stopPropagation();
-    //     var index = $(this).data("slick-index");
-    //     if ($('.slick-slider').slick('slickCurrentSlide') !== index) {
-    //         $('.slick-slider').slick('slickGoTo', index);
-    //     }
-    // });
-
-
-
-    // // Small carousel slides were not working on demandware.
-    // // This bit of JS changes current slide of Small Carousel after
-    // // large carousel has advanced. Didn't work to do this "beforeChage"
-    // // 
-    // $('#utCaroMain').on('afterChange', function(event, slick, direction){
-    //     $('#utCaroSmall .slick-active:eq('+slick.currentSlide+')').addClass('slick-current').siblings().removeClass('slick-current');
-    // });
 
 
 
