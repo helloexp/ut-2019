@@ -233,6 +233,10 @@ $(function() {
         dots: false
     });
 
+    $('#utCaroMain').on('afterChange', function(event, slick, direction){
+        $('#utCaroSmall .slick-active:eq('+slick.currentSlide+')').addClass('slick-current').siblings().removeClass('slick-current');
+    });
+
 
 
     // Positioning hero to account for the scaling of the main slide

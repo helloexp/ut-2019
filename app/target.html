@@ -644,7 +644,7 @@ $(function() {
         dots: false,
         useTransform: true,
         cssEase: 'ease',
-        asNavFor: '.utCarouselNav'
+        asNavFor: '#utCaroSmall'
     });
 
 
@@ -652,15 +652,14 @@ $(function() {
     // Small, supporting carousel which highlights 
     // current slide shown in the carousel above
     // 
-    // var smallSlideWidth = $('#utCaroSmall .slide').outerWidth()
-    $('.utCarouselNav').slick({
+    $('#utCaroSmall').slick({
         slidesToShow: 5,
-        slidesToScroll: 1,
         arrows: false,
-        dots: false,
-        infinite: true,
-        useTransform: true,
-        cssEase: 'ease'
+        dots: false
+    });
+
+    $('#utCaroMain').on('afterChange', function(event, slick, direction){
+        $('#utCaroSmall .slick-active:eq('+slick.currentSlide+')').addClass('slick-current').siblings().removeClass('slick-current');
     });
 
 
