@@ -84,7 +84,7 @@ $colBaby: #98c800;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 37%;
+                width: 29%;
                 padding: 4px 5px;
                 font-family: $fontFam_hel;
                 font-size: 8px;
@@ -199,10 +199,11 @@ $colBaby: #98c800;
         width: 100%;
         margin: 10px 0px 0 0;
         a {
-            flex-grow: 1;
-            flex-basis: 25%;
+            // flex-grow: 1;
+            flex-basis: 24%;
             // width: 25%;
-            padding: 10px;
+            // padding: 10px;
+            margin-top: 5px;
         }
         h3 {
             width: 100%;
@@ -370,6 +371,9 @@ $colBaby: #98c800;
                         position: relative;
                     }
                     .utTileCta {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         position: absolute;
                         top: 0;
                         left: 0;
@@ -378,25 +382,25 @@ $colBaby: #98c800;
                         background-color: rgba(0, 0, 0, 0);
                         transition: background-color 0.3s;
                         h3 {
-                            // visibility: hidden;
+                            visibility: hidden;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            width: 37%;
-                            padding: 4px 5px;
+                            width: 54%;
+                            padding: 6px 7px;
                             font-family: $fontFam_hel;
-                            font-size: 8px;
+                            font-size: 16px;
                             font-weight: 500;
                             color: white;
                             text-transform: uppercase;
                             text-align: center;
-                            border: 2px solid white;
-                            transition: all 0.2s;
+                            border: 3px solid white;
+                            transition: all 0.1s;
                             &:hover {
-                                visibility: visible;
-                                border: 2px solid black;
-                                background: black;
-                                transition: visibility 0.3s;
+                                // visibility: visible;
+                                // border: 2px solid black;
+                                // background: black;
+                                // transition: visibility 0.3s;
                             }
                         }
                     }
@@ -407,6 +411,10 @@ $colBaby: #98c800;
                         .utTileCta {
                             background-color: rgba(0, 0, 0, 0.7);
                             transition: background-color 0.3s;
+                            h3 {
+                                visibility: visible;
+                                transition: all 0.3s;
+                            }
                         }
                     }
                 }
