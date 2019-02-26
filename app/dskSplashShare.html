@@ -1,0 +1,57 @@
+
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+
+
+<script>
+
+
+
+// Welcome message to fade in before page content
+// 
+window.addEventListener("load", function(event) {
+
+    $( '#main' ).fadeTo( 1200 , 1, function() {
+        $('#loaderOver').delay(100).fadeIn(900, function() {
+
+
+
+            // Animating the reveals of content within the splash screen
+            // 
+            // var tl = new TimelineMax({repeat:30, repeatDelay:2});
+            var tl = new TimelineLite();
+            var insertpos = tl.duration();
+
+            // Set all elements to zero opacity on start
+            tl.to($('#loaderOver p'), 1, {opacity:0});
+
+            // Play Tweens in sequence while overlapping on timeline
+            tl.to(".loaderImg", 1, {y:-5, autoAlpha:1}, (insertpos += .2));
+            tl.to(".one", 1, {y:-20, autoAlpha:1}, (insertpos += .2));
+            tl.to(".two", 1, {y:-20, autoAlpha:1}, (insertpos += .2));
+            tl.to(".three", 1, {y:-20, autoAlpha:1}, (insertpos += .2));
+            tl.to(".four", 1, {y:-20, autoAlpha:1}, (insertpos += .2));
+            tl.to(".five", 1, {y:-20, autoAlpha:1}, (insertpos += .2));
+            tl.to(".six", 1, {y:-20, autoAlpha:1}, (insertpos += .2));
+            tl.to(".seven", 1, {y:-20, autoAlpha:1}, (insertpos += .2));
+            tl.to(".eight", 1, {y:-20, autoAlpha:1}, (insertpos += .7));
+
+
+
+            // Closing out / hiding splash screen
+            // 
+            $('#loaderHolder').click(function() {
+                $('#loaderHolder').fadeOut(600, function() {
+                    $('#utLanding').fadeTo("slow" , 1)
+                })
+            })
+            // $('#loaderOver').delay(7000).fadeOut(600, function() {
+            //     $('#utLanding').fadeTo("slow" , 1)
+            // })
+        });
+    });
+});
+</script>

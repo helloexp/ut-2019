@@ -60,14 +60,7 @@
         <div class="seeMe">
             <iframe class='teaserMovie' src='https://www.youtube.com/embed/3WQHDUYk310?rel=0&amp;controls=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen=''></iframe>
             <iframe class='teaserMovie' src='https://www.youtube.com/embed/3WQHDUYk310?rel=0&amp;controls=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen=''></iframe>
-        </div>
-        <div class='divider'></div>
-
-
-
-
-
-        <!-- <div  id='heroCaro' class='owl-carousel owl-theme'>
+            <div  id='heroCaro'>
                 <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 1'/>
                 <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
                 <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
@@ -78,6 +71,25 @@
                 <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
                 <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
                 <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            </div>
+        </div>
+        <div class='divider'></div>
+
+
+
+
+
+        <!-- <div  id='heroCaro'>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 1'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
         </div> -->
 
 
@@ -792,6 +804,7 @@
         </div>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"></script>
 <script>
 var images = [{
         id: '41433109',
@@ -1217,6 +1230,16 @@ $('.column img').on('click', function() {
 $(document).ready(function() {
     $(".toggleSee").unbind('click').click(function() {
         $(".seeMe").slideToggle();
+        $('#heroCaro').slick({
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1
+        });
     })
+    // $('#heroCaro').slick({
+    //     infinite: true,
+    //     slidesToShow: 2,
+    //     slidesToScroll: 1
+    // });
 })
 </script>

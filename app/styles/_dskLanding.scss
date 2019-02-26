@@ -13,6 +13,33 @@ $colMen: #020d80;
 $colKids: #4fb3ef;
 $colBaby: #98c800;
 
+%ctaStyle {
+    h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 17%;
+        margin: 50px auto 30px;
+        padding: 10px 5px;
+        font-family: $fontFam_uqReg;
+        font-size: 18px;
+        font-weight: 500;
+        color: black;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+        border: 3px solid black;
+        transition: all 0.2s;
+        &:hover {
+            visibility: visible;
+            color: white;
+            border: 3px solid black;
+            background: black;
+            transition: all 0.3s;
+        }
+    }
+}
+
 
 #secondary {
     display: none !important;
@@ -26,8 +53,59 @@ h1.cat-heading {
     display: none;
 }
 
+#main {
+    opacity: 0;
+    background: url(https://uniqlo.scene7.com/is/image/UNIQLO/UT_Background_022519_01);
+    // background-position: -13% 0;
+    background-size: contain;
+    overflow: hidden;
+}
+
+#loaderHolder {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    // border: 3px solid red;
+}
+#loaderOver {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44%;
+    margin: 0 auto;
+    padding: 80px 60px 50px;
+    text-align: center;
+    border: 1px solid lightgray;
+    // background: white;
+    background: rgba(255,255,255, 0.8);
+    h2 {
+        margin-bottom: 20px;
+        font-size: 40px;
+    }
+    p {
+        visibility: hidden;
+    }
+    p.topPadded {
+        width: 60%;
+        margin: 50px auto 0;
+    }
+    img {
+        visibility: hidden;
+        width: 18%;
+        margin-bottom: 50px;
+    }
+    h3 {
+        @extend %ctaStyle;
+    }
+}
 
 #utLanding {
+    opacity: 0;
+    padding: 30px;
+    background: white;
     * {
         box-sizing: border-box;
     }

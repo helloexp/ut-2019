@@ -1,6 +1,24 @@
+<div id="loaderHolder">
+    <section id="loaderOver">
+        <img class="loaderImg" src="http://im.uniqlo.com/us/en/spa/media/5c7404156279cd2a4bc3c833.jpg" alt="UT Logo" />
+        <p class="one">A t-shirt is more than just a t-shirt.</p>
+        <p class="two">It's an expression of who you are.</p>
+        <p class="three">Where you've been.</p>
+        <p class="four">What you love.</p>
+        <p class="five">And with hundreds of limited edition t-shirts</p>
+        <p class="six">to choose from each year,</p>
+        <p class="seven">you'll always find one that says exactly how you feel.</p>
+        <p class="topPadded eight">That's the UT philosophy.</p>
+    </section>
+</div>
+
+
+
+
+
+
+
 <div id='utLanding'>
-
-
 
 
 
@@ -589,10 +607,74 @@
 
 
 
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/plugins/CSSPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/easing/EasePack.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/TweenLite.min.js"></script> -->
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/TweenMax.min.js"></script> -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
 
 
 <script>
+
+
+
+// Welcome message to fade in before page content
+// 
+window.addEventListener("load", function(event) {
+
+    $( '#main' ).fadeTo( 900 , 1, function() {
+        $('#loaderOver').delay(200).fadeIn(800, function() {
+
+
+
+            // Animating the reveals of content within the splash screen
+            // 
+            // var tl = new TimelineMax({repeat:30, repeatDelay:2});
+            var tl = new TimelineLite();
+            var insertpos = tl.duration();
+
+            // Set all elements to zero opacity on start
+            tl.to($('#loaderOver p'), 1, {opacity:0});
+
+            // Play Tweens in sequence while overlapping on timeline
+            tl.to(".loaderImg", 1, {y:-5, autoAlpha:1}, (insertpos += .06));
+            tl.to(".one", 1, {y:-20, autoAlpha:1}, (insertpos += .06));
+            tl.to(".two", 1, {y:-20, autoAlpha:1}, (insertpos += .06));
+            tl.to(".three", 1, {y:-20, autoAlpha:1}, (insertpos += .06));
+            tl.to(".four", 1, {y:-20, autoAlpha:1}, (insertpos += .06));
+            tl.to(".five", 1, {y:-20, autoAlpha:1}, (insertpos += .06));
+            tl.to(".six", 1, {y:-20, autoAlpha:1}, (insertpos += .06));
+            tl.to(".seven", 1, {y:-20, autoAlpha:1}, (insertpos += .06));
+            tl.to(".eight", 1, {y:-20, autoAlpha:1}, (insertpos += .06));
+
+
+
+            // Closing out / hiding splash screen
+            // 
+            $('#loaderHolder').click(function() {
+                $('#loaderHolder').fadeOut(600, function() {
+                    $('#utLanding').fadeTo("slow" , 1)
+                    $('#loaderHolder').hide()
+                })
+            })
+            // $('#loaderOver').delay(9000).fadeOut(600, function() {
+            //     $('#utLanding').fadeTo("slow" , 1, function() {
+            //         $('#loaderHolder').hide()
+            //     })
+            // })
+        });
+    });
+});
+
+
+
+
+
+
 $(function() {
+
+
 
 
     // Main carousel in hero
