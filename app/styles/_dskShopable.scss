@@ -49,8 +49,8 @@ div#categoryspecific {
 #utCat {
     padding-top: 10px;
     padding-bottom: 10px;
-    background-image: url("https://uniqlo.scene7.com/is/image/UNIQLO/18FW_UT_KawsxSesameStreet_backgroundpattern");
-    background-size: 0.5 auto;
+    background-image: url(https://uniqlo.scene7.com/is/image/UNIQLO/UT_Background_022519_01);
+    background-size: 50% auto;
     background-repeat: repeat;
     .teaserContent {
       overflow: hidden;
@@ -221,10 +221,11 @@ div#categoryspecific {
         }
         .seeMe {
           display: none;
-          overflow: hidden;
+        //   overflow: hidden;
+            padding: 1px 0;
         }
         .teaserMovie {
-            margin: 30px auto;
+            margin: 30px auto !important;
             display: block;
             width: 85%;
             height: 440px;

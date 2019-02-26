@@ -16,8 +16,8 @@ div#categoryspecific {
 #utCat {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-image: url("https://uniqlo.scene7.com/is/image/UNIQLO/18FW_UT_KawsxSesameStreet_backgroundpattern");
-  background-size: 0.5 auto;
+  background-image: url(https://uniqlo.scene7.com/is/image/UNIQLO/UT_Background_022519_01);
+  background-size: 50% auto;
   background-repeat: repeat;
 }
 
@@ -223,11 +223,11 @@ div#categoryspecific {
 
 #utCat .teaserContent .seeMe {
   display: none;
-  overflow: hidden;
+  padding: 1px 0;
 }
 
 #utCat .teaserContent .teaserMovie {
-  margin: 30px auto;
+  margin: 30px auto !important;
   display: block;
   width: 85%;
   height: 440px;
@@ -307,10 +307,11 @@ div#categoryspecific {
 
 #utCat #heroCaro {
   width: 87.2%;
-  margin: 40px auto 60px;
+  margin: 40px auto 0;
 }
 
 #utCat #heroCaro img {
+  min-height: 1px;
   margin: 0 10px;
 }
 
@@ -397,18 +398,45 @@ div#categoryspecific {
 
 
 
+
+<!-- ————————————————————————————————————o————————————————————————————————————o SHOW/HIDE -->
+<!-- SHOW/HIDE -->
+<!-- ————————————————————————————————————o————————————————————————————————————o SHOW/HIDE -->
+<h3 class="toggleSee">EXPLORE THE COLLECTION</h3>
+<div class="seeMe">
+    <iframe class='teaserMovie' src='https://www.youtube.com/embed/3WQHDUYk310?rel=0&amp;controls=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen=''></iframe>
+    <iframe class='teaserMovie' src='https://www.youtube.com/embed/3WQHDUYk310?rel=0&amp;controls=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen=''></iframe>
+    <div id='heroCaro'>
+        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 1'/>
+        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-pc-190218-m-outerwearandblazers-hero-01?$jpgMQ$' alt='Brand Key Visual 2'/>
+    </div>
+</div>
+<div class='divider'></div>
+
+
+
+
 <script>
-    $(document).ready(function() {
-        $('.toggleSee').unbind('click').click(function() {
-            $('.seeMe').slideToggle();
-        })
+$(document).ready(function() {
+    $(".toggleSee").unbind('click').click(function() {
+        $(".seeMe").slideToggle();
         $('#heroCaro').slick({
+            infinite: true,
             slidesToShow: 2,
             slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            arrows: true,
-            dots: true
-        });  
+            dots: true,
+            // autoplay: true,
+            autoplaySpeed: 2000
+
+        });
     })
+})
 </script>
