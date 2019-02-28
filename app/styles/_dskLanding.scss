@@ -159,6 +159,7 @@ h1.cat-heading {
         padding: 25px 20px;
         background: rgba(0, 0, 0, 0.7);
         overflow: hidden;
+        z-index: 1;
         &::after {
             content: '';
             background: url('https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_UT_pattern?$png$');
@@ -275,7 +276,7 @@ h1.cat-heading {
         }
     }
     #utCaroSmall {
-        width: calc(55% + 5px);
+        width: calc(85% + 5px);
         margin: 0 auto;
         padding-top: 30px;
         z-index: 2;

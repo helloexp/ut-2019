@@ -1,632 +1,620 @@
 <style>
 /* inject:theCss:css */
 #secondary {
-  display: none !important;
+    display: none !important;
 }
 
 #primary {
-  width: 100% !important;
+    width: 100% !important;
 }
 
 h1.cat-heading {
-  display: none;
+    display: none;
 }
 
 #wrapper.header-wrapper .header-banner {
-  padding-bottom: 0;
+    padding-bottom: 0;
 }
 
 #main {
-  background-image: url(https://uniqlo.scene7.com/is/image/UNIQLO/UT_Background_022519_01);
-  background-size: 50% auto;
-  overflow: visible;
+    background-image: url(https://uniqlo.scene7.com/is/image/UNIQLO/UT_Background_022519_01);
+    background-size: 50% auto;
+    overflow: visible;
 }
 
 #main.clearfix.content-wrapper {
-  max-width: none;
+    max-width: none;
 }
 
 #main .categorybreadcrumb {
-  display: none;
+    display: none;
 }
 
 #main #primary.primary-content {
-  float: none;
-  display: block;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 24px 0 0;
+    float: none;
+    display: block;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px 0 0;
 }
 
 #utLanding {
-  padding: 30px;
-  background: white;
+    padding: 30px;
+    background: white;
 }
 
 #utLanding * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #utLanding img {
-  display: block;
+    display: block;
 }
 
 #utLanding h2 {
-  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 50px;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 50px;
 }
 
 #utLanding h3 {
-  font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #utLanding p {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#utLanding #utHdrLogo {
+    width: 100%;
+    padding-bottom: 30px;
 }
 
 #utLanding #utHero {
-  position: relative;
-  padding: 25px 20px;
-  background: rgba(0, 0, 0, 0.7);
-  overflow: hidden;
+    position: relative;
+    padding: 25px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
 }
 
 #utLanding #utHero::after {
-  content: '';
-  background: url("https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_UT_pattern?$png$");
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: 1;
+    content: '';
+    background: url("https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_UT_pattern?$png$");
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
 }
 
 #utLanding #utCaroMain {
-  margin: 0 -70px;
-  z-index: 2;
+    margin: 0 -70px;
+    z-index: 2;
 }
 
 #utLanding #utCaroMain .utMainImgWrp {
-  position: relative;
+    position: relative;
 }
 
 #utLanding #utCaroMain .utMainCta {
-  visibility: hidden;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  opacity: 0;
-  transition: opacity 0.3s;
+    visibility: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 #utLanding #utCaroMain .utMainCta h3 {
-  visibility: hidden;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  width: 29%;
-  padding: 4px 5px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 8px;
-  font-weight: 500;
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-  border: 2px solid white;
-  transition: all 0.2s;
+    visibility: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 29%;
+    padding: 4px 5px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8px;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid white;
+    transition: all 0.2s;
 }
 
 #utLanding #utCaroMain .utMainCta h3:hover {
-  visibility: visible;
-  border: 2px solid black;
-  background: black;
-  transition: visibility 0.3s;
+    visibility: visible;
+    border: 2px solid black;
+    background: black;
+    transition: visibility 0.3s;
 }
 
 #utLanding #utCaroMain .slick-current:hover .utMainImgWrp .utMainCta {
-  visibility: visible;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 1;
-  transition: opacity 0.3s;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    transition: opacity 0.3s;
 }
 
 #utLanding #utCaroMain .slick-current:hover .utMainImgWrp .utMainCta h3 {
-  visibility: visible;
-  padding: 4px 5px;
-  border: 2px solid white;
-  transition: border 0.3s;
+    visibility: visible;
+    padding: 4px 5px;
+    border: 2px solid white;
+    transition: border 0.3s;
 }
 
 #utLanding #utCaroMain .utReleaseMsg {
-  transform: translateX(-13%);
-  width: 135%;
-  margin-top: 7px;
-  color: white;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.5s;
+    transform: translateX(-13%);
+    width: 135%;
+    margin-top: 7px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 #utLanding #utCaroMain .utReleaseMsg h3 {
-  font-size: 10px;
-  text-transform: uppercase;
+    font-size: 10px;
+    text-transform: uppercase;
 }
 
 #utLanding #utCaroMain .utReleaseMsg h3 span {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 #utLanding #utCaroMain .utReleaseMsg h4 {
-  font-size: 9px;
+    font-size: 9px;
 }
 
 #utLanding #utCaroMain .slick-list {
-  overflow: visible;
-  padding: 0 !important;
+    overflow: visible;
+    padding: 0 !important;
 }
 
 #utLanding #utCaroMain .slick-slide {
-  margin: 0 80px;
-  transform: scale(0.75);
-  transition: all 0.5s;
+    margin: 0 80px;
+    transform: scale(0.75);
+    transition: all 0.5s;
 }
 
 #utLanding #utCaroMain .slick-slide.slick-center {
-  transform: scale(2.25);
-  transition: all 0.5s;
+    transform: scale(2.25);
+    transition: all 0.5s;
 }
 
 #utLanding #utCaroMain .slick-slide.slick-center .utReleaseMsg {
-  opacity: 1;
-  transition: opacity 0.5s;
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 
 #utLanding #utCaroMain button.slick-prev {
-  left: 60px;
+    left: 60px;
 }
 
 #utLanding #utCaroMain button.slick-next {
-  right: 60px;
+    right: 60px;
 }
 
 #utLanding #utCaroSmall {
-  width: calc(55% + 5px);
-  margin: 0 auto;
-  padding-top: 30px;
-  z-index: 2;
+    width: calc(55% + 5px);
+    margin: 0 auto;
+    padding-top: 30px;
+    z-index: 2;
 }
 
 #utLanding #utCaroSmall .utTileWrapper {
-  position: relative;
+    position: relative;
 }
 
 #utLanding #utCaroSmall .utTileWrapper .utTileOver {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.7);
-  transition: all 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 0.5s;
 }
 
 #utLanding #utCaroSmall .slick-slide {
-  margin: 0 10px;
-  transition: all 0.7s;
+    margin: 0 10px;
+    transition: all 0.7s;
 }
 
 #utLanding #utCaroSmall .slick-slide.slick-current {
-  background: white;
-  transition: all 0.7s;
+    background: white;
+    transition: all 0.7s;
 }
 
 #utLanding #utCaroSmall .slick-slide.slick-current .utTileOver {
-  background: rgba(255, 255, 255, 0);
-  transition: all 0.3s;
+    background: rgba(255, 255, 255, 0);
+    transition: all 0.3s;
 }
 
 #utLanding #utGenNav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  width: 100%;
-  margin: 10px 0px 0 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0px 0 0;
 }
 
 #utLanding #utGenNav a {
-  -ms-flex-preferred-size: 24%;
-      flex-basis: 24%;
-  margin-top: 5px;
+    -ms-flex-preferred-size: 24%;
+    flex-basis: 24%;
+    margin-top: 5px;
 }
 
 #utLanding #utGenNav h3 {
-  width: 100%;
-  padding: 14px 40px 15px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: white;
-  text-align: center;
-  border: 3px solid transparent;
-  transition: all 0.3s;
+    width: 100%;
+    padding: 14px 40px 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    border: 3px solid transparent;
+    transition: all 0.3s;
 }
 
 #utLanding #utGenNav h3.utNavM {
-  background: #020d80;
+    background: #020d80;
 }
 
 #utLanding #utGenNav h3.utNavM:hover {
-  color: #020d80;
-  border: 3px solid #020d80;
-  background: white;
-  transition: all 0.3s;
+    color: #020d80;
+    border: 3px solid #020d80;
+    background: white;
+    transition: all 0.3s;
 }
 
 #utLanding #utGenNav h3.utNavW {
-  background: red;
+    background: red;
 }
 
 #utLanding #utGenNav h3.utNavW:hover {
-  color: red;
-  border: 3px solid red;
-  background: white;
-  transition: all 0.3s;
+    color: red;
+    border: 3px solid red;
+    background: white;
+    transition: all 0.3s;
 }
 
 #utLanding #utGenNav h3.utNavK {
-  background: #4fb3ef;
+    background: #4fb3ef;
 }
 
 #utLanding #utGenNav h3.utNavK:hover {
-  color: #4fb3ef;
-  border: 3px solid #4fb3ef;
-  background: white;
-  transition: all 0.3s;
+    color: #4fb3ef;
+    border: 3px solid #4fb3ef;
+    background: white;
+    transition: all 0.3s;
 }
 
 #utLanding #utGenNav h3.utNavB {
-  background: #98c800;
+    background: #98c800;
 }
 
 #utLanding #utGenNav h3.utNavB:hover {
-  color: #98c800;
-  border: 3px solid #98c800;
-  background: white;
-  transition: all 0.3s;
+    color: #98c800;
+    border: 3px solid #98c800;
+    background: white;
+    transition: all 0.3s;
 }
 
 #utLanding #utCollection h2 {
-  padding: 50px 0 40px;
-  font-weight: 700;
-  text-align: center;
-  overflow: hidden;
+    padding: 50px 0 40px;
+    font-weight: 700;
+    text-align: center;
+    overflow: hidden;
 }
 
 #utLanding #utCollection article {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 #utLanding #utCollection article .utColHdr {
-  position: relative;
-  width: 100%;
-  height: 16vw;
-  max-height: 200px;
-  color: white;
-  cursor: pointer;
-  border: 1px solid lightgray;
-  border: 3px solid black;
-  background: black;
-  transition: all 0.4s;
+    position: relative;
+    width: 100%;
+    height: 16vw;
+    max-height: 200px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border: 3px solid black;
+    background: black;
+    transition: all 0.4s;
 }
 
 #utLanding #utCollection article .utColHdr:hover {
-  background: #4b4b4b;
-  transition: all 0.4s;
+    background: #4b4b4b;
+    transition: all 0.4s;
 }
 
 #utLanding #utCollection article .utColHdr:hover .utHdrTitle {
-  color: white;
-  transition: all 0.4s;
+    color: white;
+    transition: all 0.4s;
 }
 
 #utLanding #utCollection article .utColHdr .utColMain {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #utLanding #utCollection article .utColHdr .utHdrIcon {
-  width: 83px;
-  margin: 0 auto;
+    width: 83px;
+    margin: 0 auto;
 }
 
 #utLanding #utCollection article .utColHdr .utHdrTitle {
-  margin-top: 10px;
-  font-size: 36px;
-  letter-spacing: 3px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: all 0.4s;
+    margin-top: 10px;
+    font-size: 36px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.4s;
 }
 
 #utLanding #utCollection article .utColHdr .utHdrHandle {
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  transform: translateY(-50%);
-  width: 40px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 40px;
 }
 
 #utLanding #utCollection article .utColHdr .utHdrHandle img {
-  transform: rotate(0deg);
-  transform-origin: 20px 20px;
-  transition: all 0.6s;
+    transform: rotate(0deg);
+    transform-origin: 20px 20px;
+    transition: all 0.6s;
 }
 
 #utLanding #utCollection article .utColHdr .utHdrHandle img.rotated {
-  transform: rotate(180deg);
-  transform-origin: 20px 20px;
-  transition: all 0.6s;
+    transform: rotate(180deg);
+    transform-origin: 20px 20px;
+    transition: all 0.6s;
 }
 
 #utLanding #utCollection article .utColHdr .utHdrHandle img {
-  width: 100%;
+    width: 100%;
 }
 
 #utLanding #utCollection article .utColHdr .fa-angle-down {
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  transform: translateY(-50%) rotate(0deg);
-  font-size: 65px;
-  line-height: 0;
-  transition: all 0.5s;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%) rotate(0deg);
+    font-size: 65px;
+    line-height: 0;
+    transition: all 0.5s;
 }
 
 #utLanding #utCollection article .utColHdr .fa-angle-down.rotated {
-  transform: rotate(180deg);
-  transition: all 0.5s;
+    transform: rotate(180deg);
+    transition: all 0.5s;
 }
 
 #utLanding #utCollection article .utColHidn {
-  position: relative;
-  margin: 40px 20px !important;
-  overflow: hidden;
-  display: none;
+    position: relative;
+    margin: 40px 20px !important;
+    overflow: hidden;
+    display: none;
 }
 
 #utLanding #utCollection article .utColHidn hr {
-  height: 2px;
-  border: 0;
-  background: black;
-  margin: 40px 0 60px;
+    height: 2px;
+    border: 0;
+    background: black;
+    margin: 40px 0 60px;
 }
 
 #utLanding #utCollection article h3.utColTitle {
-  font-size: 46px;
+    font-size: 46px;
 }
 
 #utLanding #utCollection article p {
-  font-size: 21px;
+    font-size: 21px;
 }
 
 #utLanding #utCollection article .utProdTiles {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0 -10px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -10px;
 }
 
 #utLanding #utCollection article .utProdTiles .utOneTile {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
-  margin-bottom: 60px;
-  padding: 10px;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    margin-bottom: 60px;
+    padding: 10px;
 }
 
 #utLanding #utCollection article .utProdTiles .utOneTile.3col {
-  -ms-flex-preferred-size: 33.33333%;
-      flex-basis: 33.33333%;
+    -ms-flex-preferred-size: 33.33333%;
+    flex-basis: 33.33333%;
 }
 
 #utLanding #utCollection article .utProdTiles .utOneTile .utTileOverlay {
-  position: relative;
+    position: relative;
 }
 
 #utLanding #utCollection article .utProdTiles .utOneTile .utTileCta {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  transition: background-color 0.3s;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s;
 }
 
 #utLanding #utCollection article .utProdTiles .utOneTile .utTileCta h3 {
-  visibility: hidden;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  width: 54%;
-  padding: 6px 7px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-  border: 3px solid white;
-  transition: all 0.1s;
+    visibility: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 54%;
+    padding: 6px 7px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    border: 3px solid white;
+    transition: all 0.1s;
 }
 
 #utLanding #utCollection article .utProdTiles .utOneTile:hover .utTileOverlay {
-  position: relative;
+    position: relative;
 }
 
 #utLanding #utCollection article .utProdTiles .utOneTile:hover .utTileCta {
-  background-color: rgba(0, 0, 0, 0.7);
-  transition: background-color 0.3s;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s;
 }
 
 #utLanding #utCollection article .utProdTiles .utOneTile:hover .utTileCta h3 {
-  visibility: visible;
-  transition: all 0.3s;
+    visibility: visible;
+    transition: all 0.3s;
 }
 
 #utLanding #utCollection article .utProdTiles h3 {
-  font-size: 25px;
-  text-transform: uppercase;
+    font-size: 25px;
+    text-transform: uppercase;
 }
 
 #utLanding #utCollection article .utProdTiles h4 {
-  display: inline-block;
-  margin: 10px 1px 5px;
-  padding: 3px 10px;
-  font-size: 15px;
-  color: white;
-  text-transform: uppercase;
-  background: black;
+    display: inline-block;
+    margin: 10px 1px 5px;
+    padding: 3px 10px;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    background: black;
 }
 
 #utLanding #utCollection article .utProdTiles h4.utFlagCom {
-  display: table;
-  margin-bottom: -5px;
-  background: #378694;
+    display: table;
+    margin-bottom: -5px;
+    background: #378694;
 }
 
 #utLanding #utCollection article .utProdTiles h4.utFlagM {
-  background: #020d80;
+    background: #020d80;
 }
 
 #utLanding #utCollection article .utProdTiles h4.utFlagW {
-  background: red;
+    background: red;
 }
 
 #utLanding #utCollection article .utProdTiles h4.utFlagK {
-  background: #4fb3ef;
+    background: #4fb3ef;
 }
 
 #utLanding #utCollection article .utProdTiles h4.utFlagB {
-  background: #98c800;
+    background: #98c800;
 }
 
 #utLanding .copyright {
-  float: left;
-  width: 100%;
-  font-size: 10px;
-  color: darkgray;
-  text-align: left;
-  background: none;
+    float: left;
+    width: 100%;
+    font-size: 10px;
+    color: darkgray;
+    text-align: left;
+    background: none;
 }
 
 button.slick-arrow {
-  top: 56%;
-  z-index: 1;
+    top: 56%;
+    z-index: 1;
 }
 
 button.slick-prev,
 button.slick-arrow.slick-prev:hover,
 button.slick-arrow.slick-prev:focus {
-  width: 15px;
-  height: 69px;
-  background: url(https://www.uniqlo.com/na-static/on/demandware.static/Sites-UniqloUS-Site/-/default/v1504016526668/images/sprite-uniqlo.png) -97px -727px no-repeat;
+    width: 15px;
+    height: 69px;
+    background: url(https://www.uniqlo.com/na-static/on/demandware.static/Sites-UniqloUS-Site/-/default/v1504016526668/images/sprite-uniqlo.png) -97px -727px no-repeat;
 }
 
 button.slick-next,
 button.slick-arrow.slick-next:hover,
 button.slick-arrow.slick-next:focus {
-  width: 15px;
-  height: 69px;
-  background: url(https://www.uniqlo.com/na-static/on/demandware.static/Sites-UniqloUS-Site/-/default/v1504016526668/images/sprite-uniqlo.png) -108px -819px no-repeat;
+    width: 15px;
+    height: 69px;
+    background: url(https://www.uniqlo.com/na-static/on/demandware.static/Sites-UniqloUS-Site/-/default/v1504016526668/images/sprite-uniqlo.png) -108px -819px no-repeat;
 }
 
 
 
 /* endCSSinject */
 </style>
-
-
 <!-- inject:theHTML:html -->
 <!-- <link href="https://unpkg.com/ionicons@4.4.4/dist/css/ionicons.min.css" rel="stylesheet">
-
-
-<div id="loaderHolder">
-    <section id="loaderOver">
-        <i class="icon ion-md-close-circle-outline"></i>
-        <img class="loaderImg" src="http://im.uniqlo.com/us/en/spa/media/5c7404156279cd2a4bc3c833.jpg" alt="UT Logo" />
-        <p class="one">A t-shirt is more than just a t-shirt.</p>
-        <p class="two">It's an expression of who you are.</p>
-        <p class="three">Where you've been.</p>
-        <p class="four">What you love.</p>
-        <p class="five">And with hundreds of limited edition t-shirts</p>
-        <p class="six">to choose from each year,</p>
-        <p class="seven">you'll always find one that says exactly how you feel.</p>
-        <p class="topPadded eight">That's the UT philosophy.</p>
-    </section>
-</div>
- -->
-
-
-
-
-
-
+        
+        
+        <div id="loaderHolder">
+            <section id="loaderOver">
+                <i class="icon ion-md-close-circle-outline"></i>
+                <img class="loaderImg" src="http://im.uniqlo.com/us/en/spa/media/5c7404156279cd2a4bc3c833.jpg" alt="UT Logo" />
+                <p class="one">A t-shirt is more than just a t-shirt.</p>
+                <p class="two">It's an expression of who you are.</p>
+                <p class="three">Where you've been.</p>
+                <p class="four">What you love.</p>
+                <p class="five">And with hundreds of limited edition t-shirts</p>
+                <p class="six">to choose from each year,</p>
+                <p class="seven">you'll always find one that says exactly how you feel.</p>
+                <p class="topPadded eight">That's the UT philosophy.</p>
+            </section>
+        </div>
+         -->
 <div id='utLanding'>
-
-
-
-
-
-
+    <img id="utHdrLogo" src="https://uniqlo.scene7.com/is/image/UNIQLO/WearYourWorld_UT?$png$" />
     <!-- ————————————————————————————————————o————————————————————————————————————o BIKINIS -->
-        <!-- HERO -->
+    <!-- HERO -->
     <!-- ————————————————————————————————————o————————————————————————————————————o BIKINIS -->
     <section id='utHero'>
-
-
-
-        
         <!-- ————————————————————————————————————o MAIN CAROUSEL -->
         <!-- MAIN CAROUSEL -->
         <div id='utCaroMain' class='utCarousel'>
             <div class='utMainTile'>
                 <a href='/us/en/ut-graphic-tees/shop-all-men'>
-                    <div class="utMainImgWrp">
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_ut_020619_keithharing' alt='SPRZ NY Keith Haring Main Image' />
-                        <div class="utMainCta">
-                            <h3>Shop Now</h3>
-                        </div>
-                    </div>
-                </a>
+                            <div class="utMainImgWrp">
+                                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_ut_020619_keithharing' alt='SPRZ NY Keith Haring Main Image' />
+                                <div class="utMainCta">
+                                    <h3>Shop Now</h3>
+                                </div>
+                            </div>
+                        </a>
                 <div class='utReleaseMsg'>
                     <h3>SPRZ NY Keith Haring</h3>
                     <h4>Available Online + In Select Stores | $14.90</h4>
@@ -634,11 +622,11 @@ button.slick-arrow.slick-next:focus {
             </div>
             <div class='utMainTile'>
                 <div class="utMainImgWrp">
-                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_022119_01' alt='LINE FRIENDS Main Image' />
-                <div class="utMainCta">
-                    <h3>Shop Now</h3>
+                    <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_022119_01' alt='LINE FRIENDS Main Image' />
+                    <div class="utMainCta">
+                        <h3>Shop Now</h3>
+                    </div>
                 </div>
-            </div>
                 <div class='utReleaseMsg'>
                     <h3>LINE FRIENDS</h3>
                     <h4>Available Online + In Select Stores | $14.90</h4>
@@ -646,11 +634,11 @@ button.slick-arrow.slick-next:focus {
             </div>
             <div class='utMainTile'>
                 <div class="utMainImgWrp">
-                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_010419_01' alt='Hokusai Blue Main Image' />
-                <div class="utMainCta">
-                    <h3>Shop Now</h3>
+                    <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_010419_01' alt='Hokusai Blue Main Image' />
+                    <div class="utMainCta">
+                        <h3>Shop Now</h3>
+                    </div>
                 </div>
-            </div>
                 <div class='utReleaseMsg'>
                     <h3>Hokusai Blue</h3>
                     <h4>Available Online + In Select Stores | T-Shirts $14.90 | Sweatshirts $29.90</h4>
@@ -658,11 +646,11 @@ button.slick-arrow.slick-next:focus {
             </div>
             <div class='utMainTile'>
                 <div class="utMainImgWrp">
-                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_030119_05' alt='Minions Every Days A Weekend Collection Main Image' />
-                <div class="utMainCta">
-                    <h3>Shop Now</h3>
+                    <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_030119_05' alt='Minions Every Days A Weekend Collection Main Image' />
+                    <div class="utMainCta">
+                        <h3>Shop Now</h3>
+                    </div>
                 </div>
-            </div>
                 <div class='utReleaseMsg'>
                     <h3><span>Coming Soon!</span> Minions Every Day's A Weekend Collection</h3>
                     <h4>Available Online + In Select Stores 3/4 | Adults $14.90 | Kids $9.90</h4>
@@ -670,12 +658,11 @@ button.slick-arrow.slick-next:focus {
             </div>
             <div class='utMainTile'>
                 <div class="utMainImgWrp">
-                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_030119_16' alt='Sanrio Characters Main Image' />
-
-                <div class="utMainCta">
-                    <h3>Shop Now</h3>
+                    <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_030119_16' alt='Sanrio Characters Main Image' />
+                    <div class="utMainCta">
+                        <h3>Shop Now</h3>
+                    </div>
                 </div>
-            </div>
                 <div class='utReleaseMsg'>
                     <h3><span>Coming Soon!</span> Sanrio Characters</h3>
                     <h4>Available Online + In Select Stores 3/4 | Women $14.90 | Kids $9.90</h4>
@@ -683,48 +670,33 @@ button.slick-arrow.slick-next:focus {
             </div>
         </div>
         <div class='utBelowCaro'></div>
-
-
-
-
-
-
-
-
         <!-- ————————————————————————————————————o SECONDARY CAROUSEL -->
         <!-- SECONDARY CAROUSEL -->
         <div id='utCaroSmall' class='utCarouselNav'>
             <div class='utTileWrapper'>
                 <div class='utTileOver'></div>
                 <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-190204-utgraphictees-keith-haring-without-copyright' alt='SPRZ NY Keith Haring tile' />
-            </div>
-            <div class='utTileWrapper'>
-                <div class='utTileOver'></div>
-                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_00' alt='LINE FRIENDS tile' />
-            </div>
-            <div class='utTileWrapper'>
-                <div class='utTileOver'></div>
-                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_hero_Hokusai' alt='Hokusai Blue tile' />
-            </div>
-            <div class='utTileWrapper'>
-                <div class='utTileOver'></div>
-                <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-minions' alt='Minions Every Day's A Weekend Collection tile' />
-            </div>
-            <div class='utTileWrapper'>
-                <div class='utTileOver'></div>
-                <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-sanriocharacters45thririka' alt='Sanrio Characters tile' />
-            </div>
-        </div>
+                    </div>
+                <div class='utTileWrapper'>
+                    <div class='utTileOver'></div>
+                    <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_00' alt='LINE FRIENDS tile' />
+                    </div>
+                    <div class='utTileWrapper'>
+                        <div class='utTileOver'></div>
+                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_hero_Hokusai' alt='Hokusai Blue tile' />
+                    </div>
+                        <div class='utTileWrapper'>
+                            <div class='utTileOver'></div>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-minions' alt='Minions Every Day's A Weekend Collection tile' />
+                    </div>
+                            <div class='utTileWrapper'>
+                                <div class='utTileOver'></div>
+                                <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-sanriocharacters45thririka' alt='Sanrio Characters tile' />
+                    </div>
+                            </div>
     </section>
-
-
-
-
-
-
-
     <!-- ————————————————————————————————————o————————————————————————————————————o GENDER NAV -->
-        <!-- GENDER NAV -->
+    <!-- GENDER NAV -->
     <!-- ————————————————————————————————————o————————————————————————————————————o GENDER NAV -->
     <section id='utGenNav'>
         <a href='/us/en/ut-graphic-tees/shop-all-men'><h3 class='utNavM'>SHOP MEN</h3></a>
@@ -732,15 +704,8 @@ button.slick-arrow.slick-next:focus {
         <a href='/us/en/ut-graphic-tees/shop-all-kids'><h3 class='utNavK'>SHOP KIDS</h3></a>
         <a href='/us/en/ut-graphic-tees/shop-all-baby'><h3 class='utNavB'>SHOP BABY</h3></a>
     </section>
-
-
-
-
-
-
-
     <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION SECTION -->
-        <!-- COLLECTION SECTION -->
+    <!-- COLLECTION SECTION -->
     <!-- ————————————————————————————————————o————————————————————————————————————o COLLECTION SECTION -->
     <section id='utCollection'>
         <h2>Shop By Collection</h2>
@@ -752,86 +717,86 @@ button.slick-arrow.slick-next:focus {
                     <!---<h3 class='utHdrTitle'>MAGIC FOR ALL</h3>--->
                 </div>
                 <div class='utHdrHandle'><img src='https://uniqlo.scene7.com/is/image/UNIQLO/UT_Carrot?$gif$' /></div>
-            </div>
-            <div class='utColHidn'>
-                <h3 class='utColTitle'>MAGIC FOR ALL</h3>
-                <p>A collaboration with The Walt Disney Company, Magic For All celebrates the child in all of us with the world’s favorite Disney characters.</p>
-                <hr />
-                <div class='utProdTiles'>
-                    <div class='utOneTile'>
-                        <a href='/us/en/ut-graphic-tees/shop-all-men'>
-                            <div class="utTileOverlay">
-                                <div class="utTileCta"><h3>shop now</h3></div>
-                                <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_PRINCESSWAY_00' alt='ZZZ' />
-                            </div>
-                            <h4 class='utTileFlag utFlagA'>adults</h4>
-                            <h4 class='utTileFlag utFlagW'>women</h4>
-                            <h4 class='utTileFlag utFlagK'>kids</h4>
-                            <h4 class='utTileFlag utFlagB'>baby</h4>
-                            <h3 class='utTileTitle'>Princess Way</h3>
-                        </a>
-                    </div>
-                    <div class='utOneTile'>
-                        <a href='/us/en/ut-graphic-tees/shop-all-men'>
-                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_BLOSSOMINGDREAMS_00' alt='ZZZ' />
-                            <h4 class='utTileFlag utFlagK'>kids</h4>
-                            <h3 class='utTileTitle'>Disney | Blossoming Dreams</h3>
-                        </a>
-                    </div>
-                    <div class='utOneTile'>
-                        <a href='/us/en/ut-graphic-tees/shop-all-men'>
-                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_19ss_mickeystands' alt='ZZZ' />
-                            <h4 class='utTileFlag utFlagA'>adults</h4>
-                            <h4 class='utTileFlag utFlagK'>kids</h4>
-                            <h4 class='utTileFlag utFlagB'>baby</h4>
-                            <h3 class='utTileTitle'>MICKEY STANDS</h3>
-                        </a>
-                    </div>
-                    <div class='utOneTile'>
-                        <a href='/us/en/ut-graphic-tees/shop-all-men'>
-                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_mickey_celebrates_110918_bnr_01' alt='ZZZ' />
-                            <h4 class='utTileFlag utFlagA'>adults</h4>
-                            <h4 class='utTileFlag utFlagW'>women</h4>
-                            <h4 class='utTileFlag utFlagK'>kids</h4>
-                            <h4 class='utTileFlag utFlagB'>baby</h4>
-                            <h3 class='utTileTitle'>Celebrate Mickey</h3>
-                        </a>
-                    </div>
-                    <div class='utOneTile'>
-                        <a href='/us/en/ut-graphic-tees/shop-all-men'>
-                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/091718_ut_disney_warhol_640x640' alt='ZZZ' />
-                            <h4 class='utTileFlag utFlagA'>adults</h4>
-                            <h4 class='utTileFlag utFlagK'>kids</h4>
-                            <h3 class='utTileTitle'>Disney Mickey Mouse Art by Andy Warhol</h3>
-                        </a>
-                    </div>
-                    <div class='utOneTile'>
-                        <a href='/us/en/ut-graphic-tees/shop-all-men'>
-                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-180312-utgraphictees-mickeyart' alt='ZZZ' />
-                            <h4 class='utTileFlag utFlagA'>adults</h4>
-                            <h3 class='utTileTitle'>MICKEY ART</h3>
-                        </a>
-                    </div>
-                    <div class='utOneTile'>
-                        <a href='/us/en/ut-graphic-tees/shop-all-men'>
-                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_hero_MinnieBFF' alt='ZZZ' />
-                            <h4 class='utTileFlag utFlagW'>women</h4>
-                            <h4 class='utTileFlag utFlagK'>kids</h4>
-                            <h3 class='utTileTitle'>MINNIE MOUSE BEST FRIENDS FOREVER</h3>
-                        </a>
-                    </div>
-                    <div class='utOneTile'>
-                        <a href='/us/en/ut-graphic-tees/shop-all-men'>
-                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-magicforallarchivecollection' alt='ZZZ' />
-                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                            <h4 class='utTileFlag utFlagA'>adults</h4>
-                            <h4 class='utTileFlag utFlagW'>women</h4>
-                            <h4 class='utTileFlag utFlagK'>kids</h4>
-                            <h3 class='utTileTitle'>Magic For All Arichive Collection</h3>
-                        </a>
+                </div>
+                <div class='utColHidn'>
+                    <h3 class='utColTitle'>MAGIC FOR ALL</h3>
+                    <p>A collaboration with The Walt Disney Company, Magic For All celebrates the child in all of us with the world’s favorite Disney characters.</p>
+                    <hr />
+                    <div class='utProdTiles'>
+                        <div class='utOneTile'>
+                            <a href='/us/en/ut-graphic-tees/shop-all-men'>
+                                    <div class="utTileOverlay">
+                                        <div class="utTileCta"><h3>shop now</h3></div>
+                                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_PRINCESSWAY_00' alt='ZZZ' />
+                                    </div>
+                                    <h4 class='utTileFlag utFlagA'>adults</h4>
+                                    <h4 class='utTileFlag utFlagW'>women</h4>
+                                    <h4 class='utTileFlag utFlagK'>kids</h4>
+                                    <h4 class='utTileFlag utFlagB'>baby</h4>
+                                    <h3 class='utTileTitle'>Princess Way</h3>
+                                </a>
+                        </div>
+                        <div class='utOneTile'>
+                            <a href='/us/en/ut-graphic-tees/shop-all-men'>
+                                    <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_BLOSSOMINGDREAMS_00' alt='ZZZ' />
+                                    <h4 class='utTileFlag utFlagK'>kids</h4>
+                                    <h3 class='utTileTitle'>Disney | Blossoming Dreams</h3>
+                                </a>
+                        </div>
+                        <div class='utOneTile'>
+                            <a href='/us/en/ut-graphic-tees/shop-all-men'>
+                                    <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_19ss_mickeystands' alt='ZZZ' />
+                                    <h4 class='utTileFlag utFlagA'>adults</h4>
+                                    <h4 class='utTileFlag utFlagK'>kids</h4>
+                                    <h4 class='utTileFlag utFlagB'>baby</h4>
+                                    <h3 class='utTileTitle'>MICKEY STANDS</h3>
+                                </a>
+                        </div>
+                        <div class='utOneTile'>
+                            <a href='/us/en/ut-graphic-tees/shop-all-men'>
+                                    <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_mickey_celebrates_110918_bnr_01' alt='ZZZ' />
+                                    <h4 class='utTileFlag utFlagA'>adults</h4>
+                                    <h4 class='utTileFlag utFlagW'>women</h4>
+                                    <h4 class='utTileFlag utFlagK'>kids</h4>
+                                    <h4 class='utTileFlag utFlagB'>baby</h4>
+                                    <h3 class='utTileTitle'>Celebrate Mickey</h3>
+                                </a>
+                        </div>
+                        <div class='utOneTile'>
+                            <a href='/us/en/ut-graphic-tees/shop-all-men'>
+                                    <img src='https://uniqlo.scene7.com/is/image/UNIQLO/091718_ut_disney_warhol_640x640' alt='ZZZ' />
+                                    <h4 class='utTileFlag utFlagA'>adults</h4>
+                                    <h4 class='utTileFlag utFlagK'>kids</h4>
+                                    <h3 class='utTileTitle'>Disney Mickey Mouse Art by Andy Warhol</h3>
+                                </a>
+                        </div>
+                        <div class='utOneTile'>
+                            <a href='/us/en/ut-graphic-tees/shop-all-men'>
+                                    <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-180312-utgraphictees-mickeyart' alt='ZZZ' />
+                                    <h4 class='utTileFlag utFlagA'>adults</h4>
+                                    <h3 class='utTileTitle'>MICKEY ART</h3>
+                                </a>
+                        </div>
+                        <div class='utOneTile'>
+                            <a href='/us/en/ut-graphic-tees/shop-all-men'>
+                                    <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_hero_MinnieBFF' alt='ZZZ' />
+                                    <h4 class='utTileFlag utFlagW'>women</h4>
+                                    <h4 class='utTileFlag utFlagK'>kids</h4>
+                                    <h3 class='utTileTitle'>MINNIE MOUSE BEST FRIENDS FOREVER</h3>
+                                </a>
+                        </div>
+                        <div class='utOneTile'>
+                            <a href='/us/en/ut-graphic-tees/shop-all-men'>
+                                    <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-magicforallarchivecollection' alt='ZZZ' />
+                                    <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                                    <h4 class='utTileFlag utFlagA'>adults</h4>
+                                    <h4 class='utTileFlag utFlagW'>women</h4>
+                                    <h4 class='utTileFlag utFlagK'>kids</h4>
+                                    <h3 class='utTileTitle'>Magic For All Arichive Collection</h3>
+                                </a>
+                        </div>
                     </div>
                 </div>
-            </div>
         </article>
         <article>
             <!-- <img class='utColHdr' src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_category_buttons_Art' alt='UT Collection ART' /> -->
@@ -841,86 +806,86 @@ button.slick-arrow.slick-next:focus {
                     <h3 class='utHdrTitle'>ART</h3>
                 </div>
                 <div class='utHdrHandle'><img src='https://uniqlo.scene7.com/is/image/UNIQLO/UT_Carrot?$gif$' /></div>
-            </div>
-            <div class='utColHidn'>
-                <h3 class='utColTitle'>ART</h3>
-                <p>Dynamic collections featuring work from modern-day tastemakers in art, film, and interior design.</p>
-                <hr />
-                <div class='utProdTiles'>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-190204-utgraphictees-andy-warhol-without-copyright' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h3 class='utTileTitle'>SPRZ NY Andy Warhol</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-190204-utgraphictees-jean-michel-basquiat-without-copyright' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h3 class='utTileTitle'>SPRZ NY Jean-Michel Basquiat</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-190204-utgraphictees-keith-haring-without-copyright' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h3 class='utTileTitle'>SPRZ NY Keith Haring</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-190204-utgraphictees-eames-without-copyright' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h3 class='utTileTitle'>SPRZ NY Charles and Ray Eames</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-190204-utgraphictees-sol-lewitt-without-copyright' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h3 class='utTileTitle'>SPRZ NY Sol LeWitt</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/18FW_UT_SPRZ_SuperIconic2_640x640' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h3 class='utTileTitle'>SPRZ NY Gold Collection</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_ut_tile_2018_01_basquiat_ncr' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h3 class='utTileTitle'>SPRZ NY Jean-Michel Basquiat: The Notebooks Collection</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h3 class='utTileTitle'>SPRZ NY</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_hero_Hokusai' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h3 class='utTileTitle'>Hokusai Blue</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_18fw_pieterceizer_02' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h4 class='utTileFlag utFlagK'>kids</h4>
-                        <h4 class='utTileFlag utFlagB'>baby</h4>
-                        <h3 class='utTileTitle'>Pieter Ceizer</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_18fw_gracelee_02' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h3 class='utTileTitle'>And Have Fun! By Grace Lee</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-mirandajuly' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h3 class='utTileTitle'>Miranda July</h3>
+                </div>
+                <div class='utColHidn'>
+                    <h3 class='utColTitle'>ART</h3>
+                    <p>Dynamic collections featuring work from modern-day tastemakers in art, film, and interior design.</p>
+                    <hr />
+                    <div class='utProdTiles'>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-190204-utgraphictees-andy-warhol-without-copyright' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h3 class='utTileTitle'>SPRZ NY Andy Warhol</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-190204-utgraphictees-jean-michel-basquiat-without-copyright' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h3 class='utTileTitle'>SPRZ NY Jean-Michel Basquiat</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-190204-utgraphictees-keith-haring-without-copyright' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h3 class='utTileTitle'>SPRZ NY Keith Haring</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-190204-utgraphictees-eames-without-copyright' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h3 class='utTileTitle'>SPRZ NY Charles and Ray Eames</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us-190204-utgraphictees-sol-lewitt-without-copyright' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h3 class='utTileTitle'>SPRZ NY Sol LeWitt</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/18FW_UT_SPRZ_SuperIconic2_640x640' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h3 class='utTileTitle'>SPRZ NY Gold Collection</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_ut_tile_2018_01_basquiat_ncr' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h3 class='utTileTitle'>SPRZ NY Jean-Michel Basquiat: The Notebooks Collection</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h3 class='utTileTitle'>SPRZ NY</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_hero_Hokusai' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h3 class='utTileTitle'>Hokusai Blue</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_18fw_pieterceizer_02' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h4 class='utTileFlag utFlagK'>kids</h4>
+                            <h4 class='utTileFlag utFlagB'>baby</h4>
+                            <h3 class='utTileTitle'>Pieter Ceizer</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_18fw_gracelee_02' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h3 class='utTileTitle'>And Have Fun! By Grace Lee</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-mirandajuly' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h3 class='utTileTitle'>Miranda July</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
         </article>
         <article>
             <!-- <img class='utColHdr' src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_category_buttons_Characters' alt='UT Collection CHARACTERS' /> -->
@@ -930,44 +895,44 @@ button.slick-arrow.slick-next:focus {
                     <h3 class='utHdrTitle'>CHARACTERS</h3>
                 </div>
                 <div class='utHdrHandle'><img src='https://uniqlo.scene7.com/is/image/UNIQLO/UT_Carrot?$gif$' /></div>
-            </div>
-            <div class='utColHidn'>
-                <h3 class='utColTitle'>CHARACTERS</h3>
-                <p>The famous characters you know and love, reimagined into LifeWear you can collect in your closet.</p>
-                <hr />
-                <div class='utProdTiles'>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_00' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h3 class='utTileTitle'>LINE FRIENDS</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/19SS_UT_PEANUTS_190114-SquareImage_GL_02' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h4 class='utTileFlag utFlagK'>kids</h4>
-                        <h3 class='utTileTitle'>Peanuts</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_MOOMIN_00' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h3 class='utTileTitle'>Moomin</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-minions' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h4 class='utTileFlag utFlagK'>kids</h4>
-                        <h3 class='utTileTitle'>Minions Every Day's A Weekend Collection</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-sanriocharacters45thririka' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h4 class='utTileFlag utFlagK'>kids</h4>
-                        <h3 class='utTileTitle'>Sanrio Characters</h3>
+                </div>
+                <div class='utColHidn'>
+                    <h3 class='utColTitle'>CHARACTERS</h3>
+                    <p>The famous characters you know and love, reimagined into LifeWear you can collect in your closet.</p>
+                    <hr />
+                    <div class='utProdTiles'>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LINE-FRIENDS_00' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h3 class='utTileTitle'>LINE FRIENDS</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/19SS_UT_PEANUTS_190114-SquareImage_GL_02' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h4 class='utTileFlag utFlagK'>kids</h4>
+                            <h3 class='utTileTitle'>Peanuts</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_MOOMIN_00' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h3 class='utTileTitle'>Moomin</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-minions' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h4 class='utTileFlag utFlagK'>kids</h4>
+                            <h3 class='utTileTitle'>Minions Every Day's A Weekend Collection</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-sanriocharacters45thririka' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h4 class='utTileFlag utFlagK'>kids</h4>
+                            <h3 class='utTileTitle'>Sanrio Characters</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
         </article>
         <article>
             <!-- <img class='utColHdr' src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_category_buttons_Manga' alt='UT Collection GAME/MANGA/ANIME' /> -->
@@ -977,20 +942,20 @@ button.slick-arrow.slick-next:focus {
                     <h3 class='utHdrTitle'>GAME/MANGA/ANIME</h3>
                 </div>
                 <div class='utHdrHandle'><img src='https://uniqlo.scene7.com/is/image/UNIQLO/UT_Carrot?$gif$' /></div>
-            </div>
-            <div class='utColHidn'>
-                <h3 class='utColTitle'>GAME/MANGA/ANIME</h3>
-                <p>We put the characters and logos from your favorite comics and games on durable tees so you can find fellow fans wherever you go.</p>
-                <hr />
-                <div class='utProdTiles'>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-gundam40th' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h3 class='utTileTitle'>MOBILE SUIT GUNDAM 40th Anniversary</h3>
+                </div>
+                <div class='utColHidn'>
+                    <h3 class='utColTitle'>GAME/MANGA/ANIME</h3>
+                    <p>We put the characters and logos from your favorite comics and games on durable tees so you can find fellow fans wherever you go.</p>
+                    <hr />
+                    <div class='utProdTiles'>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-gundam40th' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h3 class='utTileTitle'>MOBILE SUIT GUNDAM 40th Anniversary</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
         </article>
         <article>
             <!-- <img class='utColHdr' src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_category_buttons_Kids' alt='UT Collection KIDS' /> -->
@@ -1000,30 +965,30 @@ button.slick-arrow.slick-next:focus {
                     <h3 class='utHdrTitle'>KIDS</h3>
                 </div>
                 <div class='utHdrHandle'><img src='https://uniqlo.scene7.com/is/image/UNIQLO/UT_Carrot?$gif$' /></div>
-            </div>
-            <div class='utColHidn'>
-                <h3 class='utColTitle'>KIDS</h3>
-                <p>Make getting dressed fun with spirited designs kids will love wearing again and again.</p>
-                <hr />
-                <div class='utProdTiles'>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_MY-LITTLE-PONY_00' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagK'>kids</h4>
-                        <h3 class='utTileTitle'>MY LITTLE PONY</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LEGO_00' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagK'>kids</h4>
-                        <h4 class='utTileFlag utFlagB'>baby</h4>
-                        <h3 class='utTileTitle'>LEGO©</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_DISCOVERYCHANNEL_00' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagK'>kids</h4>
-                        <h3 class='utTileTitle'>Discovery Channel</h3>
+                </div>
+                <div class='utColHidn'>
+                    <h3 class='utColTitle'>KIDS</h3>
+                    <p>Make getting dressed fun with spirited designs kids will love wearing again and again.</p>
+                    <hr />
+                    <div class='utProdTiles'>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_MY-LITTLE-PONY_00' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagK'>kids</h4>
+                            <h3 class='utTileTitle'>MY LITTLE PONY</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_LEGO_00' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagK'>kids</h4>
+                            <h4 class='utTileFlag utFlagB'>baby</h4>
+                            <h3 class='utTileTitle'>LEGO©</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_UT_category_DISCOVERYCHANNEL_00' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagK'>kids</h4>
+                            <h3 class='utTileTitle'>Discovery Channel</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
         </article>
         <article>
             <!-- <img class='utColHdr' src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_category_buttons_Brands' alt='UT Collection BRANDS' /> -->
@@ -1033,52 +998,52 @@ button.slick-arrow.slick-next:focus {
                     <h3 class='utHdrTitle'>BRANDS</h3>
                 </div>
                 <div class='utHdrHandle'><img src='https://uniqlo.scene7.com/is/image/UNIQLO/UT_Carrot?$gif$' /></div>
-            </div>
-            <div class='utColHidn'>
-                <h3 class='utColTitle'>BRANDS</h3>
-                <p>A collaborative project with a curated selection of your favorite iconic lifestyle brands.</p>
-                <hr />
-                <div class='utProdTiles'>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-sakagura-hero-01' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h3 class='utTileTitle'>Sakagura</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-studio_sanderson' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h3 class='utTileTitle'>Studio Sanderson for UNIQLO</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsmasterpiece' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h4 class='utTileFlag utFlagK'>kids</h4>
-                        <h3 class='utTileTitle'>The Brands Masterpiece</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsbicycle' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h3 class='utTileTitle'>The Brands Bicycle</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsokashi' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h4 class='utTileFlag utFlagK'>kids</h4>
-                        <h3 class='utTileTitle'>The Brands OKASHI</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsvolkswagen' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h3 class='utTileTitle'>The Brands Volkswagen</h3>
+                </div>
+                <div class='utColHidn'>
+                    <h3 class='utColTitle'>BRANDS</h3>
+                    <p>A collaborative project with a curated selection of your favorite iconic lifestyle brands.</p>
+                    <hr />
+                    <div class='utProdTiles'>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-sakagura-hero-01' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h3 class='utTileTitle'>Sakagura</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-studio_sanderson' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h3 class='utTileTitle'>Studio Sanderson for UNIQLO</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsmasterpiece' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h4 class='utTileFlag utFlagK'>kids</h4>
+                            <h3 class='utTileTitle'>The Brands Masterpiece</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsbicycle' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h3 class='utTileTitle'>The Brands Bicycle</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsokashi' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h4 class='utTileFlag utFlagK'>kids</h4>
+                            <h3 class='utTileTitle'>The Brands OKASHI</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsvolkswagen' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h3 class='utTileTitle'>The Brands Volkswagen</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
         </article>
         <article>
             <!-- <img class='utColHdr' src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_category_buttons_ComingSoon' alt='UT Collection COMING SOON' /> -->
@@ -1088,114 +1053,103 @@ button.slick-arrow.slick-next:focus {
                     <h3 class='utHdrTitle'>COMING SOON</h3>
                 </div>
                 <div class='utHdrHandle'><img src='https://uniqlo.scene7.com/is/image/UNIQLO/UT_Carrot?$gif$' /></div>
-            </div>
-            <div class='utColHidn'>
-                <h3 class='utColTitle'>COMING SOON</h3>
-                <p>We're always forging new partnership to bring exciting designs to your LifeWear. Stay tuned for the launch of these collections! </p>
-                <hr />
-                <div class='utProdTiles'>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-minions' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h4 class='utTileFlag utFlagK'>kids</h4>
-                        <h3 class='utTileTitle'>Minions Every Day's A Weekend Collection</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-sanriocharacters45thririka' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h4 class='utTileFlag utFlagK'>kids</h4>
-                        <h3 class='utTileTitle'>Sanrio Characters</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-magicforallarchivecollection' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h4 class='utTileFlag utFlagK'>kids</h4>
-                        <h3 class='utTileTitle'>Magic For All Arichive Collection</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-sakagura-hero-01' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h3 class='utTileTitle'>Sakagura</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-studio_sanderson' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h3 class='utTileTitle'>Studio Sanderson for UNIQLO</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsmasterpiece' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h4 class='utTileFlag utFlagK'>kids</h4>
-                        <h3 class='utTileTitle'>The Brands Masterpiece</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsbicycle' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h3 class='utTileTitle'>The Brands Bicycle</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsokashi' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h4 class='utTileFlag utFlagK'>kids</h4>
-                        <h3 class='utTileTitle'>The Brands OKASHI</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsvolkswagen' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h3 class='utTileTitle'>The Brands Volkswagen</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-mirandajuly' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagW'>women</h4>
-                        <h3 class='utTileTitle'>Miranda July</h3>
-                    </div>
-                    <div class='utOneTile'>
-                        <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-gundam40th' alt='ZZZ' />
-                        <h4 class='utTileFlag utFlagCom'>coming soon</h4>
-                        <h4 class='utTileFlag utFlagA'>adults</h4>
-                        <h3 class='utTileTitle'>MOBILE SUIT GUNDAM 40th Anniversary</h3>
+                </div>
+                <div class='utColHidn'>
+                    <h3 class='utColTitle'>COMING SOON</h3>
+                    <p>We're always forging new partnership to bring exciting designs to your LifeWear. Stay tuned for the launch of these collections! </p>
+                    <hr />
+                    <div class='utProdTiles'>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-minions' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h4 class='utTileFlag utFlagK'>kids</h4>
+                            <h3 class='utTileTitle'>Minions Every Day's A Weekend Collection</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-sanriocharacters45thririka' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h4 class='utTileFlag utFlagK'>kids</h4>
+                            <h3 class='utTileTitle'>Sanrio Characters</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-magicforallarchivecollection' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h4 class='utTileFlag utFlagK'>kids</h4>
+                            <h3 class='utTileTitle'>Magic For All Arichive Collection</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-sakagura-hero-01' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h3 class='utTileTitle'>Sakagura</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-studio_sanderson' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h3 class='utTileTitle'>Studio Sanderson for UNIQLO</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsmasterpiece' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h4 class='utTileFlag utFlagK'>kids</h4>
+                            <h3 class='utTileTitle'>The Brands Masterpiece</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsbicycle' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h3 class='utTileTitle'>The Brands Bicycle</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsokashi' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h4 class='utTileFlag utFlagK'>kids</h4>
+                            <h3 class='utTileTitle'>The Brands OKASHI</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-thebrandsvolkswagen' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h3 class='utTileTitle'>The Brands Volkswagen</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-mirandajuly' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagW'>women</h4>
+                            <h3 class='utTileTitle'>Miranda July</h3>
+                        </div>
+                        <div class='utOneTile'>
+                            <img src='//uniqlo.scene7.com/is/image/UNIQLO/us-190301-utgraphictees-gundam40th' alt='ZZZ' />
+                            <h4 class='utTileFlag utFlagCom'>coming soon</h4>
+                            <h4 class='utTileFlag utFlagA'>adults</h4>
+                            <h3 class='utTileTitle'>MOBILE SUIT GUNDAM 40th Anniversary</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
         </article>
     </section>
-<section>
-    <p class='copyright'>™ & © Universal Studios, ©1976, 1979, 1988, 1989, 1993, 1996, 2001,
-        2012, 2013, 2014, 2019 SANRIO CO., LTD.
-        APPROVAL NO.S 593773, Copyright, ©Disney, ©/®/TM The Andy Warhol Foundation for the
-        Visual Arts, Inc., © Estate of Jean-Michel Basquiat. Licensed by
-        Artestar, New York., © 2019 Eames Office, LLC, © 2019 The LeWitt Estate / Artists Rights Society (ARS), New York Project: 2019 by The Museum of Modern Art
-        Sol LeWitt. Untitled from Squares with a Different Line Direction in Each Half Square. 1971 (detail), © PIETER CEIZER, © GRACE LEE, ©︎ Miranda July, ©Scandinavian Pattern Collection, © 2019 Peanuts Worldwide LLC, © Moomin Characters™, ©SOTSU・SUNRISE, ©CAPCOM CO., LTD. ALL RIGHTS RESERVED., ©CAPCOM U.S.A., INC. ALL RIGHTS RESERVED., MY LITTLE PONY and all related characters are trademarks of Hasbro and are used with permission. © 2019 Hasbro. All Rights Reserved. Licensed by Hasbro., LEGO and the LEGO logo are trademarks of the LEGO Group. ©2019 The LEGO Group., © 2019& ™ Discovery Communications, LLC. All rights reserved., By kind permission of Sanderson,
-        a trading name of Abaris Holdings Ltd, Trademarks, design patents and copyrights are used
-        with the approval of the owner Volkswagen AG with
-        Logo provided., ©2019 Fender Musical Instruments Corporation.
-        All Rights Reserved., </p>
-</section>
+    <section>
+        <p class='copyright'>™ & © Universal Studios, ©1976, 1979, 1988, 1989, 1993, 1996, 2001,
+            2012, 2013, 2014, 2019 SANRIO CO., LTD.
+            APPROVAL NO.S 593773, Copyright, ©Disney, ©/®/TM The Andy Warhol Foundation for the
+            Visual Arts, Inc., © Estate of Jean-Michel Basquiat. Licensed by
+            Artestar, New York., © 2019 Eames Office, LLC, © 2019 The LeWitt Estate / Artists Rights Society (ARS), New York Project: 2019 by The Museum of Modern Art
+            Sol LeWitt. Untitled from Squares with a Different Line Direction in Each Half Square. 1971 (detail), © PIETER CEIZER, © GRACE LEE, ©︎ Miranda July, ©Scandinavian Pattern Collection, © 2019 Peanuts Worldwide LLC, © Moomin Characters™, ©SOTSU・SUNRISE, ©CAPCOM CO., LTD. ALL RIGHTS RESERVED., ©CAPCOM U.S.A., INC. ALL RIGHTS RESERVED., MY LITTLE PONY and all related characters are trademarks of Hasbro and are used with permission. © 2019 Hasbro. All Rights Reserved. Licensed by Hasbro., LEGO and the LEGO logo are trademarks of the LEGO Group. ©2019 The LEGO Group., © 2019& ™ Discovery Communications, LLC. All rights reserved., By kind permission of Sanderson,
+            a trading name of Abaris Holdings Ltd, Trademarks, design patents and copyrights are used
+            with the approval of the owner Volkswagen AG with
+            Logo provided., ©2019 Fender Musical Instruments Corporation.
+            All Rights Reserved., </p>
+    </section>
 </div>
-
-
-
-
-
-
 <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
-
-
 <script>
-
-
-
 // Welcome message to fade in before page content
 // 
 // Cookie set/checked to hide splash intro for repeat visitors
@@ -1207,8 +1161,8 @@ button.slick-arrow.slick-next:focus {
 //     $('#utLanding').fadeIn('slow')
 // }
 // else {
-    // New visitor so set cookie then load splash messaging
-    // 60 seconds, 60 minutes, 24 hours, 10 days
+// New visitor so set cookie then load splash messaging
+// 60 seconds, 60 minutes, 24 hours, 10 days
 //     document.cookie = "visited=yes; max-age=" + 60 * 60 * 24 * 10;
 //     console.log('first visit');
 
@@ -1309,7 +1263,7 @@ $(function() {
     // Clicking on the small carousel slides brings associated
     // large carousel slide into focus
     // 
-    $('.slick-slider').on('click', '.slick-slide', function (e) {
+    $('.slick-slider').on('click', '.slick-slide', function(e) {
         e.stopPropagation();
         var index = $(this).data("slick-index");
         if ($('.slick-slider').slick('slickCurrentSlide') !== index) {
@@ -1323,8 +1277,8 @@ $(function() {
     // This bit of JS changes current slide of Small Carousel after
     // large carousel has advanced. Didn't work to do this "beforeChage"
     // 
-    $('#utCaroMain').on('afterChange', function(event, slick, direction){
-        $('#utCaroSmall .slick-active:eq('+slick.currentSlide+')').addClass('slick-current').siblings().removeClass('slick-current');
+    $('#utCaroMain').on('afterChange', function(event, slick, direction) {
+        $('#utCaroSmall .slick-active:eq(' + slick.currentSlide + ')').addClass('slick-current').siblings().removeClass('slick-current');
     });
 
 
