@@ -168,6 +168,84 @@
 
 
 
+    <!-- ————————————————————————————————————o————————————————————————————————————o PROMO BANNER -->
+        <!-- PROMO BANNER -->
+    <!-- ————————————————————————————————————o————————————————————————————————————o PROMO BANNER -->
+    <style>
+        #utPromoBan {
+            margin: 30px 0 30px;
+            padding: 25px 0 10px;
+            text-align: center;
+            border: 3px solid red;
+        }
+        #utPromoBan h3 {
+            padding-bottom: 10px;
+            font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 24px;
+            color: red;
+            text-transform: uppercase;
+        }
+        #utPromoBan h3.subtitle {
+            padding-bottom: 10px;
+            font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 22px;
+            color: black;
+            text-transform: none;
+        }
+        #utPromoBan p {
+            margin: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 18px;
+        }
+        #utPromoBan .utPromoCtas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0 14px;
+        }
+        #utPromoBan .utPromoCtas h3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 210px;
+            /* margin: 50px auto 30px; */
+            margin: 0 7px;
+            padding: 10px 5px;
+            font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: black;
+            text-transform: uppercase;
+            text-align: center;
+            cursor: pointer;
+            border: 3px solid black;
+            transition: all 0.2s;
+        }
+        #utPromoBan .utPromoCtas h3:hover {
+            visibility: visible;
+            color: white;
+            border: 3px solid red;
+            background: red;
+            transition: all 0.3s;
+        }
+    </style>
+    <section id="utPromoBan">
+        <h3>SELECT STYLE GRAPHIC T-SHIRTS PROMOTION</h3>
+        <h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+        <p>*Online exclusive offer until 3/14</p>
+        <div class="utPromoCtas">
+            <h3>SHOP Women's Promos</h3>
+            <h3>SHOP Men's Promos</h3>
+            <h3>SHOP Kids' promo</h3>
+        </div>
+    </section>
+
+
+
+
+
+
+
     <!-- ————————————————————————————————————o————————————————————————————————————o GENDER NAV -->
         <!-- GENDER NAV -->
     <!-- ————————————————————————————————————o————————————————————————————————————o GENDER NAV -->
@@ -1140,99 +1218,109 @@
 
 
 <script>
+
 $(function() {
 
 
-
-
-    // Main carousel in hero
-    // 
-    $('#utCaroMain').slick({
-        centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        // autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: true,
-        dots: false,
-        useTransform: true,
-        cssEase: 'ease',
-        asNavFor: '#utCaroSmall'
-    });
-
-
-
-    // Small, supporting carousel which highlights 
-    // current slide shown in the carousel above
-    // 
-    $('#utCaroSmall').slick({
-        slidesToShow: 8,
-        arrows: false,
-        dots: false,
-        asNavFor: '#utCaroMain'
-    });
+// Main carousel in hero
+// 
+$('#utCaroMain').slick({
+    centerMode: true,
+    centerPadding: '20px',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    // autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: true,
+    dots: false,
+    useTransform: true,
+    cssEase: 'ease',
+    asNavFor: '#utCaroSmall'
+});
 
 
 
-    // Clicking on the small carousel slides brings associated
-    // large carousel slide into focus
-    // 
-    $('.slick-slider').on('click', '.slick-slide', function (e) {
-        e.stopPropagation();
-        var index = $(this).data("slick-index");
-        if ($('.slick-slider').slick('slickCurrentSlide') !== index) {
-            $('.slick-slider').slick('slickGoTo', index);
-        }
-    });
+// Small, supporting carousel which highlights 
+// current slide shown in the carousel above
+// 
+$('#utCaroSmall').slick({
+    slidesToShow: 8,
+    arrows: false,
+    dots: false,
+    asNavFor: '#utCaroMain'
+});
+// Clicking on the small carousel slides brings associated
+// large carousel slide into focus
+// 
+$('.slick-slider').on('click', '.slick-slide', function (e) {
+    e.stopPropagation();
+    var index = $(this).data('slick-index');
+    if ($('.slick-slider').slick('slickCurrentSlide') !== index) {
+        $('.slick-slider').slick('slickGoTo', index);
+    }
+});
 
 
 
-    // Small carousel slides were not working on demandware.
-    // This bit of JS changes current slide of Small Carousel after
-    // large carousel has advanced. Didn't work to do this "beforeChage"
-    // 
-    $('#utCaroMain').on('afterChange', function(event, slick, direction){
-        $('#utCaroSmall .slick-active:eq('+slick.currentSlide+')').addClass('slick-current').siblings().removeClass('slick-current');
-    });
+// Small carousel slides were not working on demandware.
+// This bit of JS changes current slide of Small Carousel after
+// large carousel has advanced. Didn't work to do this 'beforeChage'
+// 
+$('#utCaroMain').on('afterChange', function(event, slick, direction){
+    $('#utCaroSmall .slick-active:eq('+slick.currentSlide+')').addClass('slick-current').siblings().removeClass('slick-current');
+});
 
 
 
-    // Positioning hero to account for the scaling of the main slide
-    // 
-    setTimeout(function() {
-        var caroSlideHt = $('#utLanding #utCaroMain .slick-slide').height() * 2.5
-        // console.log('caroSlideHt: ' + caroSlideHt)
-        $('#utLanding #utHero').height(caroSlideHt * 1.16);
-        $('#utLanding #utCaroMain').css('padding-top', caroSlideHt / 3.8);
-        $('.utBelowCaro').css('padding-top', caroSlideHt / 4)
-    }, 300)
+// Disabling links used for navigation via slick slide.
+// Clicking on left and right tiles does not follow through.
+// Clicking on the main tile works as normal.
+// 
+$('#utCaroMain .utMainTile').click(function(event){
+  if ($(this).hasClass('slick-center')) {
+    return true;
+  }
+  else if ($(this).hasClass('slick-active')) {
+      console.log('clicked')
+    event.preventDefault();
+  }
+});
+
+
+// Positioning hero to account for the scaling of the main slide
+// 
+setTimeout(function() {
+    var caroSlideHt = $('#utLanding #utCaroMain .slick-slide').height() * 2.5
+    console.log('caroSlideHt: ' + caroSlideHt)
+    $('#utLanding #utHero').height(caroSlideHt * 1.16);
+    $('#utLanding #utCaroMain').css('padding-top', caroSlideHt / 3.8);
+    $('.utBelowCaro').css('padding-top', caroSlideHt / 4)
+}, 300)
 
 
 
-    // Animating the collection content reveal + spinning carat icon on reveal
-    // 
-    $('.utColHdr').click(function() {
-        $(this).next('.utColHidn').slideToggle(500)
-        $('img', this).toggleClass('rotated')
-    })
+// Animating the collection content reveal + spinning carat icon on reveal
+// 
+$('.utColHdr').click(function() {
+    $(this).next('.utColHidn').slideToggle(500)
+    $('img', this).toggleClass('rotated')
+})
 
 
 })
 
-
 // Google Analytics tracking setup
 // 
-// let triggerGA = (e) => {
-//     event.preventDefault(e)
-//     dataLayer.push({
-//         'event': 'eventTracking',
-//         'eventCategory': 'category page',
-//         'eventAction': 'clicked category: /ut-graphic-tees/,
-//         'eventLabel': `${e.dataset.label}`
-//     })
-//     // console.log(`${e.dataset.label}`)
-// }
+let triggerGA = (e) => {
+//    event.preventDefault(e)
+dataLayer.push({
+    'event': 'eventTracking',
+    'eventCategory': 'category page',
+    'eventAction': 'clicked category: /ut-graphic-tees/',
+    'eventLabel': `${e.dataset.label}`
+})
+// console.log(`${e.dataset.label}`)
+}
 
 
 

@@ -1,0 +1,764 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<style>
+.modalCarousel {
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#navCarousel {
+    flex: 20%;
+    margin: auto 15px auto 0;
+}
+
+#slideCont {
+    flex: 80%;
+}
+
+.modalCarousel .slick-slide {
+    margin: 10px 0;
+}
+
+.modalCarousel .slick-list {
+    margin: -10px 0;
+}
+
+.modalCarousel .slick-current {
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.modalCarousel .slick-next {
+    left: 50%;
+    bottom: -15% !important;
+    top: initial !important;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.modalCarousel .slick-prev {
+    left: 50% !important;
+    top: -15% !important;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.teaserHero {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.teaserHero img {
+    width: 100%;
+    min-width: 0;
+    align-self: center;
+}
+
+div#categoryspecific,
+.search-promo,
+.bottom_banner,
+#secondary {
+    display: none !important;
+}
+
+#primary {
+    width: 100% !important;
+}
+
+.teaserContent {
+    margin: 40px auto;
+    max-width: 980px;
+    background-color: white;
+    padding: 24px;
+}
+
+.flexContainer,
+.bio,
+.gwp {
+    display: flex;
+    max-width: 85%;
+    margin: 0 auto;
+    flex-direction: row;
+}
+
+.bio,
+.gwp {
+    margin: 60px auto;
+}
+
+.bioCopy,
+.gwpCopy {
+    margin: auto 0 auto 4%;
+}
+
+.teaserContent .bioCopy .title,
+.gwpCopy .title {
+    font-size: 24px;
+}
+
+.teaserContent .bioCopy .sub,
+.gwpCopy .sub {
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Helvetica, Arial;
+}
+
+.teaserContent .bioCopy small,
+.gwpCopy small {
+    display: block;
+    font-size: 11px;
+    margin-top: 10px;
+    font-family: 'Helvetica Neue', Helvetica, Arial;
+}
+
+.flag {
+    background-color: #378694;
+    color: white;
+    display: inline-block;
+    padding: 1px 5px !important;
+    margin-bottom: 4px !important;
+    font-size: 14px;
+}
+
+.flexContainer img {
+    width: 330px;
+    height: 100%;
+}
+
+.copy {
+    flex: 1;
+    margin: auto 0 auto 25px;
+}
+
+.teaserContent .copy h1 {
+    font-size: 34px;
+    margin-bottom: .45em;
+    color: black;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.teaserContent .available .disclaimer {
+    font-size: 14px;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+.teaserContent .available .disclaimerCopy {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.teaserContent .copy p,
+.eventInfo .eventDetails {
+    font-size: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.teaserContent .eventInfo .eventDetails {
+    margin: 14px 0;
+}
+
+.teaserContent .eventInfo .cta {
+    margin: 14px auto;
+    border: 2px solid black;
+    text-align: center;
+    width: 150px;
+}
+
+.teaserContent .eventInfo .cta a {
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    padding: 8px 0;
+    display: block;
+}
+
+.teaserContent .eventInfo .cta:hover {
+    background-color: black;
+    transition: all .075s linear;
+}
+
+.teaserContent .eventInfo .cta:hover a {
+    color: white;
+    transition: all .075s linear;
+}
+
+.available,
+.eventInfo {
+    text-align: center;
+    padding: 2em 0;
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.teaserContent .available .date {
+    color: red;
+    font-size: 24px;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 30px;
+}
+
+.teaserContent .eventInfo .eventTitle {
+    font-size: 24px;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 30px;
+}
+
+.teaserContent .eventInfo .eventTiming {
+    color: red;
+    font-size: 21px;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 14px;
+}
+
+.teaserContent .available .price {
+    font-size: 21px;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: .75em 0;
+}
+
+.available small,
+.eventInfo small {
+    font-size: 12px;
+}
+
+.teaserContent .divider {
+    width: 50%;
+    background-color: #dadada;
+    height: 1px;
+    margin: 30px auto;
+}
+
+.teaserContent .teaserMovie {
+    margin: 30px auto;
+    display: block;
+    width: 85%;
+    height: 440px;
+}
+
+.teaserContent .products h4 {
+    text-align: center;
+    margin: 1em 0;
+    font-size: 32px;
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.teaserContent .products .productList {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 7.5%;
+    margin: -1% 0 0 -1%;
+}
+
+.teaserContent .productList .column {
+    flex-grow: 0;
+    width: calc(100% * (1/4) - 1%);
+    margin: 1% 0 0 1%;
+    padding: 1%;
+    box-sizing: border-box;
+    background-color: #f2f3f5;
+}
+
+.column img {
+    transition: opacity .25s linear;
+    -webkit-backface-visibility: hidden;
+    display: block;
+    padding: 4%;
+    background-color: #f2f3f5;
+    box-sizing: border-box;
+}
+
+.teaserContent .productDetail {
+    display: flex;
+    margin: 10px 0;
+}
+
+.productName,
+.productPrice {
+    flex: 50%;
+}
+
+.teaserContent .productName {
+    font-family: UniqloProRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+.teaserContent .productPrice {
+    font-size: 20px;
+    text-align: right;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.column img:hover {
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+    opacity: .6;
+    transition: opacity .25s linear;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.modal-bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(235, 235, 235, 0.8);
+}
+
+.modal-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 700px;
+    margin-left: -350px;
+    padding: 30px;
+    font-size: 0;
+    transform: translateY(-50%);
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.modal-close:before,
+.modal-close:after {
+    position: absolute;
+    top: 26px;
+    right: 12px;
+    content: '';
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: #000;
+    transform-origin: center center;
+}
+
+.modal-close:before {
+    transform: rotate(45deg);
+}
+
+.modal-close:after {
+    transform: rotate(-45deg);
+}
+
+.productLogo {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    font-size: 30px;
+}
+
+#heroCaro {
+    max-width: 85%;
+    margin: 30px auto 0;
+    position: relative;
+}
+
+#heroCaro .owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 41%;
+    transform: translateY(-50%);
+}
+
+#heroCaro .owl-nav button:first-child {
+    position: absolute;
+    left: -4.2%;
+}
+
+#heroCaro .owl-nav button:last-child {
+    position: absolute;
+    right: -4.2%;
+}
+
+#heroCaro .owl-theme .owl-nav .disabled {
+    background-color: inherit !important;
+    opacity: .35;
+}
+
+.owl-theme .owl-nav .disabled:hover {
+    color: inherit !important;
+}
+
+.owl-dots {
+    margin-top: 15px;
+}
+</style>
+<div class='teaserContent'>
+    <div class='flexContainer'>
+        <img src='https://uniqlo.scene7.com/is/image/UNIQLO/us_pc_UT_tile_640x640_JP_Marvel_02' alt='MARVEL X JASON POLAN' />
+        <div class='copy'>
+            <h1 style='text-transform:uppercase'>MARVEL X JASON POLAN</h1>
+            <p>Only for UT! An exclusive MARVEL collection as drawn by popular New York-based artist Jason Polan.</p>
+            <p style='color:#ababab; font-size:14px; margin-top:8px;'>©2019 MARVEL</p>
+        </div>
+    </div>
+    <div class='available'>
+          <p class='date'>Available Online + In Select Stores in April</p>
+    </div>
+        <div class='products'>
+        <h4 style='text-transform:uppercase'>Adults</h4>
+        <div class='productList'>
+            <div class='column'>
+                    <img data-id='41432600' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_414326?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$14.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41432613' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_13_414326?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$14.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41830700' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418307?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$14.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41830709' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418307?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$14.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41830822' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_22_418308?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$14.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41830869' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_69_418308?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$14.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41830900' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418309?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$14.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41830907' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_07_418309?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$14.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41831000' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418310?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$14.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41831109' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418311?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$14.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41831200' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418312?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$14.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41831203' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_03_418312?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$14.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41831363' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_63_418313?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$14.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41831409' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418314?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$14.90</p>
+                </div>
+            </div>
+
+        </div>
+        <h4 style='text-transform:uppercase'>Kids</h4>
+        <div class='productList'>
+            <div class='column'>
+                    <img data-id='41453300' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_414533?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$9.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41453309' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_414533?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$9.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41724600' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_417246?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$9.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41724613' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_13_417246?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$9.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41724661' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_61_417246?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$9.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41724703' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_03_417247?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$9.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41774200' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_417742?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$9.90</p>
+                </div>
+            </div>
+            <div class='column'>
+                    <img data-id='41774203' src='https://uniqlo.scene7.com/is/image/UNIQLO/goods_03_417742?$prod$'/>
+                <div class='productDetail'>
+                    <p class='productName' style='text-transform:uppercase'>Short Sleeve T-Shirt</p>
+                    <p class='productPrice'>$9.90</p>
+                </div>
+            </div>
+
+        </div>
+    </div>        <div class='bio'>        <div class='bioCopy'>            <p class='title'>MARVEL X JASON POLAN</p>
+            <p class='sub'>Only for UT! An exclusive MARVEL collection as drawn by popular New York-based artist Jason Polan. Jason Polan lives and works in  New York City. He has exhibited work all over the world. He is a founding member of Taco Bell Drawing Club. Polan has done projects with the Criterion Collection and The New York Times. This collection is inspired by Marvel's greatest artists, who have had a substantial effect on Polan since he was little. Polan is currently drawing every person in New York (including a superhero or two). Polan is from MIchigan.</p>
+
+        </div>
+    </div>
+
+        <div class='bio'>    </div>
+</div>
+
+<div class='modal'>
+    <div class='modal-inner'>
+        <span class='modal-close js-modalClose'></span>
+        <div class='modalCarousel'>
+            <div id='navCarousel'></div>
+            <div id='slideCont'><img class='featuredSlide' /></div>
+            </div>
+        </div>
+    <!-- // end modal inner -->
+    <div class='modal-bg js-modalClose'></div>
+</div><script>
+var images = [    {
+      id: '41432600',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_414326?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_414326_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_414326_sub12?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_414326_sub13?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41432613',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_13_414326?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_414326_sub14?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_414326_sub15?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_414326_sub16?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41830700',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418307?$jpgMQ$&wid=600',]
+    },
+    {
+      id: '41830709',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418307?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418307_sub8?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418307_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418307_sub12?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418307_sub13?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41830822',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_22_418308?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418308_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418308_sub12?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418308_sub13?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41830869',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_69_418308?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418308_sub14?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418308_sub15?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41830900',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418309?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418309_sub8?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418309_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418309_sub12?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418309_sub13?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41830907',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_07_418309?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418309_sub14?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418309_sub15?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418309_sub16?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41831000',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418310?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418310_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418310_sub12?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41831109',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418311?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418311_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418311_sub12?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418311_sub13?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418311_sub14?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41831200',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_418312?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418312_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418312_sub12?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418312_sub13?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41831203',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_03_418312?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418312_sub14?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418312_sub15?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418312_sub16?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41831363',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_63_418313?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418313_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418313_sub12?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418313_sub13?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41831409',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_418314?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418314_sub8?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418314_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418314_sub12?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_418314_sub13?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41453300',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_414533?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_414533_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_414533_sub12?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_414533_sub13?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41453309',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_09_414533?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_414533_sub14?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_414533_sub15?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_414533_sub16?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41724600',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_417246?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417246_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417246_sub12?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41724613',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_13_417246?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417246_sub13?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417246_sub14?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417246_sub15?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41724661',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_61_417246?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417246_sub16?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417246_sub17?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41724703',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_03_417247?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417247_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417247_sub12?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417247_sub13?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41774200',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_00_417742?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417742_sub11?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417742_sub12?$jpgMQ$&wid=600']
+    },
+    {
+      id: '41774203',
+     images: ['https://uniqlo.scene7.com/is/image/UNIQLO/goods_03_417742?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417742_sub13?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417742_sub14?$jpgMQ$&wid=600','https://uniqlo.scene7.com/is/image/UNIQLO/goods_417742_sub15?$jpgMQ$&wid=600']
+    },
+  ]
+findProduct = (id) => {
+  return images.find(e => e.id == id) || null
+}
+preloadImg = (url, index = 0) => {
+  var img = new Image();
+  img.src = url;
+  img.dataset.index = index;
+  return img;
+}
+$('.column img').on('click', function () {
+  var id = $(this).data('id');
+  var img = $('.featuredSlide');
+  var nav = $('#navCarousel');
+  var product = findProduct(id);
+  var src = product.images[0];
+  if (product) {
+    product.images.forEach((image, index) => {
+      nav.append(preloadImg(image, index));
+    })
+  }
+  else {
+    nav.append(preloadImg(src));
+  }
+
+  nav.on('init', (e, slick) => {
+    slick.slickSetOption(null, null, true);
+  });
+
+  $('.modal').fadeIn(200);
+  setTimeout(()=> {
+nav.on('afterChange', function (event, slick, currentSlide) {
+      img.attr('src', product.images[currentSlide]);
+    });
+    img.attr('src', src);
+    nav.not('.slick-initialized').slick({
+      slidesToShow: 3,
+      vertical: true,
+      arrows: true,
+      infinite: false
+    })
+    nav.slick('slickSetOption', null, null, true);
+    $('#navCarousel').on('click', '.slick-slide', function (e) {
+      let index = $(this).data('index');
+      nav.slick('slickGoTo', index);
+      img.attr('src', product.images[index]);
+      !$(this).hasClass('slick-current') ? ($('.slick-current').removeClass('slick-current'), $(this).addClass('slick-current')) : null;
+    })
+    $('.js-modalClose').click(function () {
+      $('.modal').fadeOut(200);
+      nav.slick('unslick');
+      nav.html('');
+      img.attr('src', '')
+    });
+}, 400)
+  dataLayer.push({
+    'event': 'eventTracking',
+    'eventCategory': 'Category Page',
+    'eventAction': 'Clicked category: /ut-graphic-tees/kaws-x-sesame-street/',
+    'eventLabel': id
+  })
+})
+$(document).ready(function () {
+  $('#heroCaro').owlCarousel({
+    items: 2,
+    margin: 10,
+    nav: true,
+    navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
+  });
+})
+</script>
