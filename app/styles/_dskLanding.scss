@@ -215,10 +215,24 @@ h1.cat-heading {
                 }
             }
         }
-        .slick-current:hover {
-            .utMainImgWrp {
-                .utMainCta {
+        .slick-current {
+            &:hover {
+                .utMainImgWrp .utMainCta {
                     // visibility: visible;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    opacity: 1;
+                    transition: opacity 0.3s;
+                    h3 {
+                        // visibility: visible;
+                        padding: 4px 5px;
+                        border: 2px solid white;
+                        transition: border 0.3s;
+                    }
+                }
+            }
+            &[data-slick-index="0"]:hover {
+                .utMainImgWrp .utMainCta {
+                    visibility: visible;
                     background-color: rgba(0, 0, 0, 0.7);
                     opacity: 1;
                     transition: opacity 0.3s;
