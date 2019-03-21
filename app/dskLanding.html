@@ -1264,10 +1264,20 @@ $('.slick-slider').on('click', '.slick-slide', function (e) {
 
 // Small carousel slides were not working on demandware.
 // This bit of JS changes current slide of Small Carousel after
-// large carousel has advanced. Didn't work to do this 'beforeChage'
+// large carousel has advanced.
+// 
+// Also, show CTA+Background only after change. Was displaying while animating
 // 
 $('#utCaroMain').on('afterChange', function(event, slick, direction){
     $('#utCaroSmall .slick-active:eq('+slick.currentSlide+')').addClass('slick-current').siblings().removeClass('slick-current');
+    // Show CTA only after change
+    $('#utLanding #utCaroMain .slick-current .utMainImgWrp .utMainCta').css('visibility', 'visible')
+    $('#utLanding #utCaroMain .slick-current .utMainImgWrp .utMainCta h3').css('visibility', 'visible')
+});
+// Hiding the CTA+background until it's displayed via the function just above
+$('#utCaroMain').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $('#utLanding #utCaroMain .slick-current .utMainImgWrp .utMainCta').css('visibility', 'hidden')
+    $('#utLanding #utCaroMain .slick-current .utMainImgWrp .utMainCta h3').css('visibility', 'hidden')
 });
 
 

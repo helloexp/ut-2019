@@ -181,7 +181,6 @@ h1.cat-heading {
         }
         .utMainCta {
             visibility: hidden;
-            // display: none;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -219,7 +218,7 @@ h1.cat-heading {
         .slick-current:hover {
             .utMainImgWrp {
                 .utMainCta {
-                    visibility: visible;
+                    // visibility: visible;
                     background-color: rgba(0, 0, 0, 0.7);
                     opacity: 1;
                     transition: opacity 0.3s;
